@@ -1,5 +1,6 @@
 <template>
   <div class="HeaderAndFooter">
+      <font style="font-size:1rem">哇哇哇哇</font>
       <router-view/>
   </div>
 </template>
