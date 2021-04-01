@@ -98,6 +98,7 @@ export default {
   }
 .ContactUs {
   height:100vh;
+  padding-top: 52px;
 }  
 .inner {
   z-index:-100;
@@ -108,11 +109,8 @@ export default {
 .mod-heading-l1 {
   text-align: center;
   max-width: 980px;
-  top: 50%;
-  right: 50%;
   width: 100%;
   position: absolute;
-  transform: translate(50%, 50%);
 }
 .title {
   border:#0000FF 5px solid;

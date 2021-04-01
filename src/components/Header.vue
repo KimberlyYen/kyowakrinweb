@@ -5,7 +5,7 @@
           <img style="width:153px;height:26px" src="../assets/logo_header_01.png">
         </div>
         <div class="col row p-0 m-0 d-flex justify-content-end">
-          <div class="d-flex justify-content-center align-items-center" style="width:52px;"> 
+          <div class="d-flex justify-content-center align-items-center" style="width:52px;border-left: 1px solid #c9c9c9;"> 
             <img style="width:26px;height:26px" src="../assets/icon_search_01.png">
           </div>
           <div class="d-flex justify-content-center align-items-center" style="width:52px;border-left: 1px solid #c9c9c9;"> 
