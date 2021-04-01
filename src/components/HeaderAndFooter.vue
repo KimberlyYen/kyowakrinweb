@@ -1,7 +1,7 @@
 <template>
   <div class="HeaderAndFooter">
       <div class="header_"> </div>
-      <font style="font-size:1.5rem !important">112334896</font>
+      <font style="font-size:5rem !important">112334896</font>
       <router-view/>
   </div>
 </template>
