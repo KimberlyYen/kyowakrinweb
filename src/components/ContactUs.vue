@@ -1,6 +1,6 @@
 <template>
   <div class="ContactUs">
-    <div class="inner">
+    <div class="inner" >
       <div class="mod-heading-l1">
         <p class="title">最新消息</p>
       </div>

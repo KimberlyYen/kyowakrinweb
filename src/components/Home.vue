@@ -1,6 +1,28 @@
 <template>
   <div class="Home">
     <!-- <font style="font-size:5rem !important">112334896</font> -->
+    <div style="height:100vh">123456789</div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />  
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 
@@ -16,6 +38,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.Home{
+  padding-top: 52px;
+}
 h1, h2 {
   font-weight: normal;
 }
