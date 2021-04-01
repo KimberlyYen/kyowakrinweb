@@ -49,15 +49,18 @@ export default {
   font-family: "Microsoft JhengHei", Arial, sans-serif;
   }
 .inner {
+  z-index:-100;
+  position: relative;
   min-height: 250px;
   background-color: #fef3ed;
 }
-.inner-heading {
+.mod-heading-l1 {
   max-width: 980px;
   margin: 0;
   transform: translate(50%, 50%);
 }
 .title {
+  border:#0000FF 5px solid;
   top: 50%;
   right: 50%;
   width: 100%;
