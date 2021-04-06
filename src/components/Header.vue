@@ -78,6 +78,10 @@ export default {
         this.menusize = 'menusize'
         this.bg_form = 'bg_form_w'
         this.menulist = 'menulist_Up'
+        var lo = this
+        setTimeout(function(){
+          lo.menulist = 'menulist_default'
+        },500)
       }
     },
     Click_Title(index){
