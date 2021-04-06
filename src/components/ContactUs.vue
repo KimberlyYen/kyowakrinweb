@@ -77,11 +77,16 @@
         </dl>
       </div>
     </div>
+    <Footer-bg></Footer-bg>
   </div>
 </template>
 
 <script>
+import Footer from './Footer'
 export default {
+  components: {
+    'Footer-bg':Footer
+  },
   name: 'ContactUs',
   data () {
     return {
