@@ -69,7 +69,7 @@ export default {
         display: block;
         background-position: center;
         background-size: cover;
-        background-image: url("../assets/bg_footer_01.png");
+        background-image: url("../assets/bg_footer.png");
     }
 
     .bg_mobile {
@@ -85,7 +85,7 @@ export default {
         display: none;
         background-position: center;
         background-size: cover;
-        background-image: url("../assets/bg_footer_01.png");
+        background-image: url("../assets/bg_footer.png");
     }
 
     .bg_mobile {
