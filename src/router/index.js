@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import ContactUs from '@/components/ContactUs'
+import News from '@/components/News'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -20,9 +20,9 @@ export default new Router({
           component: Home
         }, 
         {
-          path: '/ContactUs',
-          name: 'ContactUs',
-          component: ContactUs
+          path: '/News',
+          name: 'News',
+          component: News
         },
         {
           path: '/Footer',
