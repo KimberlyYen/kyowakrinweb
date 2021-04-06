@@ -33,14 +33,29 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.header_{
-    width: 100vw;
-    height:52px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    opacity: 1;
-    position: fixed;
-}
+/*computer*/
+  @media (min-width: 769px) {
+    .header_{
+        width: 99vw;
+        height:52px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        opacity: 1;
+        position: fixed;
+    }
+  }
+/*mobile*/
+  @media (min-width: 320px) and (max-width:768px) {
+    .header_{
+        width: 100vw;
+        height:52px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        opacity: 1;
+        position: fixed;
+    }
+  }
+
 h1, h2 {
   font-weight: normal;
 }
