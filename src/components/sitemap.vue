@@ -1,4 +1,5 @@
 <template>
+<div>
     <div class="main-content-type-only">
         <h1 class="hdg-lv1-02">Sitemap</h1>
         <h2 class="hdg-lv2-01"><a href="/index.html">Home</a></h2>
@@ -7,6 +8,8 @@
         <h2 class="hdg-lv2-01"><a href="/sustainability/index.html">Sustainability</a></h2>
         <h2 class="hdg-lv2-01"><a href="/media_center/index.html">Media center</a></h2>
     </div>
+    <Footer-bg></Footer-bg>
+  </div>
 </template>
 
 <script>

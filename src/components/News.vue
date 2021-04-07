@@ -87,7 +87,7 @@ export default {
   components: {
     'Footer-bg':Footer
   },
-  name: 'ContactUs',
+  name: 'News',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -98,6 +98,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+/*computer*/
+
 *{
   font-family: Arial, sans-serif;
   }
@@ -129,7 +132,6 @@ export default {
   //border:#0000FF 5px solid;
   top: 50%;
   right: 50%;
-  
   width: 100%;
   font-size: 5rem;
   font-weight: bold;
@@ -158,4 +160,15 @@ dd {
 .news-a {
   color: #5D6164;
 }
+
+/*mobile*/
+  @media (min-width: 320px) and (max-width:768px) {
+    .str-outer {
+        position: relative;
+        min-height: 250px;
+        padding-right: calc(46px/2);
+        padding-left: calc(46px/2);
+    }
+  }
+
 </style>

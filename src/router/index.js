@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import News from '@/components/News'
+import sitemap from '@/components/sitemap'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -23,6 +24,11 @@ export default new Router({
           path: '/News',
           name: 'News',
           component: News
+        },
+        {
+          path: '/sitemap',
+          name: 'sitemap',
+          component: sitemap
         },
         {
           path: '/Footer',
