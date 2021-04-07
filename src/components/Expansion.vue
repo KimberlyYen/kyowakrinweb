@@ -40,7 +40,7 @@ export default {
   },
   watch:{
     'this_.status':function(){
-        console.log('1')
+        //console.log('1')
         if(this.status == true){
             this.Expansionsrc = require('@/assets/icon_close_02.png')
         }else{
