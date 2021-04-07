@@ -2,7 +2,7 @@
   <div class="Header">
       <div class="header_ row p-0 m-0" style="z-index:3">
         <div class="col-6 col-md-3 col-xl-6 p-0 m-0 pl-5 d-flex justify-content-start align-items-center"> 
-          <img @click="GoHome()" style="width:153px;height:26px" src="../assets/logo_header_01.png">
+          <img @click="GoHome()" style="width:153px;height:26px;cursor:pointer" src="../assets/logo_header_01.png">
         </div>
         <div class="col-6 col-md-9 col-xl-6 row p-0 m-0 d-flex justify-content-end">
           <div @click="Click_Title(0)" class="display_title justify-content-center align-items-center headtitle" v-bind:class="headtitle[0]" > 
@@ -34,10 +34,10 @@
           </div>
         </div>
       </div>
-      <div :class="menulist">
+      <div :class="menulist" :style="{'z-index':z_index_menulist}">
         <img style="width:100vw;height:75vh;" src="../assets/bg_header_sp_01.png">
       </div>
-      <div :class="Earthlist">
+      <div :class="Earthlist" :style="{'z-index':z_index_Earth}">
         <div class="accordion" id="accordionExample">
         <Expansion-Obj v-for="(items,index) in ContentObj" :status="items.status" :key="index" :index="index" :name="items.name" :content="items.content" @ListClick_trigger="ListClick"></Expansion-Obj>
         </div>
@@ -66,6 +66,8 @@ export default {
       Earthlist:'Earth_default',
       OpacityNum:1,
       Earth_bg_form:'Earth_bg_form_w',
+      z_index_Earth:1,
+      z_index_menulist:2,
       ContentObj:[
         {name:'日本',status:false,content:'鮭魚很好吃鮭魚很好吃鮭魚很好吃'},
         {name:'美國',status:false,content:'牛肉很好吃牛肉很好吃牛肉很好吃'},
@@ -118,6 +120,8 @@ export default {
         this.Earthsize = 'Earthsize_x'
         this.Earth_bg_form = 'Earth_bg_form_g'
         this.Earthlist = 'Earth_Down'
+        this.z_index_Earth = 2
+        this.z_index_menulist = 1
       }
     },
     MenuClick(){
@@ -127,6 +131,8 @@ export default {
         this.menusize = 'menusize_x'
         this.bg_form = 'bg_form_o'
         this.menulist = 'menulist'
+        this.z_index_menulist = 2
+        this.z_index_Earth = 1
       }else{
         this.OpacityNum = 1
         this.Menusrc = require('@/assets/icon_menu_sp_01.png')
@@ -143,6 +149,7 @@ export default {
       switch (index){
         case 0:
           this.Change_Title_Css(index)
+          this.GoHome()
           break;
         case 1:
           this.Change_Title_Css(index)  
@@ -226,7 +233,6 @@ export default {
       position:fixed;
       top:52px;
       left:0;
-      z-index: 2;
       animation-name: MoveToDown;    /*動畫名稱，需與 keyframe 名稱對應*/
       animation-duration: 0.35s;    /*動畫持續時間，單位為秒*/
       animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
@@ -235,7 +241,6 @@ export default {
       position:fixed;
       top:-75vh;
       left:0;
-      z-index: 2;
       animation-name: MoveToUp;    /*動畫名稱，需與 keyframe 名稱對應*/
       animation-duration: 0.35s;    /*動畫持續時間，單位為秒*/
       animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
@@ -251,7 +256,6 @@ export default {
       position:fixed;
       top:52px;
       left:0;
-      z-index: 1;
       background-color: transparent;
       animation-name: MoveToDown;    /*動畫名稱，需與 keyframe 名稱對應*/
       animation-duration: 0.35s;    /*動畫持續時間，單位為秒*/
@@ -263,7 +267,6 @@ export default {
       position:fixed;
       top:-75vh;
       left:0;
-      z-index: 1;
       background-color: transparent;
       animation-name: MoveToUp;    /*動畫名稱，需與 keyframe 名稱對應*/
       animation-duration: 0.35s;    /*動畫持續時間，單位為秒*/
