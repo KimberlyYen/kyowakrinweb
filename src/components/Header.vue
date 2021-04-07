@@ -1,6 +1,6 @@
 <template>
   <div class="Header">
-      <div class="header_ row p-0 m-0" style="z-index:2">
+      <div class="header_ row p-0 m-0" style="z-index:3">
         <div class="col-6 col-md-3 col-xl-6 p-0 m-0 pl-5 d-flex justify-content-start align-items-center"> 
           <img style="width:153px;height:26px" src="../assets/logo_header_01.png">
         </div>
@@ -26,19 +26,21 @@
           <div @click="GotoMail()" class="d-flex justify-content-center align-items-center MailClick"> 
             <img style="width:26px;height:17px;" src="../assets/icon_mail_01.png">
           </div>
-          <div class="d-flex justify-content-center align-items-center" style="width:52px;border-left: 1px solid #c9c9c9;cursor: pointer;"> 
-            <img style="width:31px;height:36px;cursor: pointer;" src="../assets/icon_global_01.png">
+          <div @click="EarthClick()" class="d-flex justify-content-center align-items-center" :class="Earth_bg_form" style="width:52px;border-left: 1px solid #c9c9c9;cursor: pointer;"> 
+            <img :class="Earthsize" :src="Earthsrc">
           </div>
           <div @click="MenuClick()" class="display_hamburger justify-content-center align-items-center " :class="bg_form" style="position:relative;width:52px;border-left: 1px solid #c9c9c9;cursor: pointer;"> 
-            <img :class="menusize" style="" :src="Menusrc">
+            <img :class="menusize" :src="Menusrc">
           </div>
         </div>
       </div>
-      <div class="menulist" :class="menulist">
+      <div :class="menulist">
         <img style="width:100vw;height:75vh;" src="../assets/bg_header_sp_01.png">
       </div>
+      <div :class="Earthlist">
+      </div>
       <!-- <font style="font-size:5rem !important">112334896</font> -->
-      <router-view/>
+      <router-view :style="{'opacity':OpacityNum}"/>
   </div>
 </template>
 
@@ -49,9 +51,14 @@ export default {
     return {
       headtitle:['headtitle','headtitle','headtitle','headtitle','headtitle'],
       Menusrc:require('@/assets/icon_menu_sp_01.png'),
+      Earthsrc:require('@/assets/icon_global_01.png'),
       menusize:'menusize',
+      Earthsize:'Earthsize',
       bg_form:'bg_form_w',
-      menulist:'menulist_default'
+      menulist:'menulist_default',
+      Earthlist:'Earth_default',
+      OpacityNum:1,
+      Earth_bg_form:'Earth_bg_form_w'
     }
   },
   methods:{
@@ -67,13 +74,34 @@ export default {
         }
       }
     },
+    EarthClick(){
+      if(this.Earthsrc == require('@/assets/icon_close_01.png')){
+        this.OpacityNum = 1
+        this.Earthsrc = require('@/assets/icon_global_01.png')
+        this.Earthsize = 'Earthsize'
+        this.Earth_bg_form = 'Earth_bg_form_w'
+        this.Earthlist = 'Earth_Up'
+        var lo = this
+        setTimeout(function(){
+          lo.Earthlist = 'Earth_default'
+        },500)
+      }else{
+        this.OpacityNum = 0.5
+        this.Earthsrc = require('@/assets/icon_close_01.png')
+        this.Earthsize = 'Earthsize_x'
+        this.Earth_bg_form = 'Earth_bg_form_g'
+        this.Earthlist = 'Earth_Down'
+      }
+    },
     MenuClick(){
       if(this.Menusrc == require('@/assets/icon_menu_sp_01.png')){
+        this.OpacityNum = 0.5
         this.Menusrc = require('@/assets/icon_menu_sp_02.png')
         this.menusize = 'menusize_x'
         this.bg_form = 'bg_form_o'
         this.menulist = 'menulist'
       }else{
+        this.OpacityNum = 1
         this.Menusrc = require('@/assets/icon_menu_sp_01.png')
         this.menusize = 'menusize'
         this.bg_form = 'bg_form_w'
@@ -161,7 +189,7 @@ export default {
       position:absolute;
       top:52px;
       left:0;
-      z-index: 1;
+      z-index: 2;
       animation-name: MoveToDown;    /*動畫名稱，需與 keyframe 名稱對應*/
       animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
       animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
@@ -170,10 +198,39 @@ export default {
       position:absolute;
       top:-75vh;
       left:0;
-      z-index: 1;
+      z-index: 2;
       animation-name: MoveToUp;    /*動畫名稱，需與 keyframe 名稱對應*/
       animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
       animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+    }
+    .Earth_default{
+      display: none;
+      position:absolute;
+      top:-75vh;
+      left:0;
+      width:100vw;
+    }
+    .Earth_Down{
+      position:absolute;
+      top:52px;
+      left:0;
+      z-index: 1;
+      background-color: white;
+      animation-name: MoveToDown;    /*動畫名稱，需與 keyframe 名稱對應*/
+      animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/
+      width:100vw;
+    }
+    .Earth_Up{
+      position:absolute;
+      top:-75vh;
+      left:0;
+      z-index: 1;
+      background-color: white;
+      animation-name: MoveToUp;    /*動畫名稱，需與 keyframe 名稱對應*/
+      animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+      width:100vw;
     }
   }
   /* 關鍵影格(@keyframe) */
@@ -191,13 +248,31 @@ export default {
 .bg_form_w{
   background-color: white;
 }
+.Earth_bg_form_g{
+  background-color: #dfdfdf;
+}
+.Earth_bg_form_w{
+  background-color: white;
+}
 .menusize{
   width:20px;
   height:16px;
+  cursor: pointer;
 }
 .menusize_x{
   width:20px;
   height:20px;
+  cursor: pointer;
+}
+.Earthsize{
+  width:31px;
+  height:36px;
+  cursor: pointer;
+}
+.Earthsize_x{
+  width:20px;
+  height:20px;
+  cursor: pointer;
 }
 .MailClick{
   width:52px;

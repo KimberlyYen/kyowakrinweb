@@ -5,6 +5,7 @@ import News from '@/components/News'
 import sitemap from '@/components/sitemap'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Expansion from '@/components/Expansion'
 
 Vue.use(Router)
 
@@ -30,12 +31,17 @@ export default new Router({
           name: 'sitemap',
           component: sitemap
         },
-        {
-          path: '/Footer',
-          name: 'Footer',
-          component: Footer
-        },
       ]
+    },
+    {//Object
+      path: '/Expansion',
+      name: 'Expansion',
+      component: Expansion
+    },
+    {
+      path: '/Footer',
+      name: 'Footer',
+      component: Footer
     },
   ]
 })
