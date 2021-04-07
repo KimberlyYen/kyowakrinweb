@@ -125,6 +125,15 @@ export default {
     .display_hamburger{
       display: none !important;
     }
+    .menulist_default{
+      display: none;
+    }
+    .menulist{
+      display: none;
+    }
+    .menulist_Up{
+      display: none;
+    }
   }
 /*mobile*/
   @media (min-width: 320px) and (max-width:768px) {
@@ -142,6 +151,30 @@ export default {
     .display_hamburger{
       display: flex !important;
     }
+    .menulist_default{
+      display: none;
+      position:absolute;
+      top:-75vh;
+      left:0;
+    }
+    .menulist{
+      position:absolute;
+      top:52px;
+      left:0;
+      z-index: 1;
+      animation-name: MoveToDown;    /*動畫名稱，需與 keyframe 名稱對應*/
+      animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+    }
+    .menulist_Up{
+      position:absolute;
+      top:-75vh;
+      left:0;
+      z-index: 1;
+      animation-name: MoveToUp;    /*動畫名稱，需與 keyframe 名稱對應*/
+      animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+    }
   }
   /* 關鍵影格(@keyframe) */
   @keyframes MoveToDown {
@@ -152,30 +185,6 @@ export default {
       from { top: 52px; }
       to { top: -75vh; }
   }
-.menulist_default{
-  display: none;
-  position:absolute;
-  top:-75vh;
-  left:0;
-}
-.menulist{
-  position:absolute;
-  top:52px;
-  left:0;
-  z-index: 1;
-  animation-name: MoveToDown;    /*動畫名稱，需與 keyframe 名稱對應*/
-  animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
-  animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
-}
-.menulist_Up{
-  position:absolute;
-  top:-75vh;
-  left:0;
-  z-index: 1;
-  animation-name: MoveToUp;    /*動畫名稱，需與 keyframe 名稱對應*/
-  animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
-  animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
-}
 .bg_form_o{
   background-color: #ea5504;
 }
