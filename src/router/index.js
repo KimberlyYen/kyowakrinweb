@@ -6,6 +6,7 @@ import sitemap from '@/components/sitemap'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Expansion from '@/components/Expansion'
+import Privacy from '@/components/Privacy'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
           path: '/sitemap',
           name: 'sitemap',
           component: sitemap
+        },
+        {
+          path: '/Privacy',
+          name: 'Privacy',
+          component: Privacy
         },
       ]
     },
