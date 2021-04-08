@@ -8,15 +8,18 @@
     <div class="str-outer">
       <div class="str-inner">
         <dl class="mod-list-description">
-          <div class="list">
-            <dt>2020年4月1日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和麒麟] 台灣協和麒麟股份有限公司自2020年4月搬遷至新址</a></p>
-            </dd>
+          <div v-for="(items,index) in NewsListObj" :key="index" class="list">
+            <div v-if="index < ShowNum">
+              <dt>{{items.date}}</dt>
+              <dd>
+                <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">{{items.content}}</a></p>
+              </dd>
+            </div>
           </div>
         </dl>
       </div>
     </div>
+    <div @click="SHOW_MORE_click()" style="height:25px;cursor:pointer">SHOW MORE<font style="font-size:1rem;position:relative;top:2px">   ﹀</font></div>
     <Footer-bg></Footer-bg>
   </div>
 </template>
@@ -28,9 +31,17 @@ export default {
     'Footer-bg':Footer
   },
   name: 'News',
+  mounted(){
+  },
+  methods:{
+    SHOW_MORE_click(){
+      if(this.ShowNum < this.NewsListObj.length){
+        this.ShowNum += 5
+      }
+    }
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
       NewsListObj:[
         {date:'2020年4月1日',content:'[台灣協和麒麟] 台灣協和麒麟股份有限公司自2020年4月搬遷至新址'},
         {date:'2019年9月1日',content:'[台灣協和麒麟] 台灣協和醱酵麒麟股份有限公司更名爲台灣協和麒麟股份有限公司'},
@@ -43,8 +54,8 @@ export default {
         {date:'2013年8月30日',content:'[台灣協和醱酵麒麟] 公司新藥「貼固守穿皮貼片劑」與「恩沛板」之健保價生效'},
         {date:'2013年6月28日',content:'[台灣協和醱酵麒麟] 公司網站即將上線'},
         {date:'2013年6月28日',content:'[台灣協和醱酵麒麟] 公司即將有新藥在台灣推廣上市'},
-      ]
-
+      ],
+      ShowNum:5
     }
   }
 }

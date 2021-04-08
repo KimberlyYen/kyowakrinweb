@@ -14,7 +14,6 @@
             <img style="position:absolute;top:23px;right:15px;width:13px;" :src="Expansionsrc">
             </button>                
         </div>
-
         <div :id="'collapse'+index" class="collapse" :aria-labelledby="'heading'+index" data-parent="#accordionExample">
         <div class="card-body" v-html="content">
         </div>
