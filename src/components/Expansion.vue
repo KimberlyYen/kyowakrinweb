@@ -16,8 +16,7 @@
         </div>
 
         <div :id="'collapse'+index" class="collapse" :aria-labelledby="'heading'+index" data-parent="#accordionExample">
-        <div class="card-body">
-            {{content}}
+        <div class="card-body" v-html="content">
         </div>
         </div>
   </div>

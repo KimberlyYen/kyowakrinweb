@@ -2,7 +2,7 @@
   <div class="Header">
       <div class="header_ row p-0 m-0" style="z-index:3">
         <div class="col-6 col-md-3 col-xl-6 p-0 m-0 pl-5 d-flex justify-content-start align-items-center"> 
-          <img @click="GoHome()" style="width:153px;height:26px;cursor:pointer" src="../assets/logo_header_01.png">
+          <img @click="Click_Title(0)" style="width:153px;height:26px;cursor:pointer" src="../assets/logo_header_01.png">
         </div>
         <div class="col-6 col-md-9 col-xl-6 row p-0 m-0 d-flex justify-content-end">
           <div @click="Click_Title(0)" class="display_title justify-content-center align-items-center headtitle" v-bind:class="headtitle[0]" > 
@@ -26,6 +26,11 @@
           <div @click="GotoMail()" class="d-flex justify-content-center align-items-center MailClick"> 
             <img style="width:26px;height:17px;" src="../assets/icon_mail_01.png">
           </div>
+          <!--(這個是新加坡的版本Menu)-->
+          <!-- <div @click="EarthClickForSingapore()" class="d-flex justify-content-center align-items-center" :class="Earth_bg_form" style="width:52px;border-left: 1px solid #c9c9c9;cursor: pointer;"> 
+            <img :class="Earthsize" :src="Earthsrc">
+          </div> -->
+          <!--(這個是日本的版本Menu)-->
           <div @click="EarthClick()" class="d-flex justify-content-center align-items-center" :class="Earth_bg_form" style="width:52px;border-left: 1px solid #c9c9c9;cursor: pointer;"> 
             <img :class="Earthsize" :src="Earthsrc">
           </div>
@@ -35,11 +40,67 @@
         </div>
       </div>
       <div :class="menulist" :style="{'z-index':z_index_menulist}">
-        <img style="width:100vw;height:75vh;" src="../assets/bg_header_sp_01.png">
+        <img style="width:100vw;height:50vh;position:absolute" src="../assets/bg_header_sp_01.png">
+        <div class="text-left" style="position:absolute">
+          <div v-for="(items,index) in MenuListObj" :key="index" class="menulistitem" @click="Click_Title(items.index,true)">
+            {{items.name}}
+          </div>
+        </div>
       </div>
       <div :class="Earthlist" :style="{'z-index':z_index_Earth}">
-        <div class="accordion" id="accordionExample">
-        <Expansion-Obj v-for="(items,index) in ContentObj" :status="items.status" :key="index" :index="index" :name="items.name" :content="items.content" @ListClick_trigger="ListClick"></Expansion-Obj>
+        <div class="CP_Earthlist">
+          <div class="button_form d-flex align-items-center "><font style="font-size:1.78rem;font-weight:bold">Kyowa Kirin Worldwide</font></div>
+        </div>
+        <div class="Mobile_Earthlist">
+          <div class="button_form d-flex align-items-center "><font style="font-size:2rem;font-weight:bold">Kyowa Kirin Worldwide</font></div>
+        </div>
+        <div class="CP_Earthlist">
+          <div class="row p-0 pl-4 pb-5 m-0" style="width:100vw;background-color:white;line-height:26px">
+            <div class="col p-0 m-0 text-left" style="border-right:1px solid #E0E0E0">
+              <div class="mb-3" style="font-size:1.78rem;font-weight:bold">{{ContentObj[0].name}}</div>
+              <li class="m-0">Kyowa Kirin Co., Ltd. ( <a href="https://www.kyowakirin.co.jp/index.html" class="text-link-sub" target="_blank" style="color:#ea5504">日本語</a> )</li>
+              <li class="m-0">FUJIFILM KYOWA KIRIN BIOLOGICS Co., Ltd. ( <a href="http://fujifilmkyowakirin-biologics.com/ja/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">日本語</a> / <a href="http://fujifilmkyowakirin-biologics.com/en/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin plus Co., Ltd. ( <a href="http://www.kyowakirinplus.co.jp/" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">日本語</a> )</li>
+              <li class="m-0">Kyowa Kirin Frontier Co., Ltd. ( <a href="https://www.kyowa-kirin-frontier.com/" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">日本語</a> )</li>
+              <div class="mb-3 mt-3" style="font-size:1.78rem;font-weight:bold">{{ContentObj[1].name}}</div>
+              <li class="m-0">Kyowa Kirin USA Holdings, Inc.  ( <a href="https://kkna.kyowakirin.com/" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">BioWa, Inc.  ( <a href="/biowa/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin Pharmaceutical Development, Inc.  ( <a href="https://kkna.kyowakirin.com/" target="_blank" class="text-link-sub outBoundModalLink" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin Pharmaceutical Research, Inc.  ( <a href="https://kkna.kyowakirin.com/" target="_blank" class="text-link-sub outBoundModalLink" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin, Inc.  ( <a href="https://kkna.kyowakirin.com/" target="_blank" class="text-link-sub outBoundModalLink" style="color:#ea5504">English</a> )</li>
+            </div>
+            <div class="col p-0 pl-5 m-0 text-left" style="border-right:1px solid #E0E0E0">
+              <div class="mb-3" style="font-size:1.78rem;font-weight:bold">{{ContentObj[2].name}}</div>
+              <li class="m-0">Kyowa Kirin Asia Pacific Pte. Ltd.  ( <a href="https://www.kyowakirin.com/asiapacific/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin China Pharmaceutical Co., Ltd.( <a href="https://www.kyowa-kirin.com.cn/" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">中文</a> )</li>
+              <li class="m-0">Kyowa Kirin Korea Co., Ltd.  ( <a href="/kr/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">한국어</a> )</li>
+              <li class="m-0">Kyowa Kirin Taiwan Co., Ltd.  ( <a href="/tw/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">中文</a> )</li>
+              <li class="m-0">Kyowa Kirin Hong Kong Co., Limited  ( <a href="/hk/cn/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">中文</a> / <a href="/hk/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin (Thailand) Co., Ltd. ( <a href="/thailand/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">ภาษาไทย</a> )</li>
+              <li class="m-0">Kyowa Kirin Australia Pty Ltd. ( <a href="/australia/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin Malaysia Sdn. Bhd. ( <a href="/malaysia/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+            </div>
+            <div class="col p-0 pl-5 m-0 text-left">
+              <div class="mb-3" style="font-size:1.78rem;font-weight:bold">{{ContentObj[3].name}}</div>
+              <li class="m-0">Kyowa Kirin International plc  ( <a href="http://www.international.kyowa-kirin.com/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin Ltd.  ( <a href="http://www.international.kyowa-kirin.com/uk/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin Pharma SAS ( <a href="#outBoundModal-exception-02" class="text-link-sub outBoundModalLink" style="color:#ea5504">français</a> )</li>
+              <li class="m-0">Kyowa Kirin Farmaceutica, S.L.U.  ( <a href="http://www.international.kyowa-kirin.com/es/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">Español</a> )</li>
+              <li class="m-0">Kyowa Kirin GmbH  ( <a href="http://www.international.kyowa-kirin.com/de/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">Deutsch</a> )</li>
+              <li class="m-0">Kyowa Kirin Pharma B.V. - Netherlands  ( <a href="http://www.international.kyowa-kirin.com/nl/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">Nederlands</a> )</li>
+              <li class="m-0">Kyowa Kirin Pharma B.V. - Belgium &amp; Luxembourg  ( <a href="http://international.kyowa-kirin.com/belux/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin S.r.l.  - Italia ( <a href="http://www.international.kyowa-kirin.com/it/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">Italiano</a> )</li>
+              <li class="m-0">Kyowa Kirin AB - Sweden  ( <a href="http://www.international.kyowa-kirin.com/se/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">Svenska</a> )</li>
+              <li class="m-0">Kyowa Kirin AB - Norway  ( <a href="http://www.international.kyowa-kirin.com/no/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin AB - Finland  ( <a href="http://www.international.kyowa-kirin.com/fi/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+              <li class="m-0">Kyowa Kirin AB - Denmark  ( <a href="http://www.international.kyowa-kirin.com/dk/index.html" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">English</a> )</li>
+            </div>
+          </div>
+        </div>
+        <div class="Mobile_Earthlist">
+          <div class="accordion" id="accordionExample">
+            <Expansion-Obj v-for="(items,index) in ContentObj" :status="items.status" :key="index" :index="index" :name="items.name" :content="items.content" @ListClick_trigger="ListClick"></Expansion-Obj>
+          </div>
         </div>
       </div>
       <!-- <font style="font-size:5rem !important">112334896</font> -->
@@ -68,14 +129,53 @@ export default {
       Earth_bg_form:'Earth_bg_form_w',
       z_index_Earth:1,
       z_index_menulist:2,
-      ContentObj:[
-        {name:'日本',status:false,content:'鮭魚很好吃鮭魚很好吃鮭魚很好吃'},
-        {name:'美國',status:false,content:'牛肉很好吃牛肉很好吃牛肉很好吃'},
-        {name:'馬來西亞',status:false,content:'椰子水好喝椰子水好喝椰子水好喝'}
+      ContentObj:
+      [
+        {name:'JAPAN',
+        status:false,
+        content:'<div style="width:100vw;text-align:left"><font>Kyowa Kirin Co., Ltd. ( <a href="https://www.kyowakirin.co.jp/index.html" class="text-link-sub" target="_blank" style="color:#ea5504">日本語</a> )</font></div>'
+        +'<div style="width:100vw;text-align:left"><font>FUJIFILM KYOWA KIRIN BIOLOGICS Co., Ltd. ( <a href="http://fujifilmkyowakirin-biologics.com/ja/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">日本語</a> / <a href="http://fujifilmkyowakirin-biologics.com/en/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</font></div>'
+        +'<div style="width:100vw;text-align:left"><font>Kyowa Kirin plus Co., Ltd. ( <a href="http://www.kyowakirinplus.co.jp/" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">日本語</a> )</font></div>'
+        +'<div style="width:100vw;text-align:left"><font>Kyowa Kirin Frontier Co., Ltd. ( <a href="https://www.kyowa-kirin-frontier.com/" class="text-link-sub outBoundModalLink" target="_blank" style="color:#ea5504">日本語</a> )</font></div>'},
+        {name:'NORTH AMERICA',status:false,content:'<div style="width:100vw;text-align:left">Kyowa Kirin USA Holdings, Inc.  ( <a href="https://kkna.kyowakirin.com/" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'
+	      +'<div style="width:100vw;text-align:left">BioWa, Inc.  ( <a href="/biowa/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Pharmaceutical Development, Inc.  ( <a href="https://kkna.kyowakirin.com/" target="_blank" class="text-link-sub outBoundModalLink"style="color:#ea5504">English</a> )</div>'
+	      +'<div style="width:100vw;text-align:left">Kyowa Kirin Pharmaceutical Research, Inc.  ( <a href="https://kkna.kyowakirin.com/" target="_blank" class="text-link-sub outBoundModalLink"style="color:#ea5504">English</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin, Inc.  ( <a href="https://kkna.kyowakirin.com/" target="_blank" class="text-link-sub outBoundModalLink"style="color:#ea5504">English</a> )</div>'},
+        {name:'ASIA PACIFIC',status:false,content:'<div style="width:100vw;text-align:left">Kyowa Kirin Asia Pacific Pte. Ltd.  ( <a href="https://www.kyowakirin.com/asiapacific/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin China Pharmaceutical Co., Ltd.( <a href="https://www.kyowa-kirin.com.cn/" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">中文</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Korea Co., Ltd.  ( <a href="/kr/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">한국어</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Taiwan Co., Ltd.  ( <a href="/tw/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">中文</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Hong Kong Co., Limited  ( <a href="/hk/cn/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">中文</a> / <a href="/hk/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin (Thailand) Co., Ltd. ( <a href="/thailand/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">ภาษาไทย</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Australia Pty Ltd. ( <a href="/australia/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Malaysia Sdn. Bhd. ( <a href="/malaysia/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'},
+        {name:'EMEA',status:false,content:'<div style="width:100vw;text-align:left">Kyowa Kirin International plc  ( <a href="http://www.international.kyowa-kirin.com/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Ltd.  ( <a href="http://www.international.kyowa-kirin.com/uk/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Pharma SAS ( <a href="#outBoundModal-exception-02" class="text-link-sub outBoundModalLink"style="color:#ea5504">français</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Farmaceutica, S.L.U.  ( <a href="http://www.international.kyowa-kirin.com/es/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">Español</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin GmbH  ( <a href="http://www.international.kyowa-kirin.com/de/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">Deutsch</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Pharma B.V. - Netherlands  ( <a href="http://www.international.kyowa-kirin.com/nl/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">Nederlands</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin Pharma B.V. - Belgium &amp; Luxembourg  ( <a href="http://international.kyowa-kirin.com/belux/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin S.r.l.  - Italia ( <a href="http://www.international.kyowa-kirin.com/it/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">Italiano</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin AB - Sweden  ( <a href="http://www.international.kyowa-kirin.com/se/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">Svenska</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin AB - Norway  ( <a href="http://www.international.kyowa-kirin.com/no/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin AB - Finland  ( <a href="http://www.international.kyowa-kirin.com/fi/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'
+        +'<div style="width:100vw;text-align:left">Kyowa Kirin AB - Denmark  ( <a href="http://www.international.kyowa-kirin.com/dk/index.html" class="text-link-sub outBoundModalLink" target="_blank"style="color:#ea5504">English</a> )</div>'},
+      ],
+      MenuListObj:[
+        {name:'首頁',index:0},
+        {name:'關於我們',index:1},
+        {name:'我們的產品',index:2},
+        {name:'最新消息',index:3},
+        {name:'亞太分佈圖',index:4}
       ]
     }
   },
   methods:{
+    EarthClickForSingapore(){
+      location.href = 'https://www.kyowakirin.com/index.html#anc-global-network'
+    },
     GoHome(){
       this.$router
       .push({
@@ -145,7 +245,10 @@ export default {
         },350)
       }
     },
-    Click_Title(index){
+    Click_Title(index,menuitem){
+      if(menuitem){
+        this.MenuClick()
+      }
       switch (index){
         case 0:
           this.Change_Title_Css(index)
@@ -199,12 +302,38 @@ export default {
       display: none;
     }
     .Earth_default{
-      display: none;
+      position:fixed;
+      top:-75vh;
+      left:0;
+      width:100vw;
+      box-shadow:1px 2px 2px #d1d2d2
     }
     .Earth_Down{
-      display: none;
+      position:fixed;
+      top:52px;
+      left:0;
+      background-color: transparent;
+      animation-name: MoveToDown;    /*動畫名稱，需與 keyframe 名稱對應*/
+      animation-duration: 0.35s;    /*動畫持續時間，單位為秒*/
+      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/
+      width:100vw;
+      box-shadow:1px 2px 2px #d1d2d2
     }
     .Earth_Up{
+      position:fixed;
+      top:-75vh;
+      left:0;
+      background-color: transparent;
+      animation-name: MoveToUp;    /*動畫名稱，需與 keyframe 名稱對應*/
+      animation-duration: 0.35s;    /*動畫持續時間，單位為秒*/
+      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+      width:100vw;
+      box-shadow:1px 2px 2px #d1d2d2
+    }
+    .CP_Earthlist{
+      display: block;
+    }
+    .Mobile_Earthlist{
       display: none;
     }
   }
@@ -274,6 +403,12 @@ export default {
       width:100vw;
       box-shadow:1px 2px 2px #d1d2d2
     }
+    .CP_Earthlist{
+      display: none;
+    }
+    .Mobile_Earthlist{
+      display: block;
+    }
   }
   /* 關鍵影格(@keyframe) */
   @keyframes MoveToDown {
@@ -284,6 +419,32 @@ export default {
       from { top: 52px; }
       to { top: -75vh; }
   }
+.button_form{
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  height: 62px;
+  border: 0;
+  border-top: 1px solid #d1d2d2;
+  position:relative;
+  text-align: left;
+  padding-left: 15px;
+}
+.menulistitem{
+  width:100vw;
+  border-top: 1px solid rgba(255, 255, 255, .4);
+  font-size: calc(4.4rem/2);color: #fff;
+  padding-top: 22px;
+  padding-right: 15px;
+  padding-bottom: 22px;
+  padding-left: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menulistitem:active{
+  background-color: #6b9693;
+  opacity: 0.7;
+}
 .bg_form_o{
   background-color: #ea5504;
 }
