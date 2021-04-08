@@ -21,7 +21,7 @@
         </dl>
       </div>
     </div>
-    <div @click="SHOW_MORE_click()" style="height:25px;cursor:pointer">SHOW MORE<font style="font-size:1rem;position:relative;top:2px">   ﹀</font></div>
+    <div @click="SHOW_MORE_click()" style="height:25px;cursor:pointer;font-size:2rem;" class="row d-flex justify-content-center p-0 m-0">SHOW MORE<div class="expand ml-4 mt-1"></div></div>
     <Footer-bg></Footer-bg>
   </div>
 </template>
@@ -72,6 +72,13 @@ export default {
 *{
   font-family: Arial, sans-serif;
   }
+.expand{
+  height:12.5px;
+  width:12.5px;
+  transform:rotate(45deg);
+  border-right:1px solid black;
+  border-bottom:1px solid black;
+}
 .ContactUs {
   height:100vh;
   padding-top: 52px;
