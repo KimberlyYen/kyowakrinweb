@@ -104,7 +104,9 @@
         </div>
       </div>
       <!-- <font style="font-size:5rem !important">112334896</font> -->
-      <router-view :style="{'opacity':OpacityNum}"/>
+      <div :style="{'opacity':OpacityNum_Earth}">
+        <router-view :style="{'opacity':OpacityNum}"/>
+      </div>
   </div>
 </template>
 
@@ -126,6 +128,7 @@ export default {
       menulist:'menulist_default',
       Earthlist:'Earth_default',
       OpacityNum:1,
+      OpacityNum_Earth:1,
       Earth_bg_form:'Earth_bg_form_w',
       z_index_Earth:1,
       z_index_menulist:2,
@@ -205,7 +208,7 @@ export default {
     },
     EarthClick(){
       if(this.Earthsrc == require('@/assets/icon_close_01.png')){
-        this.OpacityNum = 1
+        this.OpacityNum_Earth = 1
         this.Earthsrc = require('@/assets/icon_global_01.png')
         this.Earthsize = 'Earthsize'
         this.Earth_bg_form = 'Earth_bg_form_w'
@@ -215,7 +218,7 @@ export default {
         //   lo.Earthlist = 'Earth_default'
         // },500)
       }else{
-        this.OpacityNum = 0.5
+        this.OpacityNum_Earth = 0.5
         this.Earthsrc = require('@/assets/icon_close_01.png')
         this.Earthsize = 'Earthsize_x'
         this.Earth_bg_form = 'Earth_bg_form_g'

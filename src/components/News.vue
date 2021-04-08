@@ -14,69 +14,6 @@
               <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和麒麟] 台灣協和麒麟股份有限公司自2020年4月搬遷至新址</a></p>
             </dd>
           </div>
-          <div class="list">
-            <dt>2019年9月1日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和麒麟] 台灣協和醱酵麒麟股份有限公司更名爲台灣協和麒麟股份有限公司</a></p>
-            </dd>
-          </div>
-          <div class="list">
-            <dt>2018年6月25日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和醱酵麒麟] 公司新藥Lumicef「立美西膚皮下注射劑210毫克」</a></p>
-            </dd>
-          </div> 
-          <div class="list">
-            <dt>2016年3月17日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[新聞澄清] KH NeoChem Co., Ltd. 並非 本公司之日本總公司(KHK)集團的公司。</a></p>
-            </dd>
-          </div>
-          <div class="list">
-            <dt>2016年1月25日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和醱酵麒麟] 公司已上市藥品-恩沛板注射用凍晶粉末，英文商品名將以Romiplate 取代Nplate 之現有品項。</a></p>
-            </dd>
-          </div>
-          <div class="list">
-            <dt>2014年8月13日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和醱酵麒麟] 公司已上市藥品-耐血比注射劑，將以0.5ml 取代1.0ml 之現有品項。</a></p>
-            </dd>
-          </div>
-          <div class="list">
-            <dt>2013年11月20日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和醱酵麒麟] 公司新藥Sancuso「貼固守」上市</a></p>
-            </dd>
-          </div>
-          <div class="list">
-            <dt>2013年10月31日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和醱酵麒麟] 公司新藥Nplate「恩沛板」上市</a></p>
-            </dd>
-          </div>
-          <div class="list">
-            <dt>2013年8月30日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和醱酵麒麟] 公司新藥「貼固守穿皮貼片劑」與「恩沛板」之健保價生效</a></p>
-            </dd>
-          </div>
-          <div class="list">
-            <dt>2013年6月28日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和醱酵麒麟] 公司網站即將上線</a></p>
-            </dd>
-          </div>
-          <div class="list">
-            <dt>2013年6月28日</dt>
-            <dd>
-              <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">[台灣協和醱酵麒麟] 公司即將有新藥在台灣推廣上市</a></p>
-            </dd>
-          </div>
-          <div class="showMore">
-            <font> SHOW MORE ﹀ </font>
-          </div>
         </dl>
       </div>
     </div>
