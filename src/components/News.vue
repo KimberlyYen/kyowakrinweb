@@ -1,5 +1,5 @@
 <template>
-  <div class="ContactUs">
+  <div class="News">
     <div class="inner" >
       <div class="mod-heading-l1">
         <p class="title">最新消息</p>
@@ -79,7 +79,7 @@ export default {
   border-right:1px solid black;
   border-bottom:1px solid black;
 }
-.ContactUs {
+.News {
   height:100vh;
   padding-top: 52px;
   padding-bottom: 100px;
