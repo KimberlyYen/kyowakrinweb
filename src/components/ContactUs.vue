@@ -166,7 +166,7 @@
     box-shadow: none;
   }
 
-  :hover .button_1 {
+  .button_1:hover {
     background-color: white;
     color: #ea5504;
     text-decoration: underline;
