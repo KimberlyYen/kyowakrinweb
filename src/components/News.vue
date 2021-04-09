@@ -104,7 +104,6 @@ export default {
   position: absolute;
 }
 .title {
-  //border:#0000FF 5px solid;
   top: 50%;
   right: 50%;
   width: 100%;
