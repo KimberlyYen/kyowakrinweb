@@ -134,6 +134,7 @@ dd {
 .news-a {
   color: #5D6164;
 }
+
 .showMore {
   font-weight: 7
   

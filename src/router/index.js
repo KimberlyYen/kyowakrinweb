@@ -7,6 +7,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Expansion from '@/components/Expansion'
 import Privacy from '@/components/Privacy'
+import law from '@/components/law'
+import ContactUs from '@/components/ContactUs'
+
 
 Vue.use(Router)
 
@@ -37,6 +40,16 @@ export default new Router({
           name: 'Privacy',
           component: Privacy
         },
+        {
+          path: '/law',
+          name: 'law',
+          component: law
+        },
+        {
+          path: '/ContactUs',
+          name: 'ContactUs',
+          component: ContactUs
+        },        
       ]
     },
     {//Object
