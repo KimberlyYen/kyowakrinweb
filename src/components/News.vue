@@ -13,15 +13,15 @@
               <dt>{{items.date}}</dt>
               <dd>
                 <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" style="font-weight:bold" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">{{items.content}}</a></p>
-                <p class="ml-5" style="color:#5d6164">{{items.detail}}</p>
-                <p class="ml-5" style="color:#5d6164">{{items.detail_}}</p>
+                <p class="ml-5" style="color:#a5a5a5">{{items.detail}}</p>
+                <p class="ml-5" style="color:#a5a5a5">{{items.detail_}}</p>
               </dd>
             </div>
           </div>
         </dl>
       </div>
     </div>
-    <div @click="SHOW_MORE_click()" style="height:25px;cursor:pointer;font-size:2rem;" class="row d-flex justify-content-center p-0 m-0">SHOW MORE<div class="expand ml-4 mt-1"></div></div>
+    <div @click="SHOW_MORE_click()" style="font-weight: 500;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;" class="row d-flex justify-content-center p-0 m-0">SHOW MORE<div class="expand ml-4 mt-1" style="color:#5d6164;"></div></div>
     <Footer-bg></Footer-bg>
   </div>
 </template>
