@@ -1,47 +1,100 @@
 <template>
   <div class="Home">
-    <div class="bg_cp" >
-      <div v-html="Title" style="position:relative;top:150px;color:white;max-width:800px;width:100%;height:200px;min-width:350px;text-align:left;"></div>
-    </div>
-    <div class="bg_mobile">
-      <div v-html="Title" style="position:relative;top:80px;color:white;max-width:345px;width:100%;min-width:320px;height:200px;text-align:left;"></div>
-    </div>
-    <div class="d-flex justify-content-center pt-5 pb-5 pl-5 pr-5" style="width:100vw;background-color:#F3F3F3;">
-      <div style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);">
-        <div style="font-size:3rem;font-weight:bold;text-align:left;">{{NewInformation}}</div><br />
-        <div class="row p-0 m-0">
-          <div class="col-12 col-md-8 p-0 m-0" style="text-align:left;">
-            <div v-for="(items,index) in NewsListObj" :key="index">
-              <div class="row p-0 m-0" v-if="index < ShowNum">
-                <div class="col-4 col-md-2  p-0 m-0 font_size" style="color:#5D6164;">{{items.date}}</div><div class="col-8 col-md-10 p-0 m-0 font_size" style="color:#009DE1;">{{items.content}}</div>
+    <div :class="disabled">
+      <div class="bg_cp" >
+        <div v-html="Title" style="position:relative;top:150px;color:white;max-width:800px;width:100%;height:200px;min-width:350px;text-align:left;"></div>
+      </div>
+      <div class="bg_mobile">
+        <div v-html="Title" style="position:relative;top:80px;color:white;max-width:345px;width:100%;min-width:320px;height:200px;text-align:left;"></div>
+      </div>
+      <div class="d-flex justify-content-center pt-5 pb-5 pl-5 pr-5" style="width:100vw;background-color:#F3F3F3;">
+        <div style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);">
+          <div style="font-size:3rem;font-weight:bold;text-align:left;">{{NewInformation}}</div><br />
+          <div class="row p-0 m-0">
+            <div class="col-12 col-md-8 p-0 m-0" style="text-align:left;">
+              <div v-for="(items,index) in NewsListObj" :key="index">
+                <div class="row p-0 m-0" v-if="index < ShowNum">
+                  <div class="col-4 col-md-2  p-0 m-0 font_size" style="color:#5D6164;">{{items.date}}</div><div class="col-8 col-md-10 p-0 m-0 font_size" style="color:#009DE1;">{{items.content}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 p-0 m-0 mt-5 mt-md-0 d-flex justify-content-center align-items-center">
+              <div @click="ToNews()" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>更多資訊</font><font style="position:absolute;right:20px">➝</font>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4 p-0 m-0 mt-5 mt-md-0 d-flex justify-content-center align-items-center">
-            <div @click="ToNews()" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>更多資訊</font><font style="position:absolute;right:20px">➝</font>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
+        <div class="d-flex justify-content-center align-items-center" style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">專注的領域</div>
+      </div>
+        <div class="d-flex justify-content-center" style="width:100vw">
+        <div class="d-flex justify-content-center align-items-center p-0 pl-5 pr-5" style="max-width:1000px;min-width:320px;width:100%;color:#5D6164;font-size:2rem;">公司的產品專注於血液腫瘤科，腎臟科與免疫科的治療領域。</div>
+      </div>
+      <div class="d-flex justify-content-center pro_height">
+        <div  style="position:relative;max-width:1200px;min-width:350px;width:100%;">
+          <div class="d-flex justify-content-center" style="position:relative;top:140px;width:100%;height:100%">
+            <div @click="ToNews()"  style="font-size:1.5rem;background-color:#F3F3F3;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>我們的產品</font><font style="position:absolute;right:20px">➝</font></div>
+          </div>
+          <div class="svg_1 bg_svg_1" style="left:0px;top:0"><font style="color:white;position:relative;top:20%;">Nephrology</font></div>
+          <div class="svg_1 bg_svg_2 positioncss_left" style="top:180px" ><font style="color:white;position:relative;top:50%;">Oncology</font></div>
+          <div class="svg_1 bg_svg_3 positioncss_right" style="top:180px" ><font style="color:white;position:relative;top:20%;">Central nervous<br /> system (CNS)</font></div>
+          <div class="svg_1 bg_svg_4" style="right:0px;top:0" ><font style="color:white;position:relative;top:40%;">Immunology <br />& Allergy</font></div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center pt-5 pb-5" style="width:100vw;background-color:rgb(243, 243, 243);">
+        <div class="d-flex justify-content-center align-items-center" style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">快速導覽</div>
+      </div>
+      <div class="d-flex justify-content-center pt-4 pb-5" style="width:100vw;background-color:rgb(243, 243, 243);color:#5D6164;font-size:2rem">我們利用生命科學和技術的創新力量幫助患者過上更好的生活</div>
+      <div class="d-flex justify-content-center pt-5 pb-5" style="width:100vw;background-color:rgb(243, 243, 243);">
+        <!-- <video width="320" height="240" src="" >
+        </video> -->
+        <div class="d-flex justify-content-center" style="max-width:1000px;min-width:320px;width:90%;">
+          <div @click="ShowVedio(1)"  class="d-flex justify-content-center align-items-center vedio_img pic">
+            <img src="../assets/icon_movie_01.png">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center pt-0" style="width:100vw;background-color:rgb(243, 243, 243);padding-bottom:100px">
+        <div style="max-width:1000px;min-width:320px;width:100%;">
+          <div class="row p-0 m-0 mb-5 justify-content-center">
+            <div @mouseover="Arrow(1)" @mouseleave="ArrowBack(1)" class="d-flex justify-content-center align-items-center pic" style="cursor:pointer;position:relative">
+              <img class="imgsize1" src="../assets/29595215.jpg">
+              <font style="position:absolute;top:5px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">我們的產品</font>
+              <font id="arrow1" style="position:absolute;top:25px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">→</font>
+            </div>
+            <div @mouseover="Arrow(2)" @mouseleave="ArrowBack(2)" class="d-flex justify-content-center align-items-center pic ml-0 ml-md-5 mt-5 mt-md-0" style="cursor:pointer;position:relative">
+              <img class="imgsize2" src="../assets/首頁69480419.jpg">
+              <font style="position:absolute;top:5px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">關於我們</font>
+              <font id="arrow2" style="position:absolute;top:25px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">→</font>
+            </div>
+          </div>
+          <div class="row p-0 m-0 justify-content-center">
+            <div @mouseover="Arrow(3)" @mouseleave="ArrowBack(3)" class="d-flex justify-content-center align-items-center pic" style="cursor:pointer;position:relative">
+              <img class="imgsize3" style="height:260px;width:520px" src="../assets/66253614.jpg">
+              <font style="position:absolute;top:5px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">最新消息</font>
+              <font id="arrow3" style="position:absolute;top:25px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">→</font>
+            </div>
+            <div @mouseover="Arrow(4)" @mouseleave="ArrowBack(4)" class="d-flex justify-content-center align-items-center pic ml-0 ml-md-5 mt-5 mt-md-0" style="cursor:pointer;position:relative">
+              <img class="imgsize4" style="height:260px;width:255px" src="../assets/world.png">
+              <font style="position:absolute;top:5px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px white;">亞太分佈圖</font>
+              <font id="arrow4" style="position:absolute;top:25px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px white;">→</font>
             </div>
           </div>
         </div>
       </div>
+      <Footer-bg></Footer-bg>
     </div>
-    <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
-      <div class="d-flex justify-content-center align-items-center" style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">專注的領域</div>
+    <div v-if="showvedio" style="position:fixed;top:0;left:0;height:100vh;width:100vw;background-color:black;z-index:2;opacity:0.8">
+
     </div>
-      <div class="d-flex justify-content-center" style="width:100vw">
-      <div class="d-flex justify-content-center align-items-center p-0 pl-5 pr-5" style="max-width:1000px;min-width:320px;width:100%;color:#5D6164;font-size:2rem;">公司的產品專注於血液腫瘤科，腎臟科與免疫科的治療領域。</div>
-    </div>
-    <div class="d-flex justify-content-center" style="height:600px;width:100vw">
-      <div  style="position:relative;max-width:1200px;min-width:350px;width:100%;">
-        <div class="d-flex justify-content-center" style="position:relative;top:140px;width:100%;height:100%">
-          <div @click="ToNews()"  style="font-size:1.5rem;background-color:#F3F3F3;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>我們的產品</font><font style="position:absolute;right:20px">➝</font></div>
-        </div>
-        <div class="svg_1 bg_svg_1" style="left:0px;top:0"><font style="color:white;position:relative;top:20%;">Nephrology</font></div>
-        <div class="svg_1 bg_svg_2 positioncss_left" style="top:180px" ><font style="color:white;position:relative;top:50%;">Oncology</font></div>
-        <div class="svg_1 bg_svg_3 positioncss_right" style="top:180px" ><font style="color:white;position:relative;top:20%;">Central nervous<br /> system (CNS)</font></div>
-        <div class="svg_1 bg_svg_4" style="right:0px;top:0" ><font style="color:white;position:relative;top:40%;">Immunology <br />& Allergy</font></div>
+    <div v-if="showvedio" class="d-flex justify-content-center row p-0 m-0" style="position:fixed;top:25%;left:0;width:100%;z-index:3">
+      <div  class="col-12 col-md-8" style="position:relative;">
+        <div @click="ShowVedio(2)" style="position:absolute;top:0;right:15px;font-size:3rem;cursor:pointer;z-index:3;color:white">╳</div>
       </div>
+      <iframe class="col-12 col-md-8 p-0 m-0" style="height:500px;border:0" src="https://www.youtube.com/embed/So2GnXRadcI?rel=0" title="Kyowa Kirin Corporate Video" allow="autoplay; encrypted-media" allowfullscreen="true" loading="lazy">
+      </iframe>
     </div>
-    <Footer-bg></Footer-bg>
   </div>
 </template>
 
@@ -61,6 +114,24 @@ export default {
       .catch(err => {
         console.log(err)
       })
+    },
+    Arrow(index){
+      $('#arrow'+index).animate({left:'30px'},'fast');
+    },
+    ArrowBack(index){
+      $('#arrow'+index).animate({left:'15px'},'fast');
+    },
+    ShowVedio(index){
+      switch(index){
+        case 1:
+          this.showvedio = true
+          this.disabled = 'disabled'
+          break;
+        case 2:
+          this.showvedio = false
+          this.disabled = 'disable'
+          break; 
+      }
     }
   },
   data () {
@@ -83,7 +154,9 @@ export default {
         {date:'2013年6月28日',content:'[台灣協和醱酵麒麟] 公司即將有新藥在台灣推廣上市',detail:'台灣協和醱酵麒麟公司將於近期內上市推廣兩項新藥，分別為(1)中文名:貼固守穿皮貼片劑，英文名:Sancuso transdermal patch 3.1mg/24hour(Granisetron);(2)中文名:恩沛板注射用凍晶粉末，英文名:Nplate injection(Romiplostim)。'
         },
       ],
-      ShowNum:5
+      ShowNum:5,
+      showvedio:false,
+      disabled:'disable'
     }
   }
 }
@@ -151,6 +224,22 @@ export default {
 }
 /*computer*/
 @media (min-width: 769px){
+  .imgsize1{
+    height:260px;
+    width:255px;
+  }
+  .imgsize2{
+    height:260px;
+    width:520px
+  }
+  .imgsize3{
+    height:260px;
+    width:520px
+  }
+  .imgsize4{
+    height:260px;
+    width:255px;
+  }
   .bg_cp {
     display: flex;
     height: 600px;
@@ -178,9 +267,29 @@ export default {
   .margin_{
     margin:80px auto 0 auto;
   }
+  .pro_height{
+    height:500px;
+    width:100vw
+  }
 }
 /*mobile*/
 @media (min-width: 320px) and (max-width:768px) {
+  .imgsize1{
+    width:90vw !important;
+  }
+  .imgsize2{
+    width:90vw !important;
+  }
+  .imgsize3{
+    width:90vw !important;
+  }
+  .imgsize4{
+    width:90vw !important;
+  }
+  .pro_height{
+    height:350px;
+    width:100vw
+  }
   .margin_{
     margin:80px auto 0 auto;
   }
@@ -235,6 +344,22 @@ export default {
     z-index: 1;
     font-size: 2rem;
   }
+}
+.pic{overflow:hidden;}
+.pic img{transform:scale(1,1);transition: all 1s ease-out;}
+.pic img:hover{transform:scale(1.2,1.2);}
+.disable{
+  pointer-events: initial;
+}
+.disabled{
+  pointer-events: none;
+}
+.vedio_img{
+  height: 400px;
+  width: 800px;
+  background-repeat: no-repeat;
+  background-image: url("../assets/video_bg.png");
+  cursor: pointer;
 }
 .bg_svg_1{
   background-image: url("../assets/kyowa-01.svg");
