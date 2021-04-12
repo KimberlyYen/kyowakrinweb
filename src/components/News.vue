@@ -21,7 +21,7 @@
         </dl>
       </div>
     </div>
-    <div @click="SHOW_MORE_click()" style="font-weight: 500;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;" class="row d-flex justify-content-center p-0 m-0">SHOW MORE<div class="expand ml-4 mt-1" style="color:#5d6164;"></div></div>
+    <div @click="SHOW_MORE_click()" style="font-weight: 600;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;padding-bottom: 120px;" class="row d-flex justify-content-center ">SHOW MORE<div class="expand ml-4 mt-1" style="color:#5d6164;"></div></div>
     <Footer-bg></Footer-bg>
   </div>
 </template>
@@ -76,8 +76,8 @@ export default {
   height:12.5px;
   width:12.5px;
   transform:rotate(45deg);
-  border-right:1px solid black;
-  border-bottom:1px solid black;
+  border-right: 2px solid #5d6164;
+  border-bottom: 2px solid #5d6164;
 }
 .News {
   height:100vh;
@@ -114,7 +114,7 @@ export default {
 }
 .str-outer {
   margin-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
 }
 .str-inner {
   max-width: 1000px;

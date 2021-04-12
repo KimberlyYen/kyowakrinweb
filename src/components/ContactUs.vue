@@ -1,6 +1,6 @@
 <template>
     <div class="News">
-        <!-- <div class="str-outer">
+        <div class="str-outer">
             <div class="str-inner">
                 <dl class="mod-list-description">
 
@@ -20,9 +20,9 @@
             
                 </dl>
             </div>
-        </div> -->
+        </div>
         <button class="button_1">點擊此處連結至諮詢表單</button>
-        <!-- <Footer-bg></Footer-bg> -->
+        <Footer-bg></Footer-bg>
     </div>
 </template>
   
@@ -158,6 +158,7 @@
     font-weight: bold;
     color: white;
     margin-top: 6vh;
+    margin-bottom: 3vh;
     border-radius: 30px;
     width: 100%;
     max-width: 415px;
