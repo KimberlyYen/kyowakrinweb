@@ -9,6 +9,8 @@ import Expansion from '@/components/Expansion'
 import Privacy from '@/components/Privacy'
 import law from '@/components/law'
 import ContactUs from '@/components/ContactUs'
+import Product from '@/components/Product'
+
 
 
 Vue.use(Router)
@@ -49,7 +51,12 @@ export default new Router({
           path: '/ContactUs',
           name: 'ContactUs',
           component: ContactUs
-        },        
+        },
+        {
+          path: '/Product',
+          name: 'Product',
+          component: Product
+        },
       ]
     },
     {//Object

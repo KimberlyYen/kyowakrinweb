@@ -20,8 +20,8 @@
             
                 </dl>
             </div>
-        </div>
-        <button class="button_1">點擊此處連結至諮詢表單</button>
+          <button class="button_1">點擊此處連結至諮詢表單</button>
+          </div>
         <Footer-bg></Footer-bg>
     </div>
 </template>
@@ -168,7 +168,7 @@
   }
 
   .button_1:hover {
-    background-color: white;
+    background-color: #FCCAAD;
     color: #ea5504;
     text-decoration: underline;
     }
