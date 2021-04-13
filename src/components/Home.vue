@@ -289,7 +289,7 @@ export default {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../assets/video_bg.png");
+    background-image: url("../assets/video_mobile_bg.png");
     cursor: pointer;
   }
   .imgsize1{
