@@ -169,7 +169,7 @@ components: {
                 address:'Address: 801 Toa Payoh Lorong 7 <br /> #06-06 Wearnes Building <br /> Singapore 319319.<br /><br/>Phone : +65-6253 2938<br/>Fax: +65 6836 3928<br />E-mail: Info-KKAP@kyowakirin.com',
                 visitwebsite:'VISITWEBSITE',
                 data:'<div style="text-align:left;margin-top:30px"><div style="font-size: 1.6rem;color: #5d6164;display: block;margin-bottom: 10px;font-weight: 600;">Distributor: Steward Cross Pte Ltd </div><div style="color:#5d6164;font-size:1.4rem">Address: 801 Toa Payoh Lorong 7<br /> #06-06 Wearnes Building<br /> Singapore 319319.<br />Phone : +65-6253 2938</div></div>',
-                src:require('@/assets/map.png')
+                src:require('@/assets/index_img_regionalnetwork_panel_singapore_01.jpg')
             },
             {
                 title:'AUSTRALIA',
