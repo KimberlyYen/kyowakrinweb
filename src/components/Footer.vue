@@ -5,7 +5,7 @@
           <div class="d-flex justify-content-center" style="width:100%;">
             <div class="row p-0 m-0" style="max-width:980px;width:calc(100% + -250px);">
                 <div class="col p-0 m-0"> 
-                    <div class="fontcss d-flex jusitfy-content-start">我們的產品</div>
+                    <div @click="Product()" class="fontcss d-flex jusitfy-content-start">我們的產品</div>
                     <div class="fontcss d-flex jusitfy-content-start">關於我們</div>
                 </div>
                 <div class="col p-0 m-0">
@@ -26,7 +26,7 @@
             <img src="../assets/logo_footer.png" style="width:160px;margin-bottom:60px">
             <div class="row m-0" style="padding-left:100px">
                 <div class="col-6 p-0 m-0 text-left"> 
-                    <div class="fontcss mb-2">我們的產品</div>
+                    <div @click="Product()" class="fontcss mb-2">我們的產品</div>
                     <div class="fontcss mb-2">關於我們</div>
                     <div class="fontcss mb-2">法律聲明</div>
                     <div class="fontcss mb-2">隱私條款</div>
@@ -51,6 +51,15 @@ export default {
     }
   },
   methods:{
+    Product(){
+      this.$router
+      .push({
+        path: "Product",
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
   }
 }
 </script>
