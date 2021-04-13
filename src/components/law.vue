@@ -58,8 +58,9 @@
   
   /*computer*/
   
-  *{
+  * {
     font-family: Arial, sans-serif;
+    text-justify:inter-ideograph;
   }
   .expand{
     height:12.5px;
@@ -67,10 +68,6 @@
     transform:rotate(45deg);
     border-right:1px solid black;
     border-bottom:1px solid black;
-  }
-  
-  .mod-list-description{
-    text-justify:inter-ideograph
   }
   
   h1,h2,h3,h4 {
@@ -157,7 +154,7 @@
   }
   .mod-list-description {
     text-align: left;
-    line-height: 1.8;
+    line-height: 1.8;    
   }
   dt {
     font-size: 2rem;
@@ -181,11 +178,15 @@
   
   /*mobile*/
     @media (min-width: 320px) and (max-width:768px) {
+      * {
+        text-align: justify;
+        text-justify:inter-ideograph;
+      }
       .str-outer {
-          position: relative;
-          min-height: 250px;
-          padding-right: calc(46px/2);
-          padding-left: calc(46px/2);
+        position: relative;
+        min-height: 250px;
+        padding-right: calc(46px/2);
+        padding-left: calc(46px/2);
       }
     }
   

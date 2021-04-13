@@ -200,6 +200,8 @@
   /*mobile*/
     @media (min-width: 320px) and (max-width:768px) {
       .str-outer {
+          text-align: justify;
+          text-justify:inter-ideograph;
           position: relative;
           min-height: 250px;
           padding-right: calc(46px/2);
