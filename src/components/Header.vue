@@ -1,5 +1,5 @@
 <template>
-  <div class="Header" id ='Headerdiv'>
+  <div class="Header">
       <div class="header_ row p-0 m-0" style="z-index:3">
         <div class="col-6 col-md-3 col-xl-6 p-0 m-0 pl-5 d-flex justify-content-start align-items-center"> 
           <img @click="Click_Title(0)" style="width:153px;height:26px;cursor:pointer" src="../assets/logo_header_01.png">
@@ -40,7 +40,7 @@
         </div>
       </div>
       <div :class="menulist" :style="{'z-index':z_index_menulist}">
-        <img style="width:100vw;height:50vh;position:absolute" src="../assets/bg_header_sp_01.png">
+        <img style="width:100vw;height:60vh;position:absolute" src="../assets/bg_header_sp_01.png">
         <div class="text-left" style="position:absolute">
           <div v-for="(items,index) in MenuListObj" :key="index" class="menulistitem" @click="Click_Title(items.index,true)">
             {{items.name}}
@@ -103,10 +103,10 @@
           </div>
         </div>
       </div>
-      <div @click="ScrollTop()" style="position:fixed;background-color:#ea5504;width:40px;height:40px;border-radius:50%;color:white;font-size:3rem;top:10px;right:10px;z-index:2">↑</div>
+      <div @click="scrollToTop()" class="scrollToTop-btn">↑</div>
       <!-- <font style="font-size:5rem !important">112334896</font> -->
       <div :style="{'opacity':OpacityNum_Earth}">
-        <router-view :style="{'opacity':OpacityNum}"/>
+        <router-view style="overflow:auto" :style="{'opacity':OpacityNum}"/>
       </div>
   </div>
 </template>
@@ -173,12 +173,45 @@ export default {
         {name:'我們的產品',index:2},
         {name:'最新消息',index:3},
         {name:'亞太分佈圖',index:4}
-      ]
+      ],
+      scrollTop: null,
+      isScrollTop: false
     }
   },
+  mounted(){
+    window.addEventListener('scroll', () => {
+      this.scrollTop = document.documentElement.scrollTop ||
+                        window.pageYOffset ||
+                        document.body.scrollTop ||
+                        document.querySelector(this.el).scrollTop;
+      if (this.scrollTop > 150) {
+        this.isScrollTop = true;
+      } else {
+        this.isScrollTop = false;
+      }
+    }, true);
+  },
   methods:{
-    ScrollTop(){
-      document.getElementById('Headerdiv').scrollTop = 0;
+    scrollToTop() {
+      let $this = this;
+      setTimeout(function animation() {
+        if ($this.scrollTop > 0) {
+          setTimeout(() => {
+            $this.scrollTop = $this.scrollTop - 30;
+            if(document.documentElement.scrollTop > 0) {
+              document.documentElement.scrollTop = $this.scrollTop - 30;
+            } else if (window.pageYOffset > 0) {
+              window.pageYOffset = $this.scrollTop - 30;
+            } else if (document.body.scrollTop > 0) {
+              document.body.scrollTop = $this.scrollTop - 30;
+            } else if (document.querySelector($this.el).scrollTop) {
+              document.querySelector($this.el).scrollTop = $this.scrollTop - 30;
+            }
+
+            animation();
+          }, 1);
+        }
+      }, 1);
     },
     EarthClickForSingapore(){
       location.href = 'https://www.kyowakirin.com/index.html#anc-global-network'
@@ -291,6 +324,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.scrollToTop-btn{
+  position:fixed;background-color:#ea5504;cursor:pointer;width:50px;height:50px;border-radius:50%;color:white;font-size:3rem;bottom:20px;right:20px;z-index:2
+}
+.scrollToTop-btn:hover{
+  position:fixed;background-color:#ea5504;cursor:pointer;width:50px;height:50px;border-radius:50%;color:white;font-size:3rem;bottom:20px;right:20px;z-index:2;box-shadow: 1px 1px 1px 1px #8b8b8b;
+}
 /*computer*/
   @media (min-width: 769px) {
     .header_{
