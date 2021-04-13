@@ -325,7 +325,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .scrollToTop-btn{
-  position:fixed;background-color:#ea5504;cursor:pointer;width:50px;height:50px;border-radius:50%;color:white;font-size:3rem;bottom:20px;right:20px;z-index:2
+  position:fixed;background-color:#ea5504;cursor:pointer;width:50px;height:50px;border-radius:50%;color:white;font-size:3rem;bottom:20px;right:20px;z-index:2;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .scrollToTop-btn:hover{
   position:fixed;background-color:#ea5504;cursor:pointer;width:50px;height:50px;border-radius:50%;color:white;font-size:3rem;bottom:20px;right:20px;z-index:2;box-shadow: 1px 1px 1px 1px #8b8b8b;
