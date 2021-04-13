@@ -26,16 +26,105 @@
       <div class="bg_middle_PCmobile">
         <div v-html="Title" style="position:relative;margin-top: 10vh;color:white;width:100%;height:200px;text-align:center;"></div>
       </div>
-      <div class="str-section">
-         <div class="box-hdg2-wrapper">
-             <div class="box-layout">
-                 <div class="box-content"></div>
+      <div class="container" style="margin: 0 auto;">
+         <div class="box-hdg2-wrapper" style="margin: auto;justify-items: center; width: 800px;padding-bottom: 5h;">
+             <div class="row">
+                <div class="box-image col-4">
+                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                </div>
+                <div class="box-text col-7 p-5">
                     <h3 class="hdg-lv2-05">CRYSVITA®</h3>
-                    <div class="box-text"></div>
-                     <p>CRYSVITA® (burosumab) is a recombinant fully human monoclonal lgG1 antibody against the phosphaturic hormone fibroblast growth factor 23 (FGF23). By locking excess FGF23 in patients, CRYSVITA® is intended to increase phosphate reabsorption in the kidney and increase the production of vitamin D, which enhances intestinal absorption of phosphate and calcium in patients with X linked hypophosphatemia.</p>
-                 <div class="box-image">
-                    <img src="images/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
-                 </div>
+                    <font> 適應症：性聯遺傳型低磷酸鹽症(X-linked hypophosphatemia，XLH)：
+                        適用於1歲以上兒童與青少年，及合併有XLH相關骨骼疾病之成人。</font>
+                </div>
+             </div>
+             <div class="row">
+                <div class="box-image col-4">
+                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                </div>
+                <div class="box-text col-7 p-5">
+                    <h3 class="hdg-lv2-05">GRAN®</h3>
+                    <p> (1)動員造血幹細胞至周邊血中。</p>
+                    <p> (2)促進造血幹細胞移植時嗜中性白血球數的增加。</p>
+                    <p> (3)癌症化學療法所引起之嗜中性白血球減少症。</p>
+                    <p> (4)骨髓發育不良症候群的嗜中性白血球缺乏症。</p>
+                    <p> (5)先天性、特異性嗜中性白血球缺乏症。 </p>
+                </div>
+             </div>
+             <div class="row">
+                <div class="box-image col-4">
+                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                </div>
+                <div class="box-text col-7 p-5">
+                    <h3 class="hdg-lv2-05">LUMICEF®</h3>
+                    <p> 適應症：</p>
+                    <p> (1)治療適合接受全身性治療的中至重度斑塊性乾癬成人病人。</p>
+                    <p> (2)治療適合接受全身性治療的膿疱性乾癬之成人病人。</p>
+                    <p> (3)治療對疾病緩解型抗風濕性藥物(DMARDs)無效或無法耐受的</p>
+                    <p> 活動性乾癬性關節炎成人病人。</p>
+                </div>
+             </div>
+             <div class="row">
+                <div class="box-image col-4">
+                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                </div>
+                <div class="box-text col-7 p-5">
+                    <h3 class="hdg-lv2-05">NESP®</h3>
+                    <p>  適應症：治療與慢性腎臟功能失調有關的貧血症狀或因此而需要輸血的患者，</p>
+                    <p>  治療與癌症化學治療有關的症狀性貧血。</p>
+                </div>
+             </div>
+             <div class="row">
+                <div class="box-image col-4">
+                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                </div>
+                <div class="box-text col-7 p-5">
+                    <h3 class="hdg-lv2-05">Sancuso®</h3>
+                    <p>  適應症：</p>
+                    <p>  預防連續5天使用中度及/或高度致吐性化學療法療程的病人</p>
+                    <p>  所引起的噁心及嘔吐。 </p>
+                </div>
+             </div>
+             <div class="row">
+                <div class="box-image col-4">
+                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                </div>
+                <div class="box-text col-7 p-5">
+                    <h3 class="hdg-lv2-05">REGPARA®</h3>
+                    <p> 適應症：</p>
+                    <p> 治療透析患者的次發性副甲狀腺機能亢進。</p>
+                </div>
+             </div>
+             <div class="row">
+                <div class="box-image col-4">
+                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                </div>
+                <div class="box-text col-7 p-5">
+                    <h3 class="hdg-lv2-05">Romiplate®</h3>
+                    <p> 適應症：</p>
+                        <p> (1)用於治療在脾臟切除後且對於其他治療(例如:類固醇、免疫球蛋白等)失敗之成年慢性自發性(免疫性)血小板缺乏紫斑症(ITP)患者，或對於不適合進行脾臟切除之成年慢性自發性(免疫性)血小板缺乏紫斑症(ITP)患者之第二線治療。</p>
+                        <p> (2)適用在對免疫抑制療法反應不佳的嚴重再生不良性貧血病人。</p>
+                </div>
+             </div>
+             <div class="row">
+                <div class="box-image col-4">
+                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                </div>
+                <div class="box-text col-7 p-5">
+                    <h3 class="hdg-lv2-05">Neulasta®</h3>
+                    <font> 適應症：
+                        適用於非骨髓性癌症患者在接受易引起臨床上有顯著發生率的嗜中性白血球減少症合併發燒之骨髓抑制性抗癌藥物治療時，以降低嗜中性白血球減少症合併發燒為表現之感染發生率。 </font>
+                </div>
+             </div>
+             <div class="row">
+                <div class="box-image col-4">
+                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                </div>
+                <div class="box-text col-7 p-5">
+                    <h3 class="hdg-lv2-05">Leunase®</h3>
+                    <font>適應症：
+                        適用於非骨髓性癌症患者在接受易引起臨床上有顯著發生率的嗜中性白血球減少症合併發燒之骨髓抑制性抗癌藥物治療時，以降低嗜中性白血球減少症合併發燒為表現之感染發生率。</font>
+                </div>
              </div>
          </div> 
       </div>
@@ -87,208 +176,213 @@
   }
   </script>
   
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped>
-  @media (min-width: 1025px){
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    * {
+        font-family: Arial, "微軟正黑體", sans-serif;
+    }
+    font,p {
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+    h3{
+        font-size: 2.3rem;
+        margin-bottom: 1vh;
+        color: #ea5504;
+    }
+    .row {
+        margin: 3vh;
+    }
+    .box-image{
+        margin-right: 20px;
+        /* background-color: rgb(181, 253, 203); */
+    }
+    .box-text {
+        text-align: left;
+        /* background-color: rgb(242, 255, 182); */
+    }
+
+@media (min-width: 1025px){
     @keyframes expand {
-      from { height: 256px; width: 256px;}
-      to { height: 400px; width: 400px;}
+        from { height: 256px; width: 256px;}
+        to { height: 400px; width: 400px;}
     }
     @keyframes tight {
         from { height: 400px;width: 400px;}
         to { height: 256px; width: 256px;}
     }
     .svg_1{
-      height: 256px;
-      width: 256px;
-      position: absolute;
-      animation-name: tight;    /*動畫名稱，需與 keyframe 名稱對應*/
-      animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
-      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
-      font-size: 1.5rem;
+        height: 256px;
+        width: 256px;
+        position: absolute;
+        animation-name: tight;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+        font-size: 1.5rem;
     }
     .svg_1:hover{
-      height: 400px;
-      width: 400px;
-      position: absolute;
-      animation-name: expand;    /*動畫名稱，需與 keyframe 名稱對應*/
-      animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
-      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
-      z-index: 1;
-      font-size: 2rem;
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        animation-name: expand;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+        z-index: 1;
+        font-size: 2rem;
     }
-  }
-  @media (min-width: 769px) and (max-width: 1024px){
+}
+@media (min-width: 769px) and (max-width: 1024px){
     @keyframes expand {
-      from { height: 175px; width: 175px;}
-      to { height: 300px; width: 300px;}
+        from { height: 175px; width: 175px;}
+        to { height: 300px; width: 300px;}
     }
     @keyframes tight {
         from { height: 300px;width: 300px; }
         to { height: 175px; width: 175px;}
     }
     .svg_1{
-      height: 175px;
-      width: 175px;
-      position: absolute;
-      animation-name: tight;    /*動畫名稱，需與 keyframe 名稱對應*/
-      animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
-      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
-      font-size: 1.5rem;
+        height: 175px;
+        width: 175px;
+        position: absolute;
+        animation-name: tight;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+        font-size: 1.5rem;
     }
     .svg_1:hover{
-      height: 300px;
-      width: 300px;
-      position: absolute;
-      animation-name: expand;    /*動畫名稱，需與 keyframe 名稱對應*/
-      animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
-      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
-      z-index: 1;
-      font-size: 2rem;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        animation-name: expand;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+        z-index: 1;
+        font-size: 2rem;
     }
     .str-section {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: blue;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: blue;
     }
-    .box-hdg2-wrapper {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-bottom: 30px;
-    background-color: burlywood;
-    }
-    .box-layout {
-    padding-right: 0;
-    padding-left: 30px;
-    background-color: cornflowerblue;
-    }
-    .box-content{
-    background-color: crimson;
-    }
-  }
-  /*computer*/
-  @media (min-width: 769px){
+}
+/*computer*/
+@media (min-width: 769px){
     .bg_cp {
-      display: flex;
-      height: 600px;
-      background-position: center;
-      background-size: cover;
-      background-image: url("../assets/29595215-2.png");
-      justify-content: center;
+        display: flex;
+        height: 600px;
+        background-position: center;
+        background-size: cover;
+        background-image: url("../assets/29595215-2.png");
+        justify-content: center;
     }
-    /* .bg_mobile {
-      height: 600px;
-      display: none;
-      background-position: center;
-      background-size: cover;
-      background-image: url("../assets/30093347-2.jpg");
-    } */
     .bg_middle_PCmobile {
-      min-height: 300px;
-      display: flex;
-      background-position: center;
-      background-size: cover;
-      background-image: url("../assets/index_bg_section_blue_01.png");
+        min-height: 300px;
+        display: flex;
+        background-position: center;
+        background-size: cover;
+        background-image: url("../assets/index_bg_section_blue_01.png");
+    }
+    .str-section{
+        max-width: 800px
     }
     .font_size{
-      font-size: 1.4rem;
+        font-size: 1.4rem;
     }
     .positioncss_right{
-      right:180px;
+        right:180px;
     }
     .positioncss_left{
-      left:180px;
+        left:180px;
     }
     .margin_{
-      margin:80px auto 0 auto;
+        margin:80px auto 0 auto;
     }
-  }
-  /*mobile*/
-  @media (min-width: 320px) and (max-width:768px) {
+}
+/*mobile*/
+    @media (min-width: 320px) and (max-width:768px) {
     .margin_{
-      margin:80px auto 0 auto;
+        margin:80px auto 0 auto;
     }
     .bg_cp {
-      display: flex;
-      height: 300px;
-      background-position: center;
-      background-size: cover;
-      background-image: url("../assets/29595215-2.png");
-      justify-content: center;
+        display: flex;
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+        background-image: url("../assets/29595215-2.png");
+        justify-content: center;
     }
     /* .bg_mobile {
-      height: 450px;
-      display: flex;
-      background-position: center;
-      background-size: cover;
-      background-image: url("../assets/30093347-2.jpg");
-      justify-content: center;
+        height: 450px;
+        display: flex;
+        background-position: center;
+        background-size: cover;
+        background-image: url("../assets/30093347-2.jpg");
+        justify-content: center;
     } */
     .positioncss_right{
-      right:0px;
+        right:0px;
     }
     .positioncss_left{
-      left:0px;
+        left:0px;
     }
     .font_size{
-      font-size: 1.4rem;
+        font-size: 1.4rem;
     }
     @keyframes expand {
-      from { height: 150px;width: 150px; }
-      to { height: 200px; }
+        from { height: 150px;width: 150px; }
+        to { height: 200px; }
     }
     @keyframes tight {
         from { height: 150px; width: 200px;}
         to { height: 100px; }
     }
     .svg_1{
-      height: 150px;
-      width: 150px;
-      position: absolute;
-      animation-name: tight;    /*動畫名稱，需與 keyframe 名稱對應*/
-      animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
-      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
-      font-size: 1.5rem;
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        animation-name: tight;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+        font-size: 1.5rem;
     }
     .svg_1:hover{
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      animation-name: expand;    /*動畫名稱，需與 keyframe 名稱對應*/
-      animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
-      animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
-      z-index: 1;
-      font-size: 2rem;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        animation-name: expand;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+        z-index: 1;
+        font-size: 2rem;
     }
-  }
-  .bg_svg_1{
+    }
+    .bg_svg_1{
     background-image: url("../assets/kyowa-01.svg");
-  }
-  .bg_svg_2{
+    }
+    .bg_svg_2{
     background-image: url("../assets/kyowa-02.svg");
-  }
-  .bg_svg_3{
+    }
+    .bg_svg_3{
     background-image: url("../assets/kyowa-03.svg");
-  }
-  .bg_svg_4{
+    }
+    .bg_svg_4{
     background-image: url("../assets/kyowa-04.svg");
-  }
-  .Product{
+    }
+    .Product{
     padding-top: 52px;
-  }
-  h1, h2 {
+    }
+    h1, h2 {
     font-weight: normal;
-  }
-  ul {
+    }
+    ul {
     list-style-type: none;
     padding: 0;
-  }
-  li {
+    }
+    li {
     display: inline-block;
     margin: 0 10px;
-  }
-  a {
+    }
+    a {
     color: #42b983;
-  }
-  </style>
-  
+}
+</style>
