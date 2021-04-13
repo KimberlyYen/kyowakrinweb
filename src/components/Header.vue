@@ -188,6 +188,15 @@ export default {
         console.log(err)
       })
     },
+    GoOurAsiaPacificOffices(){
+      this.$router
+      .push({
+        path: "OurAsiaPacificOffices",
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
     ListClick(obj){
       for(var i=0 ; i <this.ContentObj.length ; i++){
           this.ContentObj[i].status = false
@@ -268,6 +277,7 @@ export default {
           break;
         case 4:
           this.Change_Title_Css(index)
+          this.GoOurAsiaPacificOffices()
           break;        
       }
     }
@@ -526,4 +536,7 @@ li {
 a {
   color: #42b983;
 }
+</style>
+<style>
+
 </style>
