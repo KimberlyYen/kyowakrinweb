@@ -83,16 +83,16 @@
           </div>
         </div>
       </div>
-      <Footer-bg></Footer-bg>
+      <Footer-bg style="background-color:#F3F3F3"></Footer-bg>
     </div>
     <div v-if="showvedio" style="position:fixed;top:0;left:0;height:100vh;width:100vw;background-color:black;z-index:2;opacity:0.8">
 
     </div>
-    <div v-if="showvedio" class="d-flex justify-content-center row p-0 m-0" style="position:fixed;top:25%;left:0;width:100%;z-index:3">
+    <div v-if="showvedio" class="d-flex justify-content-center row p-0 m-0" style="position:fixed;top:0;left:0;width:100%;z-index:3">
       <div  class="col-12 col-md-8" style="position:relative;">
         <div @click="ShowVedio(2)" style="position:absolute;top:0;right:15px;font-size:3rem;cursor:pointer;z-index:3;color:white">╳</div>
       </div>
-      <iframe class="col-12 col-md-8 p-0 m-0" style="height:500px;border:0" src="https://www.youtube.com/embed/So2GnXRadcI?rel=0" title="Kyowa Kirin Corporate Video" allow="autoplay; encrypted-media" allowfullscreen="true" loading="lazy">
+      <iframe class="col-12 col-md-8 p-0 m-0" style="height:100vh;width:100vw;border:0;" src="https://www.youtube.com/embed/So2GnXRadcI?rel=0" title="Kyowa Kirin Corporate Video" allow="autoplay; encrypted-media" allowfullscreen loading="lazy">
       </iframe>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="Header">
+  <div class="Header" id ='Headerdiv'>
       <div class="header_ row p-0 m-0" style="z-index:3">
         <div class="col-6 col-md-3 col-xl-6 p-0 m-0 pl-5 d-flex justify-content-start align-items-center"> 
           <img @click="Click_Title(0)" style="width:153px;height:26px;cursor:pointer" src="../assets/logo_header_01.png">
@@ -103,6 +103,7 @@
           </div>
         </div>
       </div>
+      <div @click="ScrollTop()" style="position:fixed;background-color:#ea5504;width:40px;height:40px;border-radius:50%;color:white;font-size:3rem;top:10px;right:10px;z-index:2">↑</div>
       <!-- <font style="font-size:5rem !important">112334896</font> -->
       <div :style="{'opacity':OpacityNum_Earth}">
         <router-view :style="{'opacity':OpacityNum}"/>
@@ -176,6 +177,9 @@ export default {
     }
   },
   methods:{
+    ScrollTop(){
+      document.getElementById('Headerdiv').scrollTop = 0;
+    },
     EarthClickForSingapore(){
       location.href = 'https://www.kyowakirin.com/index.html#anc-global-network'
     },
