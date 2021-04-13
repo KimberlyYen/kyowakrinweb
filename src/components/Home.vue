@@ -226,6 +226,13 @@ export default {
 }
 /*computer*/
 @media (min-width: 769px){
+  .vedio_img{
+    height: 400px;
+    width: 800px;
+    background-repeat: no-repeat;
+    background-image: url("../assets/video_bg.png");
+    cursor: pointer;
+  }
   .imgsize1{
     height:260px;
     width:255px;
@@ -276,6 +283,15 @@ export default {
 }
 /*mobile*/
 @media (min-width: 320px) and (max-width:768px) {
+  .vedio_img{
+    height: 400px;
+    width: 800px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../assets/video_bg.png");
+    cursor: pointer;
+  }
   .imgsize1{
     width:90vw !important;
   }
@@ -357,13 +373,6 @@ export default {
 }
 .disabled{
   pointer-events: none;
-}
-.vedio_img{
-  height: 400px;
-  width: 800px;
-  background-repeat: no-repeat;
-  background-image: url("../assets/video_bg.png");
-  cursor: pointer;
 }
 .bg_svg_1{
   background-image: url("../assets/kyowa-01.svg");
