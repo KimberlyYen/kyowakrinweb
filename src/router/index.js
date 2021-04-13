@@ -10,6 +10,7 @@ import Privacy from '@/components/Privacy'
 import law from '@/components/law'
 import ContactUs from '@/components/ContactUs'
 import Product from '@/components/Product'
+import OurAsiaPacificOffices from '@/components/OurAsiaPacificOffices'
 
 
 
@@ -57,6 +58,11 @@ export default new Router({
           name: 'Product',
           component: Product
         },
+        {
+          path: '/OurAsiaPacificOffices',
+          name: 'OurAsiaPacificOffices',
+          component: OurAsiaPacificOffices
+        }
       ]
     },
     {//Object

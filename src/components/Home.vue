@@ -101,7 +101,7 @@
 <script>
 import Footer from './Footer'
 export default {
-    components: {
+  components: {
     'Footer-bg':Footer
   },
   name: 'Home',
@@ -116,7 +116,9 @@ export default {
       })
     },
     Arrow(index){
-      $('#arrow'+index).animate({left:'30px'},'fast');
+      if($('#arrow'+index).css('left') == '15px'){
+        $('#arrow'+index).animate({left:'30px'},'fast');
+      }
     },
     ArrowBack(index){
       $('#arrow'+index).animate({left:'15px'},'fast');
