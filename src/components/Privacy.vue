@@ -111,7 +111,6 @@ p {
 .News {
   height:100vh;
   padding-top: 52px;
-  padding-bottom: 100px;
 }  
 .inner {
   z-index:-100;

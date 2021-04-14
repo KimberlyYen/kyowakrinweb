@@ -6,15 +6,15 @@
             <div class="row p-0 m-0" style="max-width:980px;width:calc(100% + -250px);">
                 <div class="col p-0 m-0"> 
                     <div @click="Product()" class="fontcss d-flex jusitfy-content-start">我們的產品</div>
-                    <div class="fontcss d-flex jusitfy-content-start">關於我們</div>
+                    <div @click="AboutUs()" class="fontcss d-flex jusitfy-content-start">關於我們</div>
                 </div>
                 <div class="col p-0 m-0">
-                    <div class="fontcss d-flex jusitfy-content-start">連絡我們</div>
-                    <div class="fontcss d-flex jusitfy-content-start">網站地圖</div>
+                    <div @click="ContactUs()" class="fontcss d-flex jusitfy-content-start">連絡我們</div>
+                    <div @click="sitemap()" class="fontcss d-flex jusitfy-content-start">網站地圖</div>
                 </div>
                 <div class="col p-0 m-0">
-                    <div class="fontcss d-flex jusitfy-content-start">法律聲明</div>
-                    <div class="fontcss d-flex jusitfy-content-start">隱私條款</div>
+                    <div @click="law()" class="fontcss d-flex jusitfy-content-start">法律聲明</div>
+                    <div @click="Privacy()" class="fontcss d-flex jusitfy-content-start">隱私條款</div>
                 </div>
                 <div class="col p-0 m-0">
                     <div class="fontcss d-flex jusitfy-content-start">Kyowa Kirin Group</div>
@@ -27,13 +27,13 @@
             <div class="row m-0" style="padding-left:100px">
                 <div class="col-6 p-0 m-0 text-left"> 
                     <div @click="Product()" class="fontcss mb-2">我們的產品</div>
-                    <div class="fontcss mb-2">關於我們</div>
-                    <div class="fontcss mb-2">法律聲明</div>
-                    <div class="fontcss mb-2">隱私條款</div>
+                    <div @click="AboutUs()" class="fontcss mb-2">關於我們</div>
+                    <div @click="law()" class="fontcss mb-2">法律聲明</div>
+                    <div @click="Privacy()" class="fontcss mb-2">隱私條款</div>
                 </div>
                 <div class="col-6 p-0 m-0 text-left">
-                    <div class="fontcss mb-2">連絡我們</div>
-                    <div class="fontcss mb-2">網站地圖</div>
+                    <div @click="ContactUs()" class="fontcss mb-2">連絡我們</div>
+                    <div @click="sitemap()" class="fontcss mb-2">網站地圖</div>
                 </div>
                 <div class="col-6 p-0 m-0 text-left mt-5">
                     <div class="fontcss">Kyowa Kirin Group</div>
@@ -56,7 +56,52 @@ export default {
       .push({
         path: "Product",
       })
-      .catch(err => {
+       .catch(err => {
+        console.log(err)
+      })
+    },
+    law(){
+      this.$router
+      .push({
+        path: "law",
+      })
+       .catch(err => {
+        console.log(err)
+      })
+    },
+    Privacy(){
+      this.$router
+      .push({
+        path: "Privacy",
+      })
+       .catch(err => {
+        console.log(err)
+      })
+    },
+    sitemap(){
+      this.$router
+      .push({
+        path: "sitemap",
+      })
+       .catch(err => {
+        console.log(err)
+      })
+    },
+    ContactUs(){
+      this.$router
+      .push({
+        path: "ContactUs",
+      })
+       .catch(err => {
+        console.log(err)
+      })
+    },
+    AboutUs(){
+      this.$router
+      .push({
+        path: "AboutUs",
+      })
+       .catch(err => {
         console.log(err)
       })
     },

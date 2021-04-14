@@ -22,7 +22,7 @@
             </div>
           <button class="button_1">點擊此處連結至諮詢表單</button>
           </div>
-        <Footer-bg></Footer-bg>
+    <Footer-bg></Footer-bg>
     </div>
 </template>
   
@@ -110,8 +110,8 @@
   .News {
     height:100vh;
     padding-top: 52px;
-    padding-bottom: 100px;
   }  
+
   .inner {
     z-index:-100;
     position: relative;
@@ -142,7 +142,6 @@
   }
   .str-outer {
     margin-top: 100px;
-    padding-bottom: 100px;
   }
   .str-inner {
     max-width: 1000px;
