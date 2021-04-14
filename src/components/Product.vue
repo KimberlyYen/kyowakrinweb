@@ -9,10 +9,10 @@
       <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
         <div class="d-flex justify-content-center align-items-center" style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">專注的領域</div>
       </div>
-        <div class="d-flex justify-content-center" style="width:100vw">
-        <div class="d-flex justify-content-center align-items-center p-0 pl-5 pr-5" style="max-width:1000px;min-width:320px;width:100%;color:#5D6164;font-size:2rem;">公司的產品專注於血液腫瘤科，腎臟科與免疫科的治療領域。</div>
+        <div class="d-flex justify-content-center" style="padding-bottom: 4vh;width:100vw">
+        <div class="d-flex justify-content-center align-items-center p-0 pl-5 pr-5 pb-5" style=";max-width:1000px;min-width:320px;width:100%;color:#5D6164;font-size:2rem;">公司的產品專注於血液腫瘤科，腎臟科與免疫科的治療領域。</div>
       </div>
-      <div class="d-flex justify-content-center" style="height:600px;width:100vw">
+      <div class="d-flex justify-content-center" style="height:500px;width:100vw">
         <div  style="position:relative;max-width:1200px;min-width:350px;width:100%;">
           <div class="d-flex justify-content-center" style="position:relative;top:140px;width:100%;height:100%">
             <div @click="ToNews()"  style="font-size:1.5rem;background-color:#F3F3F3;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>我們的產品</font><font style="position:absolute;right:20px">➝</font></div>
@@ -157,7 +157,7 @@
     },
     data () {
       return {
-        Title:'<font style="font-size:5rem;font-weight:bold;text-shadow: 0px 0px 5px #3e6db3;">我們的產品</font><br/><br/>',
+        Title:'<font style="font-size:5rem;font-weight:bold;">我們的產品</font><br/><br/>',
         NewInformation:'最新資訊',
       }
     }
@@ -174,7 +174,8 @@
         line-height: 1.5;
     }
     h3{
-        font-size: 2.3rem;
+        font-size: 2.4rem;
+        font-weight: bold;
         margin-bottom: 1vh;
         color: #ea5504;
     }
@@ -188,7 +189,19 @@
     .box-text {
         text-align: left;
         margin-bottom: 4vh;
+        animation-name: MoveToDown;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.35s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
         /* background-color: rgb(242, 255, 182); */
+    }
+
+    @keyframes MoveToDown {
+      from { top: -75vh; }
+      to { top: 52px; }
+    }
+    @keyframes MoveToUp {
+        from { top: 52px; }
+        to { top: -75vh; }
     }
 
 @media (min-width: 1025px){
@@ -251,7 +264,6 @@
     .str-section {
         max-width: 800px;
         margin: 0 auto;
-        background-color: blue;
     }
 }
 /*computer*/
@@ -291,7 +303,7 @@
     @media (min-width: 320px) and (max-width:768px) {
     .box-image{
         margin: 0 auto;
-        background-color: rgb(181, 253, 203);
+        /* background-color: rgb(181, 253, 203); */
     }
     .row {
         margin: 0px;
