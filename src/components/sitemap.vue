@@ -16,7 +16,7 @@
               <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">總經理的話</a></h3>
             <h2 class="hdg-lv2-01"><a href="/what_we_do/index.html">What we do</a></h2>
               <div>
-                <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">Products</a></h3>
+                <h3><a @click="Click_Title(2)" class="hdg-lv3-01">Products</a></h3>
                   <div class="row">
                     <div class="col">
                       <li><a class="col_li_a" href="/what_we_do/products/abstral/index.html">NESP</a></li>
@@ -34,7 +34,7 @@
                   </div>            
               </div>
             <h2 class="hdg-lv2-01"><a href="/sustainability/index.html">最新資訊</a></h2>
-            <h2 class="hdg-lv2-01"><a href="/media_center/index.html">亞太分佈圖</a></h2>
+            <h2 @click="Click_Title(4)" class="hdg-lv2-01">亞太分佈圖</h2>
             <h2 class="hdg-lv2-01"><a href="/media_center/index.html">其他</a></h2>
               <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">連絡我們</a></h3>
               <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">網站地圖</a></h3>
