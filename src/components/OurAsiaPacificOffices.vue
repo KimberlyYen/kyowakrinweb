@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <Footer-bg></Footer-bg>
+        <Footer-bg style="background-color:#F3F3F3" @Click_Title_trigger="Click_Title2"></Footer-bg>
     </div>
     <div v-if="showcard" class="d-flex justify-content-center divtop" style="width:100vw;position:fixed;left:0;cursor:pointer">
         <div style="box-shadow:1px 1px 1px 1px #BEBEBE;max-width:60%;min-width:250px;width:100%;background-color:white;">
@@ -107,7 +107,13 @@ components: {
     CloseCountry(){
         this.showcard = false
         this.divdisabled = 'divNdisabled'
-    }
+    },
+    Click_Title2(index){
+    this.$emit('Click_Title_trigger', { index: index.index });
+    },
+    Click_Title(index){
+    this.$emit('Click_Title_trigger', { index: index });
+    },
   },
   data () {
     return {

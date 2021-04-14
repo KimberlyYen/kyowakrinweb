@@ -22,7 +22,7 @@
             </div>
           <button class="button_1">點擊此處連結至諮詢表單</button>
           </div>
-    <Footer-bg></Footer-bg>
+    <Footer-bg @Click_Title_trigger="Click_Title2"></Footer-bg>
     </div>
 </template>
   
@@ -37,6 +37,14 @@
         return {
           msg: 'Welcome to Your Vue.js App'
         }
+      },
+      methods:{
+        Click_Title2(index){
+        this.$emit('Click_Title_trigger', { index: index.index });
+        },
+        Click_Title(index){
+        this.$emit('Click_Title_trigger', { index: index });
+        },
       }
     }
     </script>

@@ -22,7 +22,7 @@
       </div>
     </div>
     <div @click="SHOW_MORE_click()" style="font-weight: 600;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;padding-bottom: 120px;" class="row d-flex justify-content-center ">SHOW MORE<div class="expand ml-4 mt-1" style="color:#5d6164;"></div></div>
-    <Footer-bg></Footer-bg>
+    <Footer-bg style="background-color:#F3F3F3" @Click_Title_trigger="Click_Title2"></Footer-bg>
   </div>
 </template>
 
@@ -40,7 +40,13 @@ export default {
       if(this.ShowNum < this.NewsListObj.length){
         this.ShowNum += 5
       }
-    }
+    },
+    Click_Title2(index){
+    this.$emit('Click_Title_trigger', { index: index.index });
+    },
+    Click_Title(index){
+    this.$emit('Click_Title_trigger', { index: index });
+    },
   },
   data () {
     return {

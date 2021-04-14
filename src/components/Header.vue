@@ -106,7 +106,7 @@
       <div @click="scrollToTop()" class="scrollToTop-btn">↑</div>
       <!-- <font style="font-size:5rem !important">112334896</font> -->
       <div :style="{'opacity':OpacityNum_Earth}">
-        <router-view style="overflow:auto" :style="{'opacity':OpacityNum}"/>
+        <router-view style="overflow:auto" :style="{'opacity':OpacityNum}" @Click_Title_trigger="Click_Title_"/>
       </div>
   </div>
 </template>
@@ -216,6 +216,24 @@ export default {
     EarthClickForSingapore(){
       location.href = 'https://www.kyowakirin.com/index.html#anc-global-network'
     },
+    ToProduct(){
+      this.$router
+      .push({
+        path: "Product",
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
+    ToAboutUs(){
+      this.$router
+      .push({
+        path: "AboutUs",
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
     GoHome(){
       this.$router
       .push({
@@ -234,6 +252,15 @@ export default {
         console.log(err)
       })
     },
+    ToNews(){
+      this.$router
+      .push({
+        path: "Home",
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
     ListClick(obj){
       for(var i=0 ; i <this.ContentObj.length ; i++){
           this.ContentObj[i].status = false
@@ -244,6 +271,12 @@ export default {
       location.href = 'https://faq.kirin.co.jp/form/kkc_18_cn.html#_ga=2.267408327.85928623.1616483882-769985277.1576133350'
     },
     Change_Title_Css(index){
+      if(index == -1){
+        for(var i=0 ; i<this.headtitle.length ; i++){
+          this.$set(this.headtitle, i, 'headtitle');
+        }
+        return
+      }
       for(var i=0 ; i<this.headtitle.length ; i++){
         if(i!=index){
           this.$set(this.headtitle, i, 'headtitle');
@@ -294,23 +327,57 @@ export default {
         },350)
       }
     },
+    Click_Title_(obj){
+      switch (obj.index){
+        case -1:
+          this.Change_Title_Css(obj.index)
+          break;
+        case 0:
+          this.Change_Title_Css(obj.index)
+          this.GoHome()
+          break;
+        case 1:
+          this.Change_Title_Css(obj.index)
+          console.log(obj.index)
+          this.ToAboutUs()
+          break;
+        case 2:
+          this.Change_Title_Css(obj.index)
+          this.ToProduct()
+          break;
+        case 3:
+          this.Change_Title_Css(obj.index)
+          this.ToNews()
+          break;
+        case 4:
+          this.Change_Title_Css(obj.index)
+          this.GoOurAsiaPacificOffices()
+          break;        
+      }
+    },
     Click_Title(index,menuitem){
       if(menuitem){
         this.MenuClick()
       }
       switch (index){
+        case -1:
+          this.Change_Title_Css(index)
+          break;
         case 0:
           this.Change_Title_Css(index)
           this.GoHome()
           break;
         case 1:
-          this.Change_Title_Css(index)  
+          this.Change_Title_Css(index)
+          this.ToAboutUs()
           break;
         case 2:
           this.Change_Title_Css(index)
+          this.ToProduct()
           break;
         case 3:
           this.Change_Title_Css(index)
+          this.ToNews()
           break;
         case 4:
           this.Change_Title_Css(index)

@@ -5,8 +5,8 @@
           <div class="d-flex justify-content-center" style="width:100%;">
             <div class="row p-0 m-0" style="max-width:980px;width:calc(100% + -250px);">
                 <div class="col p-0 m-0"> 
-                    <div @click="Product()" class="fontcss d-flex jusitfy-content-start">我們的產品</div>
-                    <div @click="AboutUs()" class="fontcss d-flex jusitfy-content-start">關於我們</div>
+                    <div @click="Click_Title(2)" class="fontcss d-flex jusitfy-content-start">我們的產品</div>
+                    <div @click="Click_Title(1)" class="fontcss d-flex jusitfy-content-start">關於我們</div>
                 </div>
                 <div class="col p-0 m-0">
                     <div @click="ContactUs()" class="fontcss d-flex jusitfy-content-start">連絡我們</div>
@@ -26,8 +26,8 @@
             <img src="../assets/logo_footer.png" style="width:160px;margin-bottom:60px">
             <div class="row m-0" style="padding-left:100px">
                 <div class="col-6 p-0 m-0 text-left"> 
-                    <div @click="Product()" class="fontcss mb-2">我們的產品</div>
-                    <div @click="AboutUs()" class="fontcss mb-2">關於我們</div>
+                    <div @click="Click_Title(2)" class="fontcss mb-2">我們的產品</div>
+                    <div @click="Click_Title(1)" class="fontcss mb-2">關於我們</div>
                     <div @click="law()" class="fontcss mb-2">法律聲明</div>
                     <div @click="Privacy()" class="fontcss mb-2">隱私條款</div>
                 </div>
@@ -51,15 +51,6 @@ export default {
     }
   },
   methods:{
-    Product(){
-      this.$router
-      .push({
-        path: "Product",
-      })
-       .catch(err => {
-        console.log(err)
-      })
-    },
     law(){
       this.$router
       .push({
@@ -68,6 +59,7 @@ export default {
        .catch(err => {
         console.log(err)
       })
+      this.Click_Title(-1)
     },
     Privacy(){
       this.$router
@@ -77,6 +69,7 @@ export default {
        .catch(err => {
         console.log(err)
       })
+      this.Click_Title(-1)
     },
     sitemap(){
       this.$router
@@ -86,6 +79,7 @@ export default {
        .catch(err => {
         console.log(err)
       })
+      this.Click_Title(-1)
     },
     ContactUs(){
       this.$router
@@ -95,15 +89,10 @@ export default {
        .catch(err => {
         console.log(err)
       })
+      this.Click_Title(-1)
     },
-    AboutUs(){
-      this.$router
-      .push({
-        path: "AboutUs",
-      })
-       .catch(err => {
-        console.log(err)
-      })
+    Click_Title(index){
+      this.$emit('Click_Title_trigger', { index: index });
     },
   }
 }

@@ -127,7 +127,7 @@
              </div>
          </div> 
       </div>
-      <Footer-bg></Footer-bg>
+      <Footer-bg style="background-color:#F3F3F3" @Click_Title_trigger="Click_Title2"></Footer-bg>
     </div>
   </template>
   
@@ -139,15 +139,21 @@
     },
     name: 'Product',
     methods:{
-      ToNews(){
-        this.$router
-        .push({
-          path: "News",
-        })
-        .catch(err => {
-          console.log(err)
-        })
-      }
+        ToNews(){
+            this.$router
+            .push({
+                path: "News",
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        },
+        Click_Title2(index){
+            this.$emit('Click_Title_trigger', { index: index.index });
+        },
+        Click_Title(index){
+            this.$emit('Click_Title_trigger', { index: index });
+        },
     },
     data () {
       return {
