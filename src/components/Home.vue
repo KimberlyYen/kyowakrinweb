@@ -2,10 +2,18 @@
   <div class="Home">
     <div :class="disabled">
       <div class="bg_cp" >
-        <div v-html="Title" style="position:relative;top:150px;color:white;max-width:800px;width:100%;height:200px;min-width:350px;text-align:left;"></div>
+        <div style="position:relative;max-width:800px;width:100%;height:200px;min-width:350px;">
+          <div v-html="Title" style="position:relative;top:150px;color:white;max-width:800px;width:100%;height:350px;min-width:350px;text-align:left;">
+          </div>
+          <div @click="Click_Title(1)" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
+        </div>
       </div>
       <div class="bg_mobile">
-        <div v-html="Title" style="position:relative;top:80px;color:white;max-width:345px;width:100%;min-width:320px;height:200px;text-align:left;"></div>
+        <div style="position:relative;max-width:345px;width:100%;min-width:320px;">
+          <div v-html="Title" style="position:relative;top:80px;color:white;max-width:345px;width:100%;min-width:320px;height:325px;text-align:left;">
+          </div>
+          <div @click="Click_Title(1)" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
+        </div>
       </div>
       <div class="d-flex justify-content-center pt-5 pb-5 pl-5 pr-5" style="width:100vw;background-color:#F3F3F3;">
         <div style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);">
@@ -83,7 +91,7 @@
           </div>
         </div>
       </div>
-      <Footer-bg style="background-color:#F3F3F3"></Footer-bg>
+      <Footer-bg style="background-color:#F3F3F3" @Click_Title_trigger="Click_Title2"></Footer-bg>
     </div>
     <div v-if="showvedio" style="position:fixed;top:0;left:0;height:100vh;width:100vw;background-color:black;z-index:2;opacity:0.8">
 
@@ -106,6 +114,21 @@ export default {
   },
   name: 'Home',
   methods:{
+    Click_Title2(index){
+      this.$emit('Click_Title_trigger', { index: index.index });
+    },
+    Click_Title(index){
+      this.$emit('Click_Title_trigger', { index: index });
+    },
+    ToAboutUs(){
+      this.$router
+      .push({
+        path: "AboutUs",
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
     ToNews(){
       this.$router
       .push({
@@ -139,8 +162,7 @@ export default {
   data () {
     return {
       Title:'<font style="font-size:4rem;font-weight:bold;text-shadow: 0px 0px 5px #3e6db3;">與您共同守護<br/>這僅有一次的生命</font><br/><br/>'
-      +'<font style="font-size:2rem;text-shadow: 0px 0px 5px #3e6db3;">我們是優秀的團隊，共同為全人類在腫瘤及腎臟學領域追求最高的幸福<br/>您全家的平安快樂就是我們最大的成就</font><br/><br/>'
-      +'<div style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>',
+      +'<font style="font-size:2rem;text-shadow: 0px 0px 5px #3e6db3;">我們是優秀的團隊，共同為全人類在腫瘤及腎臟學領域追求最高的幸福<br/>您全家的平安快樂就是我們最大的成就</font><br/><br/>',
       NewInformation:'最新資訊',
       NewsListObj:[
         {date:'2020年4月1日',content:'[台灣協和麒麟] 台灣協和麒麟股份有限公司自2020年4月搬遷至新址',detail:'台灣協和麒麟股份有限公司自2020年4月15日起在新址正式營運'},

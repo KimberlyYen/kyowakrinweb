@@ -11,6 +11,7 @@ import law from '@/components/law'
 import ContactUs from '@/components/ContactUs'
 import Product from '@/components/Product'
 import OurAsiaPacificOffices from '@/components/OurAsiaPacificOffices'
+import AboutUs from '@/components/AboutUs'
 
 
 
@@ -62,6 +63,11 @@ export default new Router({
           path: '/OurAsiaPacificOffices',
           name: 'OurAsiaPacificOffices',
           component: OurAsiaPacificOffices
+        },
+        {
+          path: '/AboutUs',
+          name: 'AboutUs',
+          component: AboutUs
         }
       ]
     },

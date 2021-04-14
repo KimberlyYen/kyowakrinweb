@@ -26,7 +26,7 @@
         </dl>
       </div>
     </div>
-    <Footer-bg></Footer-bg>
+    <Footer-bg style="background-color:#F3F3F3" @Click_Title_trigger="Click_Title2"></Footer-bg>
   </div>
 </template>
 
@@ -41,6 +41,14 @@
       return {
         msg: 'Welcome to Your Vue.js App'
       }
+    },
+    methods:{
+      Click_Title2(index){
+        this.$emit('Click_Title_trigger', { index: index.index });
+      },
+      Click_Title(index){
+        this.$emit('Click_Title_trigger', { index: index });
+      },
     }
   }
   </script>
