@@ -22,7 +22,7 @@
             </div>
           <button class="button_1">點擊此處連結至諮詢表單</button>
           </div>
-    <Footer-bg @Click_Title_trigger="Click_Title2"></Footer-bg>
+    <Footer-bg style="background-color:white" @Click_Title_trigger="Click_Title2"></Footer-bg>
     </div>
 </template>
   

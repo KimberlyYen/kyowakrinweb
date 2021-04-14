@@ -26,7 +26,7 @@
         </dl>
       </div>
     </div>
-    <Footer-bg style="background-color:#F3F3F3" @Click_Title_trigger="Click_Title2"></Footer-bg>
+    <Footer-bg style="background-color:white" @Click_Title_trigger="Click_Title2"></Footer-bg>
   </div>
 </template>
 
