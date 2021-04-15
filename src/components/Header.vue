@@ -180,10 +180,7 @@ export default {
   },
   mounted(){
     window.addEventListener('scroll', () => {
-      this.scrollTop = document.documentElement.scrollTop ||
-                        window.pageYOffset ||
-                        document.body.scrollTop ||
-                        document.querySelector(this.el).scrollTop;
+      this.scrollTop = document.documentElement.scrollTop;
       if (this.scrollTop > 150) {
         this.isScrollTop = true;
       } else {
@@ -198,16 +195,7 @@ export default {
         if ($this.scrollTop > 0) {
           setTimeout(() => {
             $this.scrollTop = $this.scrollTop - 30;
-            if(document.documentElement.scrollTop > 0) {
-              document.documentElement.scrollTop = $this.scrollTop - 30;
-            } else if (window.pageYOffset > 0) {
-              window.pageYOffset = $this.scrollTop - 30;
-            } else if (document.body.scrollTop > 0) {
-              document.body.scrollTop = $this.scrollTop - 30;
-            } else if (document.querySelector($this.el).scrollTop) {
-              document.querySelector($this.el).scrollTop = $this.scrollTop - 30;
-            }
-
+            document.documentElement.scrollTop = $this.scrollTop - 30;
             animation();
           }, 1);
         }
