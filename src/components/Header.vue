@@ -40,7 +40,7 @@
         </div>
       </div>
       <div :class="menulist" :style="{'z-index':z_index_menulist}">
-        <img style="width:100vw;height:60vh;position:absolute" src="../assets/bg_header_sp_01.png">
+        <img style="width:100vw;height:72.5vh;position:absolute" src="../assets/bg_header_sp_01.png">
         <div class="text-left" style="position:absolute">
           <div v-for="(items,index) in MenuListObj" :key="index" class="menulistitem" @click="Click_Title(items.index,true)">
             {{items.name}}
@@ -103,7 +103,7 @@
           </div>
         </div>
       </div>
-      <div @click="scrollToTop()" class="scrollToTop-btn">↑</div>
+      <div @click="scrollToTop()" class="scrollToTop-btn d-flex justify-content-center align-items-center">↑</div>
       <!-- <font style="font-size:5rem !important">112334896</font> -->
       <div :style="{'opacity':OpacityNum_Earth}">
         <router-view style="overflow:auto" :style="{'opacity':OpacityNum}" @Click_Title_trigger="Click_Title_"/>
