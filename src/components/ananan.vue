@@ -6,7 +6,8 @@
   
             <!-- <Button @click="open" style="background-color: rgb(255, 94, 0);"> 法律聲明 </Button>
             <h1 @click="open" class="hdg-lv1-02" v-bind:class="ABC"> 法律聲明 </h1> -->
-            <button class="div0" style="color: black"> 法律聲明 </button>
+            <h1 @click="show_detail"> 法律聲明 </h1>
+            <button @click="close_detail" v-bind:class="div0_1" style="color: black"> 第一條 </button>
 
           </dl>
         </div>
@@ -25,19 +26,16 @@
       data () {
         return {
           msg: 'Welcome to Your Vue.js App',
-          ABC: 'div0',
+          div0_1: 'div0',
         }
       },
       methods:{
-        Click_Title2(index){
-        this.$emit('Click_Title_trigger', { index: index.index });
+        show_detail () {
+        this.div0_1='div1'
         },
-        Click_Title(index){
-        this.$emit('Click_Title_trigger', { index: index });
+        close_detail () {
+        this.div0_1='div2'
         },
-        open () {
-        this.ABC='div1'
-        }
       }
     }
     </script>
@@ -45,40 +43,40 @@
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
   /*ani*/
-  .div0 {
-  width:100px;
-  height:200px;
-  background:#ea5504;
-  position:absolute;
-  margin: 0px;
-  right: 100px;
+.div0 {
+width:100px;
+height:200px;
+background:#ea5504;
+position:absolute;
+margin: 0px;
+right: -100px;
 }
 .div1 {
-  width:100px;
-  height:200px;
-  background:#ea5504;
-  position:absolute;
-  margin: 0px;
-  right: 0px;
-  animation: open 3s 1;
+width:200px;
+height:200px;
+background:#ea5504;
+position:absolute;
+margin: 0px;
+right: 0px;
+animation: open 3s 1;
 }
 .div2 {
-  width:100px;
-  height:200px;
-  background:#ea5504;
-  position:absolute;
-  margin: 0px;
-  right: 100px;
-  animation: close 3s 1;
+width:100px;
+height:200px;
+background:#ea5504;
+position:absolute;
+margin: 0px;
+right: -100px;
+animation: close 3s 1;
 }
 
 @keyframes open {
-  from   {right: 0px;}
-  to     {right: 100px;}
+  from   {right: -100px;width:100px;}
+  to     {right: 0px;width:200px;}
 }
 @keyframes close {
-  from   {right: 100px;}
-  to     {right: 0px;}
+  from   {right: 0px;width:200px;}
+  to     {right: -100px;width:100px;}
 }
 
 
@@ -96,10 +94,16 @@
     border-bottom:1px solid black;
   }
   
-  h1,h2,h3,h4 {
-    font-weight: 600;
-    margin-bottom: 18px;
-  }
+    h1,h2,h3,h4 {
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+  
+    h1:hover {
+        color: chocolate;
+        text-decoration: underline;
+        cursor: pointer; 
+    }
   
   .hdg-lv1-02 {
     font-size: 4.8rem;
