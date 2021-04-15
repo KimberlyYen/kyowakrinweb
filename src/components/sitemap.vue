@@ -5,41 +5,41 @@
         <dl class="mod-list-description">
 
           <div>
-            <h1 class="hdg-lv1-02">網站地圖</h1>
-            <h2 class="hdg-lv2-01"><a href="/index.html">首頁</a></h2>
-              <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">公司的理念</a></h3>
-              <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">專注的領域</a></h3>
-              <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">快速導覽</a></h3>
-            <h2 class="hdg-lv2-01"><a href="/index.html">關於我們</a></h2>
-              <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">公司目標</a></h3>
-              <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">我們的願景</a></h3>
-              <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">總經理的話</a></h3>
-            <h2 class="hdg-lv2-01"><a href="/what_we_do/index.html">What we do</a></h2>
+            <h1 class="hdg-lv1-02">網站地圖</h1><br />
+            <button @click="Click_Title(0)" class="hdg-lv2-01 btn" >首頁</button><br />
+              <button @click="Click_Title(0)" class="btn">公司的理念</button><br />
+              <button @click="Click_Title(0)" class="btn">專注的領域</button><br />
+              <button @click="Click_Title(0)" class="btn">快速導覽</button><br />
+            <button @click="Click_Title(1)" class="hdg-lv2-01 btn">關於我們</button><br />
+              <button @click="Click_Title(1)" class="btn">公司目標</button><br />
+              <button @click="Click_Title(1)" class="btn">我們的願景</button><br />
+              <button @click="Click_Title(1)" class="btn">總經理的話</button><br />
+            <button @click="Click_Title(2)" class="hdg-lv2-01 btn">What we do</button><br />
               <div>
-                <h3><a @click="Click_Title(2)" class="hdg-lv3-01">Products</a></h3>
+                <button @click="Click_Title(2)"  class="hdg-lv3-01 btn">Products</button>
                   <div class="row">
                     <div class="col">
-                      <li><a class="col_li_a" href="/what_we_do/products/abstral/index.html">NESP</a></li>
-                      <li><a class="col_li_a" href="/what_we_do/products/abstral/index.html">REGPARA</a></li>
-                      <li><a class="col_li_a" href="/what_we_do/products/abstral/index.html">Filgrastim</a></li>
-                      <li><a class="col_li_a" href="/what_we_do/products/abstral/index.html">Leunase</a></li>
-                      <li><a class="col_li_a" href="/what_we_do/products/abstral/index.html">Neulasta</a></li>                  
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">NESP</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">REGPARA</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Filgrastim</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Leunase</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Neulasta</button></li>                  
                     </div>
                     <div class="col">
-                      <li><a class="col_li_a" href="/what_we_do/products/abstral/index.html">Romiplate</a></li>
-                      <li><a class="col_li_a" href="/what_we_do/products/abstral/index.html">Sancuso</a></li>
-                      <li><a class="col_li_a" href="/what_we_do/products/abstral/index.html">Lumicef</a></li>
-                      <li><a class="col_li_a" href="/what_we_do/products/abstral/index.html">Leunase</a></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Romiplate</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Sancuso</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Lumicef</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Leunase</button></li>
                     </div>
                   </div>            
               </div>
-            <h2 class="hdg-lv2-01"><a href="/sustainability/index.html">最新資訊</a></h2>
-            <h2 @click="Click_Title(4)" class="hdg-lv2-01">亞太分佈圖</h2>
-            <h2 class="hdg-lv2-01"><a href="/media_center/index.html">其他</a></h2>
-              <h3 @click="ContactUs()">連絡我們</h3>
-              <h3 @click="sitemap()">網站地圖</h3>
-              <h3 @click="law()">法律聲明</h3>
-              <h3 @click="Privacy()">隱私條款</h3>
+            <button  @click="Click_Title(3)" class="hdg-lv2-01 btn">最新資訊</button><br />
+            <button @click="Click_Title(4)" class="hdg-lv2-01 btn">亞太分佈圖</button>
+            <h2 class="hdg-lv2-01 ">其他</h2>
+              <button class="btn" @click="ContactUs()">連絡我們</button>
+              <button class="btn" @click="sitemap()">網站地圖</button>
+              <button class="btn" @click="law()">法律聲明</button>
+              <button class="btn" @click="Privacy()">隱私條款</button>
           </div>
   
         </dl>
@@ -116,7 +116,9 @@
 <style scoped>
 
 /*computer*/
-
+.btn{
+  background-color:white;outline:0;border:0
+}
 *{
   font-family: Arial, sans-serif;
 }
