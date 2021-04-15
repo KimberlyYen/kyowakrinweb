@@ -12,8 +12,8 @@ import ContactUs from '@/components/ContactUs'
 import Product from '@/components/Product'
 import OurAsiaPacificOffices from '@/components/OurAsiaPacificOffices'
 import AboutUs from '@/components/AboutUs'
-import an from '@/components/an'
- 
+import ananan from '@/components/ananan'
+
 
 
 Vue.use(Router)
@@ -64,11 +64,11 @@ export default new Router({
           path: '/OurAsiaPacificOffices',
           name: 'OurAsiaPacificOffices',
           component: OurAsiaPacificOffices
-        },       
+        },
         {
-          path: '/an',
-          name: 'an',
-          component: an 
+          path: '/ananan',
+          name: 'ananan',
+          component: ananan
         },
         {
           path: '/AboutUs',

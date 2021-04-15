@@ -98,7 +98,27 @@ export default {
 .arrow {
   font-weight: bold;
   color: #ea5504;
+  margin-right: 10px;
 }
+
+.aaa {
+  height:9px;
+  width:9px;
+  transform:rotate(45deg);
+  border-right:1px solid black;
+  border-bottom:1px solid black;
+}
+
+.mb-5, {
+  top: 50%;
+  right: 50%;
+  width: 100vw;
+}
+
+.buttom {
+  width: 100vw;
+}
+
 .mod-heading-l1 {
   text-align: center;
   max-width: 980px;
@@ -119,7 +139,7 @@ export default {
 }
 .str-outer {
   margin-top: 100px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 .str-inner {
   max-width: 1000px;
@@ -130,11 +150,12 @@ export default {
   line-height: 1.8;
 }
 dt {
-  font-size: 2rem;
+  font-size: 2.1rem;
   color: #ea5504;
 }
 dd {
   font-size: 1.8rem;
+  margin-bottom: 15px;
   }
 .news-a {
   color: #5D6164;

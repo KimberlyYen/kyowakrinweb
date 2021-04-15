@@ -29,7 +29,7 @@
       <div class="container" style="margin: 0 auto;">
          <div class="box-hdg2-wrapper" style="margin: auto;justify-items: center;padding-bottom: 5h;">
              <div class="row">
-                <div class="box-image col-4">
+                <div class="box-image col-md-4">
                     <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
@@ -39,8 +39,8 @@
                 </div>
              </div>
              <div class="row">
-                <div class="box-image col-4">
-                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                <div class="box-image col-md-4">
+                    <img src="../assets/index_img_slide_gran.jpg" alt="GRAN®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
                     <h3 class="hdg-lv2-05">GRAN®</h3>
@@ -52,8 +52,8 @@
                 </div>
              </div>
              <div class="row">
-                <div class="box-image col-4">
-                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                <div class="box-image col-md-4">
+                    <img src="../assets/index_img_slide_lumicef.jpg" alt="LUMICEF®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
                     <h3 class="hdg-lv2-05">LUMICEF®</h3>
@@ -65,8 +65,8 @@
                 </div>
              </div>
              <div class="row">
-                <div class="box-image col-4">
-                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                <div class="box-image col-md-4">
+                    <img src="../assets/index_img_slide_espo.jpg" alt="NESP®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
                     <h3 class="hdg-lv2-05">NESP®</h3>
@@ -75,8 +75,8 @@
                 </div>
              </div>
              <div class="row">
-                <div class="box-image col-4">
-                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                <div class="box-image col-md-4">
+                    <img src="../assets/index_img_sancuso.jpg" alt="Sancuso®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
                     <h3 class="hdg-lv2-05">Sancuso®</h3>
@@ -86,8 +86,8 @@
                 </div>
              </div>
              <div class="row">
-                <div class="box-image col-4">
-                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                <div class="box-image col-md-4">
+                    <img src="../assets/index_img_slide_regpara.jpg" alt="REGPARA®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
                     <h3 class="hdg-lv2-05">REGPARA®</h3>
@@ -96,8 +96,8 @@
                 </div>
              </div>
              <div class="row">
-                <div class="box-image col-4">
-                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                <div class="box-image col-md-4">
+                    <img src="../assets/index_img_slide_romiplate.jpg" alt="Romiplate®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
                     <h3 class="hdg-lv2-05">Romiplate®</h3>
@@ -107,8 +107,8 @@
                 </div>
              </div>
              <div class="row">
-                <div class="box-image col-4">
-                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                <div class="box-image col-md-4">
+                    <img src="../assets/index_img_slide_neulasta.jpg" alt="Neulasta®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
                     <h3 class="hdg-lv2-05">Neulasta®</h3>
@@ -117,8 +117,8 @@
                 </div>
              </div>
              <div class="row">
-                <div class="box-image col-4">
-                    <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                <div class="box-image col-md-4">
+                    <img src="../assets/index_img_slide_Leunase.jpg" alt="Leunase®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
                     <h3 class="hdg-lv2-05">Leunase®</h3>
