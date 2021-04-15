@@ -5,14 +5,14 @@
         <div style="position:relative;max-width:800px;width:100%;height:200px;min-width:350px;">
           <div v-html="Title" style="position:relative;top:150px;color:white;max-width:800px;width:100%;height:350px;min-width:350px;text-align:left;">
           </div>
-          <div @click="Click_Title(1)" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
+          <div @click="Click_Title(1)" class="aboutus" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
         </div>
       </div>
       <div class="bg_mobile">
         <div style="position:relative;max-width:345px;width:100%;min-width:320px;">
           <div v-html="Title" style="position:relative;top:80px;color:white;max-width:345px;width:100%;min-width:320px;height:325px;text-align:left;">
           </div>
-          <div @click="Click_Title(1)" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
+          <div @click="Click_Title(1)" class="aboutus" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
         </div>
       </div>
       <div class="d-flex justify-content-center pt-5 pb-5 pl-5 pr-5" style="width:100vw;background-color:#F3F3F3;">
@@ -27,7 +27,7 @@
               </div>
             </div>
             <div class="col-12 col-md-4 p-0 m-0 mt-5 mt-md-0 d-flex justify-content-center align-items-center">
-              <div @click="ToNews()" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>更多資訊</font><font style="position:absolute;right:20px">➝</font>
+              <div @click="ToNews()" class="aboutus" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>更多資訊</font><font style="position:absolute;right:20px">➝</font>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@
       <div class="d-flex justify-content-center pro_height">
         <div  style="position:relative;max-width:1200px;min-width:350px;width:100%;">
           <div class="d-flex justify-content-center" style="position:relative;top:140px;width:100%;height:100%">
-            <div @click="ToNews()"  style="font-size:1.5rem;background-color:#F3F3F3;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>我們的產品</font><font style="position:absolute;right:20px">➝</font></div>
+            <div @click="Click_Title(2)"  style="font-size:1.5rem;background-color:#F3F3F3;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>我們的產品</font><font style="position:absolute;right:20px">➝</font></div>
           </div>
           <div class="svg_1 bg_svg_1" style="left:0px;top:0"><font style="color:white;position:relative;top:20%;">Nephrology</font></div>
           <div class="svg_1 bg_svg_2 positioncss_left" style="top:180px" ><font style="color:white;position:relative;top:50%;">Oncology</font></div>
@@ -66,27 +66,27 @@
       <div class="d-flex justify-content-center pt-0" style="width:100vw;background-color:rgb(243, 243, 243);padding-bottom:100px">
         <div style="max-width:1000px;min-width:320px;width:100%;">
           <div class="row p-0 m-0 mb-5 justify-content-center">
-            <div @mouseover="Arrow(1)" @mouseleave="ArrowBack(1)" class="d-flex justify-content-center align-items-center pic" style="cursor:pointer;position:relative">
+            <div @mouseover="Arrow(1)" @mouseleave="ArrowBack(1)" @click="Click_Title(2)" class="d-flex justify-content-center align-items-center pic" style="cursor:pointer;position:relative">
               <img class="imgsize1" src="../assets/29595215.jpg">
               <font style="position:absolute;top:5px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">我們的產品</font>
-              <font id="arrow1" style="position:absolute;top:25px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">→</font>
+              <font id="arrow1" style="position:absolute;top:25px;left:15px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">→</font>
             </div>
-            <div @mouseover="Arrow(2)" @mouseleave="ArrowBack(2)" class="d-flex justify-content-center align-items-center pic ml-0 ml-md-5 mt-5 mt-md-0" style="cursor:pointer;position:relative">
+            <div @mouseover="Arrow(2)" @mouseleave="ArrowBack(2)" @click="Click_Title(1)" class="d-flex justify-content-center align-items-center pic ml-0 ml-md-5 mt-5 mt-md-0" style="cursor:pointer;position:relative">
               <img class="imgsize2" src="../assets/首頁69480419.jpg">
               <font style="position:absolute;top:5px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">關於我們</font>
-              <font id="arrow2" style="position:absolute;top:25px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">→</font>
+              <font id="arrow2" style="position:absolute;top:25px;left:15px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">→</font>
             </div>
           </div>
           <div class="row p-0 m-0 justify-content-center">
-            <div @mouseover="Arrow(3)" @mouseleave="ArrowBack(3)" class="d-flex justify-content-center align-items-center pic" style="cursor:pointer;position:relative">
+            <div @mouseover="Arrow(3)" @mouseleave="ArrowBack(3)" @click="Click_Title(3)" class="d-flex justify-content-center align-items-center pic" style="cursor:pointer;position:relative">
               <img class="imgsize3" style="height:260px;width:520px" src="../assets/66253614.jpg">
               <font style="position:absolute;top:5px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">最新消息</font>
-              <font id="arrow3" style="position:absolute;top:25px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">→</font>
+              <font id="arrow3" style="position:absolute;top:25px;left:15px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px black;">→</font>
             </div>
-            <div @mouseover="Arrow(4)" @mouseleave="ArrowBack(4)" class="d-flex justify-content-center align-items-center pic ml-0 ml-md-5 mt-5 mt-md-0" style="cursor:pointer;position:relative">
+            <div @mouseover="Arrow(4)" @mouseleave="ArrowBack(4)" @click="Click_Title(4)" class="d-flex justify-content-center align-items-center pic ml-0 ml-md-5 mt-5 mt-md-0" style="cursor:pointer;position:relative">
               <img class="imgsize4" style="height:260px;width:255px" src="../assets/world.png">
               <font style="position:absolute;top:5px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px white;">亞太分佈圖</font>
-              <font id="arrow4" style="position:absolute;top:25px;left:10px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px white;">→</font>
+              <font id="arrow4" style="position:absolute;top:25px;left:15px;color:#EA5504;font-size:2rem;font-weight:bold;text-shadow: 0px 0px 5px white;">→</font>
             </div>
           </div>
         </div>
@@ -194,8 +194,8 @@ export default {
     to { height: 400px; width: 400px;}
   }
   @keyframes tight {
-      from { height: 400px;width: 400px;}
-      to { height: 256px; width: 256px;}
+    from { height: 400px;width: 400px;}
+    to { height: 256px; width: 256px;}
   }
   .svg_1{
     height: 256px;
@@ -386,6 +386,9 @@ export default {
     z-index: 1;
     font-size: 2rem;
   }
+}
+.aboutus:hover{
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) !important;
 }
 .pic{overflow:hidden;}
 .pic img{transform:scale(1,1);transition: all 1s ease-out;}

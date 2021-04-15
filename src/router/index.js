@@ -15,7 +15,6 @@ import AboutUs from '@/components/AboutUs'
 import ananan from '@/components/ananan'
 
 
-
 Vue.use(Router)
 
 export default new Router({

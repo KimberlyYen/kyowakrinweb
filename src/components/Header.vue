@@ -255,7 +255,7 @@ export default {
     ToNews(){
       this.$router
       .push({
-        path: "Home",
+        path: "News",
       })
       .catch(err => {
         console.log(err)

@@ -36,10 +36,10 @@
             <h2 class="hdg-lv2-01"><a href="/sustainability/index.html">最新資訊</a></h2>
             <h2 @click="Click_Title(4)" class="hdg-lv2-01">亞太分佈圖</h2>
             <h2 class="hdg-lv2-01"><a href="/media_center/index.html">其他</a></h2>
-              <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">連絡我們</a></h3>
-              <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">網站地圖</a></h3>
-              <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">法律聲明</a></h3>
-              <h3><a class="hdg-lv3-01" href="/what_we_do/products/index.html">隱私條款</a></h3>
+              <h3 @click="ContactUs()">連絡我們</h3>
+              <h3 @click="sitemap()">網站地圖</h3>
+              <h3 @click="law()">法律聲明</h3>
+              <h3 @click="Privacy()">隱私條款</h3>
           </div>
   
         </dl>
@@ -67,6 +67,46 @@
       },
       Click_Title(index){
           this.$emit('Click_Title_trigger', { index: index });
+      },
+      law(){
+        this.$router
+        .push({
+          path: "law",
+        })
+        .catch(err => {
+          console.log(err)
+        })
+        this.Click_Title(-1)
+      },
+      Privacy(){
+        this.$router
+        .push({
+          path: "Privacy",
+        })
+        .catch(err => {
+          console.log(err)
+        })
+        this.Click_Title(-1)
+      },
+      sitemap(){
+        this.$router
+        .push({
+          path: "sitemap",
+        })
+        .catch(err => {
+          console.log(err)
+        })
+        this.Click_Title(-1)
+      },
+      ContactUs(){
+        this.$router
+        .push({
+          path: "ContactUs",
+        })
+        .catch(err => {
+          console.log(err)
+        })
+        this.Click_Title(-1)
       },
     }
   }
