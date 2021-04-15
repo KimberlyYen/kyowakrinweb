@@ -7,13 +7,13 @@
           <div>
             <h1 class="hdg-lv1-02">網站地圖</h1><br />
             <button @click="Click_Title(0)" class="hdg-lv2-01 btn" >首頁</button><br />
-              <button @click="Click_Title(0)" class="btn">公司的理念</button><br />
-              <button @click="Click_Title(0)" class="btn">專注的領域</button><br />
-              <button @click="Click_Title(0)" class="btn">快速導覽</button><br />
+              <button @click="Click_Title(0)" class="btn_li">公司的理念</button><br />
+              <button @click="Click_Title(0)" class="btn_li">專注的領域</button><br />
+              <button @click="Click_Title(0)" class="btn_li">快速導覽</button><br />
             <button @click="Click_Title(1)" class="hdg-lv2-01 btn">關於我們</button><br />
-              <button @click="Click_Title(1)" class="btn">公司目標</button><br />
-              <button @click="Click_Title(1)" class="btn">我們的願景</button><br />
-              <button @click="Click_Title(1)" class="btn">總經理的話</button><br />
+              <button @click="Click_Title(1)" class="btn_li">公司目標</button><br />
+              <button @click="Click_Title(1)" class="btn_li">我們的願景</button><br />
+              <button @click="Click_Title(1)" class="btn_li">總經理的話</button><br />
             <button @click="Click_Title(2)" class="hdg-lv2-01 btn">What we do</button><br />
               <div>
                 <button @click="Click_Title(2)"  class="hdg-lv3-01 btn">Products</button>
@@ -35,11 +35,11 @@
               </div>
             <button  @click="Click_Title(3)" class="hdg-lv2-01 btn">最新資訊</button><br />
             <button @click="Click_Title(4)" class="hdg-lv2-01 btn">亞太分佈圖</button>
-            <h2 class="hdg-lv2-01 ">其他</h2>
-              <button class="btn" @click="ContactUs()">連絡我們</button>
-              <button class="btn" @click="sitemap()">網站地圖</button>
-              <button class="btn" @click="law()">法律聲明</button>
-              <button class="btn" @click="Privacy()">隱私條款</button>
+            <h2 class="hdg-lv2-01">其他</h2>
+              <button class="btn_li" @click="ContactUs()">連絡我們</button><br />
+              <button class="btn_li" @click="sitemap()">網站地圖</button><br />
+              <button class="btn_li" @click="law()">法律聲明</button><br />
+              <button class="btn_li" @click="Privacy()">隱私條款</button>
           </div>
   
         </dl>
@@ -116,9 +116,16 @@
 <style scoped>
 
 /*computer*/
-.btn{
-  background-color:white;outline:0;border:0
+.btn_li {
+  background-color:white;
+  outline:0;
+  border:0;
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding-left: 3vw;
+  color: #ea5504;
 }
+
 *{
   font-family: Arial, sans-serif;
 }
@@ -149,6 +156,7 @@ h1,h2,h3,h4 {
 
 .hdg-lv2-01 {
   font-size: 2.8rem;
+  font-weight: bold;
   margin-top: 4vh;
   margin-bottom: 2vh;
   text-decoration:underline;
