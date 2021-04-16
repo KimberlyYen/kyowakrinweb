@@ -12,7 +12,7 @@
       <div class="d-flex justify-content-center" style="height:55vh;width:100vw">
         <div  style="position:relative;max-width:1200px;min-width:350px;width:100%;">
           <div class="d-flex justify-content-center" style="position:relative;top:140px;width:100%;height:100%">
-            <div @click="Click_Title(1)"  style="font-size:1.5rem;background-color:#F3F3F3;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
+            <div @click="Click_Title(1)" class="aboutus" style="font-size:1.5rem;background-color:#F3F3F3;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
           </div>
           <div class="svg_1 bg_svg_1" style="left:0px;top:0"><font style="color:white;position:relative;top:20%;">Nephrology</font></div>
           <div class="svg_1 bg_svg_2 positioncss_left" style="top:180px" ><font style="color:white;position:relative;top:50%;">Oncology</font></div>
@@ -259,6 +259,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    .aboutus:hover{
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) !important;
+    }
     * {
         font-family: Arial, "微軟正黑體", sans-serif;
     }
@@ -503,8 +506,8 @@
         to { height: 200px; }
     }
     @keyframes tight {
-        from { height: 150px; width: 200px;}
-        to { height: 100px; }
+        from { height: 200px; width: 200px;}
+        to { height: 150px; }
     }
     .svg_1{
         height: 150px;
