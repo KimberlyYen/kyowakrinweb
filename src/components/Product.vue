@@ -57,7 +57,7 @@
                     <img src="../assets/index_img_slide_gran.jpg" alt="GRAN®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
-                    <h3> GRAN®</h3>
+                    <h3 @click="show_detail(1)"> GRAN®</h3>
                     <p> (1) 動員造血幹細胞至周邊血中。</p>
                     <p> (2) 促進造血幹細胞移植時嗜中性白血球數的增加。</p>
                     <p> (3) 癌症化學療法所引起之嗜中性白血球減少症。</p>
@@ -200,7 +200,7 @@
                 [        
                     {   
                         src: require('../assets/index_img_slide_gran.jpg'),
-                        content:'Lumicef <br/>中文品名<br/>立美西膚皮下注射劑210毫克<br/>英文品名<br/>LUMICEF Subcutaneous Injection 210mg Syringe<br/>主成份名<br/>brodalumab<br/>許可證字號<br/>衛部菌疫輸字第 001076 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)<br/>病人用藥說明書(254KB)<br/>正確使用指引-醫護人員專用(13251KB)',
+                        content:'Filgrastim <br/> 【劑量一】<br/> 中文品名<br/> 惠爾血添注射劑 75<br/> 英文品名<br/> Filgrastim Injection 75μg/0.3ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000712 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/> <br/> 【劑量二】<br/> 中文品名<br/> 惠爾血添注射劑 150<br/> 英文品名 <br/> Filgrastim Injection 150μg/0.6ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000711 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/> <br/> 【劑量三】<br/> 中文品名<br/> 惠爾血添 M300<br/> 英文品名><br/> Filgrastim Injection M300 300μg/0.7ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000670 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)'
                     },
                 ],
                 
