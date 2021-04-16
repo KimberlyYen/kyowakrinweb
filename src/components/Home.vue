@@ -362,8 +362,8 @@ export default {
     to { height: 200px; }
   }
   @keyframes tight {
-      from { height: 150px; width: 200px;}
-      to { height: 100px; }
+      from { height: 200px; width: 200px;}
+      to { height: 150px; }
   }
   .svg_1{
     height: 150px;
