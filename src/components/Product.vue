@@ -81,7 +81,7 @@
 
              <div class="row">
                 <div class="box-image col-md-4">
-                    <img src="../assets/index_img_slide_espo.jpg" alt="NESP®">
+                    <img src="../assets/index_img_slide_nesp.jpg" alt="NESP®">
                 </div>
                 <div class="box-text col-sm-12 col-md-7 p-5">
                     <h3 @click="show_detail(3)"> NESP®</h3>
