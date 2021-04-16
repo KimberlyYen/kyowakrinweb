@@ -37,7 +37,7 @@
     </div>
     <div :class="extra_content" style="padding:10%;text-align:left;font-size:1.5rem;">
         <font style="color:white">Welcome to visit our official website. I am Kenji Furuya, General Manager of Kyowa Kirin (Taiwan) Co., Ltd.<br/>which is one of subsidiary companies of Kyowa Kirin (Japan) Co., Ltd.<br/>under Kirin Holdings, (Japan) Co., Ltd. We established in Taipei since 1991, located two branches in Taichung City and Kaohsiung City.<br/>Our products focusing on two major category treatment fields, including oncology and nephrology.<br/>In 2019 we will expand the field of dermatology.<br/>We strive to contribute to the health and well-being of people in Taiwan by creating new value through the pursuit of advances in life sciences and technologies.</font>
-        <div @click="CloseExtraContent()" class="d-flex justify-content-center align-items-center mt-5" style="height:40px;width:80px;background-color:#EE7736;border-radius: 30px;;color:white;cursor:pointer;">close</div>
+        <div @click="CloseExtraContent()" class="d-flex justify-content-center align-items-center mt-5" style="font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;;color:white;cursor:pointer;">close</div>
     </div>
     <Footer-bg class="mt-5" style="background-color:white" @Click_Title_trigger="Click_Title2"></Footer-bg>
   </div>
