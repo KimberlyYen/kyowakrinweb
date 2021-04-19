@@ -43,7 +43,7 @@
         <Footer-bg style="background-color:white" @Click_Title_trigger="Click_Title2"></Footer-bg>
     </div>
     <div v-if="showcard" class="d-flex justify-content-center divtop" style="width:100vw;position:fixed;left:0;cursor:pointer">
-        <div style="box-shadow:1px 1px 1px 1px #BEBEBE;max-width:60%;min-width:250px;width:100%;background-color:white;">
+        <div class="card" style="box-shadow:1px 1px 1px 1px #BEBEBE;min-width:250px;width:100%;background-color:white;">
             <div class="row p-0 m-0 div_country" style="position:relative">
                 <div @click="CloseCountry()" style="background-color:#ea5504;width:40px;height:40px;border-radius:50%;position:absolute;color:white;font-size:3rem;top:10px;right:10px;z-index:2">╳</div>
                 <div class="pic col-12 col-md-5 col-xl-4 p-0 m-0 d-flex justify-content-start" >
@@ -253,6 +253,9 @@ components: {
     .img101_mb{
         display: none;
     }
+    .card{
+        max-width:60%;
+    }
 }
 /*mobile*/
 @media (min-width: 320px) and (max-width:768px) {
@@ -271,6 +274,9 @@ components: {
     }
     .fontsize{
         font-size: 3rem;
+    }
+    .card{
+        max-width:350px;
     }
 }
 .point1{
