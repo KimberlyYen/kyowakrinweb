@@ -1,8 +1,9 @@
 <template>
   <div class="Header">
       <div class="header_ row p-0 m-0" style="z-index:3">
-        <div class="col-6 col-md-3 col-xl-6 p-0 m-0 pl-5 d-flex justify-content-start align-items-center"> 
-          <img @click="Click_Title(0)" style="width:153px;height:26px;cursor:pointer" src="../assets/logo_header_01.png">
+        <div class="col-6 col-md-3 col-xl-6 p-0 m-0 pl-0 d-flex justify-content-start align-items-center"> 
+          <img class="logo_pc" @click="Click_Title(0)" style="width:350px;height:26px;cursor:pointer" src="../assets/logo_header_01.png">
+          <img class="logo_mb" @click="Click_Title(0)" style="width:280px;height:45px;cursor:pointer;position:absolute;left:-30px" src="../assets/logo_header_02.png">
         </div>
         <div class="col-6 col-md-9 col-xl-6 row p-0 m-0 d-flex justify-content-end">
           <div @click="Click_Title(0)" class="display_title justify-content-center align-items-center headtitle" v-bind:class="headtitle[0]" > 
@@ -388,6 +389,12 @@ export default {
 }
 /*computer*/
   @media (min-width: 769px) {
+    .logo_pc{
+      display: flex;
+    }
+    .logo_mb{
+      display: none;
+    }
     .header_{
         width: 99vw;
         height:52px;
@@ -451,6 +458,12 @@ export default {
   }
 /*mobile*/
   @media (min-width: 320px) and (max-width:768px) {
+    .logo_pc{
+      display: none;
+    }
+    .logo_mb{
+      display: flex;
+    }
     .header_{
         width: 100vw;
         height:52px;
