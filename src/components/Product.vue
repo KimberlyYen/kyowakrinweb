@@ -25,8 +25,8 @@
         <div v-html="Title" style="position:relative;margin-top: 10vh;color:white;width:100%;height:200px;text-align:center;"></div>
       </div>
 
-        <!-- 展開的產品細節 -->
-        <button v-bind:class="div0_1" style="padding: 5% 5% 10% 13%; text-align: left">
+        <!-- 展開的產品細節↓ -->
+        <button v-bind:class="div0_1" style="text-align: left">
         <div class="box_detail_Layout" style="height:100% ; width:80vw"> 
             <font  v-for="(items,index) in dataram" :key="index" class="d-flex" style="color: white;">    
                 <div class="box_image_detail">
@@ -39,15 +39,16 @@
         </div>
         <div @click="close_detail" class="d-flex justify-content-center align-items-center mt-5" style="font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;;color:white;cursor:pointer;">close</div>
         </button>
-    
-      <div class="container" style="margin: 0 auto ;padding: 0px;">
+        <!-- 展開的產品細節↑ -->
+        
+      <div class="container" style="margin: 0 auto ;padding: 0px;color:#5D6164">
          <div class="box-hdg2-wrapper" style="margin: auto;justify-items: center;padding-bottom: 5h;">
              <div class="row">
                     <div class="box-image col-md-4">
                         <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
                     </div>
                     <div class="box-text col-sm-12 col-md-7 p-5">
-                        <h3> CRYSVITA® </h3>
+                        <h3 style="pointer-events: none"> CRYSVITA® </h3>
                         <p> 適應症：</p>
                         <p> 性聯遺傳型低磷酸鹽症(X-linked hypophosphatemia，XLH)：適用於1歲以上兒童與青少年，及合併有XLH相關骨骼疾病之成人。</p>
                     </div>
@@ -199,9 +200,18 @@
                 data://1-GRAN
                 [        
                     {   
-                        src: require('../assets/index_img_slide_gran.jpg'),
-                        content:'Filgrastim <br/> 【劑量一】<br/> 中文品名<br/> 惠爾血添注射劑 75<br/> 英文品名<br/> Filgrastim Injection 75μg/0.3ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000712 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/> <br/> 【劑量二】<br/> 中文品名<br/> 惠爾血添注射劑 150<br/> 英文品名 <br/> Filgrastim Injection 150μg/0.6ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000711 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/> <br/> 【劑量三】<br/> 中文品名<br/> 惠爾血添 M300<br/> 英文品名><br/> Filgrastim Injection M300 300μg/0.7ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000670 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)'
+                        src: require('../assets/GRAN_1.jpg'),
+                        content:'Filgrastim <br/> 【劑量一】<br/> 中文品名<br/> 惠爾血添注射劑 75<br/> 英文品名<br/> Filgrastim Injection 75μg/0.3ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000712 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/> <br/>'
                     },
+                    {   
+                        src: require('../assets/GRAN_2.jpg'),
+                        content:'【劑量二】<br/> 中文品名<br/> 惠爾血添注射劑 150<br/> 英文品名 <br/> Filgrastim Injection 150μg/0.6ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000711 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/> <br/>'
+                    },
+                    {   
+                        src: require('../assets/GRAN_3.jpg'),
+                        content:'【劑量三】<br/> 中文品名<br/> 惠爾血添 M300<br/> 英文品名><br/> Filgrastim Injection M300 300μg/0.7ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000670 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)'
+                    },
+
                 ],
                 
             },
@@ -209,7 +219,7 @@
                 data://2-LUMICEF
                 [        
                     {   
-                        src: require('../assets/index_img_slide_lumicef.jpg'),
+                        src: require('../assets/Lumicef.jpg'),
                         content:'Lumicef <br/> 中文品名<br/>立美西膚皮下注射劑210毫克<br/>英文品名<br/>LUMICEF Subcutaneous Injection 210mg Syringe<br/>主成份名<br/>brodalumab<br/>許可證字號<br/>衛部菌疫輸字第 001076 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)<br/>病人用藥說明書(254KB)<br/>正確使用指引-醫護人員專用(13251KB)',
                     },
                 ],
@@ -219,75 +229,65 @@
                 data://3-NESP
                 [        
                     {   
-                        src: require('../assets/index_img_slide_nesp.jpg'),
+                        src: require('../assets/NESP_1.jpg'),
                         content:'【劑量一】<br/> 中文品名<br/>耐血比注射劑 20微克 / 0.5 毫升<br/>英文品名<br/>NESP Injection Plastic Syringe 20mcg / 0.5 ml<br/>主成份名<br/>DARBEPOETIN ALFA <br/> 許可證字號 <br/> 衛部菌疫輸字第 000955 號 <br/> 藥品仿單(另開衛福部食藥署視窗) <br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/>',
                     },
                     {   
-                        src: require('../assets/index_img_slide_nesp.jpg'),
+                        src: require('../assets/NESP_2.jpg'),
                         content:'【劑量二】<br/> 中文品名 <br/> 耐血比注射劑 40微克 / 0.5 毫升 <br/> 英文品名 <br/> NESP Injection Plastic Syringe 40mcg / 0.5 ml <br/> 主成份名 <br/> DARBEPOETIN ALFA <br/> 許可證字號 <br/> 衛部菌疫輸字第 000953 號 <br/> 藥品仿單(另開衛福部食藥署視窗) <br/> 藥品詳細資料(另開衛福部食藥署視窗)',
                     },
                     {   
-                        src: require('../assets/index_img_slide_nesp.jpg'),
+                        src: require('../assets/NESP_3.jpg'),
                         content:'【劑量三】<br/>中文品名<br/>惠爾血添 M300<br/>英文品名><br/>Filgrastim Injection M300 300μg/0.7ml<br/>主成份名<br/>FILGRASTIM<br/>許可證字號<br/>衛署菌疫輸字第 000670 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)<br/>',
                     },
                 ],
                 
-            },            
-            {   
+            },{   
                 data://4-Sancuso
                 [        
                     {   
-                        src: require('../assets/index_img_sancuso.jpg'),
+                        src: require('../assets/Sancuso.jpg'),
                         content:'Sancuso<br/>中文品名<br/>貼固守穿皮貼片劑<br/>英文品名<br/>Sancuso transdermal patch 3.1 mg/24hours<br/>主成份名<br/>GRANISETRON<br/>許可證字號<br/>衛署藥輸字第025820號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
                     },
                 ],
                 
-            },            
-            {   
+            },{   
                 data://5-REGPARA
                 [        
                     {   
-                        src: require('../assets/index_img_slide_regpara.jpg'),
+                        src: require('../assets/REGPARA.jpg'),
                         content:'REGPARA<br/>中文品名<br/>銳克鈣錠25毫克<br/>英文品名<br/>REGPARA TABLETS 25MG<br/>主成份名<br/>CINACALCET HYDROCHLORIDE<br/>許可證字號<br/>衛署藥輸字第 025141 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
                     },
                 ],
                 
-            },
-            {   
+            },{   
                 data://6-Romiplate
                 [        
                     {   
-                        src: require('../assets/index_img_slide_romiplate.jpg'),
+                        src: require('../assets/Romiplate.jpg'),
                         content:'Lumicef <br/>中文品名<br/>立美西膚皮下注射劑210毫克<br/>英文品名<br/>LUMICEF Subcutaneous Injection 210mg Syringe<br/>主成份名<br/>brodalumab<br/>許可證字號<br/>衛部菌疫輸字第 001076 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)<br/>病人用藥說明書(254KB)<br/>正確使用指引-醫護人員專用(13251KB)',
                     },
                 ],
                 
-            },
-            {   
+            },{   
                 data://7-Neulasta
                 [        
                     {   
-                        src: require('../assets/index_img_slide_neulasta.jpg'),
+                        src: require('../assets/Neulasta_1.jpg'),
                         content:'Neulasta<br/>中文品名<br/>倍血添注射劑<br/>英文品名<br/>Neulasta<br/>主成份名<br/>Pegfilgrastim<br/>許可證字號<br/>衛署菌疫輸字第 000919 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
                     },
                 ],
                 
-            },
-            {   
+            },{   
                 data://8-Leunase
                 [        
                     {   
-                        src: require('../assets/index_img_slide_Leunase.jpg'),
+                        src: require('../assets/Leunase.jpg'),
                         content:'Leunase<br/>中文品名<br/>樂拿舒注射劑 10,000K.U.<br/>英文品名<br/>Leunase Injection (10,000K.U.)<br/>主成份名<br/>L-ASPARAGINASE<br/>許可證字號<br/>衛署藥輸字第 021032 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
                     },
-                ],
-                
-            },
-        ],
-        
-      }
-    }
-  }
+                ],},],}
+            }
+        }
   </script>
 
 
@@ -321,6 +321,7 @@
     background:#ea5504;
     position:fixed;
     margin: 0px;
+    padding: 5% 5% 10% 13%;
     right: 0vw;
     top: 0;
     animation: open 1s 1;
@@ -337,7 +338,7 @@
     margin: 0px;
     right: -100vw;
     top: 0;
-    animation: close 2s 1;
+    animation: close 1s 1;
     }
 
     @keyframes open {
@@ -352,7 +353,7 @@
 /* <!-- 展品詳細介紹右側展開動畫 ↑ --> */
 
     font,p {
-        font-size: 1.8rem;
+        font-size: 2rem;
         line-height: 1.5;
     }
     .p_btn {
@@ -497,6 +498,22 @@
 
 /*mobile*/
     @media (min-width: 320px) and (max-width:768px) {
+    .div1 {
+        padding: 5% 5% 40% 13%;
+    }
+
+    .div0,.div1,.div2 {
+        border-radius: 0%;
+        width: 95vw;
+    }
+    .box_image_detail {
+        width: 0%;
+    }
+    .box_text_detail {
+        width: 100vw;
+        margin-top: 60%;
+        padding: 1vh 15vw 3vh 0vw;
+    }
     .box-image{
         margin: 0 auto;
         /* background-color: rgb(181, 253, 203); */
