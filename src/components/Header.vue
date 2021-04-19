@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-      <div :class="Earthlist" :style="{'z-index':z_index_Earth}">
+      <div :class="Earthlist" :style="{'z-index':z_index_Earth}" style="max-height:calc(100vh + -52px);overflow:auto">
         <div class="CP_Earthlist">
           <div class="button_form d-flex align-items-center "><font style="font-size:1.78rem;font-weight:bold">Kyowa Kirin Worldwide</font></div>
         </div>
@@ -415,7 +415,7 @@ export default {
     }
     .Earth_default{
       position:fixed;
-      top:-75vh;
+      top:-150vh;
       left:0;
       width:100vw;
       box-shadow:1px 2px 2px #d1d2d2
@@ -433,7 +433,7 @@ export default {
     }
     .Earth_Up{
       position:fixed;
-      top:-75vh;
+      top:-150vh;
       left:0;
       background-color: transparent;
       animation-name: MoveToUp;    /*動畫名稱，需與 keyframe 名稱對應*/
@@ -488,7 +488,7 @@ export default {
     }
     .Earth_default{
       position:fixed;
-      top:-75vh;
+      top:-150vh;
       left:0;
       width:100vw;
       box-shadow:1px 2px 2px #d1d2d2
@@ -506,7 +506,7 @@ export default {
     }
     .Earth_Up{
       position:fixed;
-      top:-75vh;
+      top:-150vh;
       left:0;
       background-color: transparent;
       animation-name: MoveToUp;    /*動畫名稱，需與 keyframe 名稱對應*/
@@ -524,12 +524,12 @@ export default {
   }
   /* 關鍵影格(@keyframe) */
   @keyframes MoveToDown {
-      from { top: -75vh; }
+      from { top: -150vh; }
       to { top: 52px; }
   }
   @keyframes MoveToUp {
       from { top: 52px; }
-      to { top: -75vh; }
+      to { top: -150vh; }
   }
 .button_form{
   z-index: 1;

@@ -6,17 +6,17 @@
         <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
             <div class="d-flex justify-content-center align-items-center" style="max-width:1200px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">公司目標</div>
         </div>
-        <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
+        <div class="d-flex justify-content-center pt-5 pb-4 pl-5 pr-5 pl-md-0 pr-md-0" style="width:100vw">
             <div class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem">日本麒麟控股集團下所屬協和麒麟公司，是一個以研究為基礎的生命科學事業體，<br/>且專精於生物化學相關領域。我們不斷致力於尖端生物化學的發展，並使用於製藥流程當中，<br/>以期望能研發出更符合患者所需的藥品，改善病患的生活品質。</div>
         </div>
         <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
             <div class="d-flex justify-content-center align-items-center" style="max-width:1200px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">我們的願景</div>
         </div>
-        <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
+        <div class="d-flex justify-content-center pt-5 pb-4 pl-5 pr-5 pl-md-0 pr-md-0" style="width:100vw">
             <div class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem" v-html="content[0].content"></div>
             
         </div>
-        <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
+        <div class="d-flex justify-content-center pt-5 pb-4 pl-5 pr-5 pl-md-0 pr-md-0" style="width:100vw">
             <div v-if="show" class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem" v-html="content[1].content"></div>
         </div>
         <div @click="SHOW_MORE_click()" style="font-weight: 600;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;padding-bottom: 120px;" class="row d-flex justify-content-center ">SHOW MORE<div class="expand ml-4 mt-1" style="color:#5d6164;"></div></div>
@@ -30,7 +30,7 @@
                 <div class="pic col-11 col-md-4 p-0">
                     <img class="p-0 m-0 w-100" src="../assets/gm.png">
                 </div>
-                <div class="col-11 col-md-8 p-5 pt-md-3 pb-md-3 pt-xl-5 pb-xl-5 m-0 font_size_content" style="background-color:#EA5504;color:white;line-height:30px;text-align:left">
+                <div class="col-11 col-md-8 p-5 pt-md-3 pb-md-3 pt-xl-5 pb-xl-5 m-0 font_size_content" style="background-color:#EA5504;color:white;line-height:30px;text-align:justify">
                     您好:<br/>我是台灣協和麒麟公司總經理 古谷健二，歡迎你們的到訪。 敝公司是日本麒麟控股集團下所屬協和麒麟公司的海外子公司，於1991年成立於台北市，另分別於台中市與高雄市設立辦公室。公司的產品專注於血液腫瘤科與腎臟科的治療領域。2019年度我們即將拓展到皮膚科的領域。 公司的願景是追求生命科學與技術的進步，透過創造新價值對台灣人之健康與安泰帶來貢獻。<br />
                     <div @click="ShowExtraContent()">→ English Version</div>
                 </div>
@@ -39,7 +39,7 @@
         <Footer-bg class="mt-5" style="background-color:white" @Click_Title_trigger="Click_Title2"></Footer-bg>
     </div>
     <div :class="extra_content" style="padding:10%;text-align:left;font-size:1.5rem;">
-        <font style="color:white">Welcome to visit our official website. I am Kenji Furuya, General Manager of Kyowa Kirin (Taiwan) Co., Ltd.<br/>which is one of subsidiary companies of Kyowa Kirin (Japan) Co., Ltd.<br/>under Kirin Holdings, (Japan) Co., Ltd. We established in Taipei since 1991, located two branches in Taichung City and Kaohsiung City.<br/>Our products focusing on two major category treatment fields, including oncology and nephrology.<br/>In 2019 we will expand the field of dermatology.<br/>We strive to contribute to the health and well-being of people in Taiwan by creating new value through the pursuit of advances in life sciences and technologies.</font>
+        <font style="color:white;text-align:justify">Welcome to visit our official website. I am Kenji Furuya, General Manager of Kyowa Kirin (Taiwan) Co., Ltd.<br/>which is one of subsidiary companies of Kyowa Kirin (Japan) Co., Ltd.<br/>under Kirin Holdings, (Japan) Co., Ltd. We established in Taipei since 1991, located two branches in Taichung City and Kaohsiung City.<br/>Our products focusing on two major category treatment fields, including oncology and nephrology.<br/>In 2019 we will expand the field of dermatology.<br/>We strive to contribute to the health and well-being of people in Taiwan by creating new value through the pursuit of advances in life sciences and technologies.</font>
         <div @click="CloseExtraContent()" class="d-flex justify-content-center align-items-center mt-5" style="font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;;color:white;cursor:pointer;">close</div>
     </div>
   </div>
@@ -169,7 +169,7 @@ components: {
 /*mobile*/
 @media (min-width: 320px) and (max-width:768px) {
     .font_size_content{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .bg_cp_AboutUs {
         display: flex;
