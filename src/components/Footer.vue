@@ -17,7 +17,7 @@
                     <div @click="Privacy()" class="fontcss d-flex jusitfy-content-start">隱私條款</div>
                 </div>
                 <div class="col p-0 m-0">
-                    <div class="fontcss d-flex jusitfy-content-start">Kyowa Kirin Group</div>
+                    <div @click="ToKyowaKirinGroup()" class="fontcss d-flex jusitfy-content-start">Kyowa Kirin Group</div>
                 </div>
             </div>
           </div>
@@ -36,7 +36,7 @@
                     <div @click="sitemap()" class="fontcss mb-2">網站地圖</div>
                 </div>
                 <div class="col-6 p-0 m-0 text-left mt-5">
-                    <div class="fontcss">Kyowa Kirin Group</div>
+                    <div @click="ToKyowaKirinGroup()" class="fontcss">Kyowa Kirin Group</div>
                 </div>
             </div>
       </div>
@@ -51,6 +51,10 @@ export default {
     }
   },
   methods:{
+    ToKyowaKirinGroup(){
+      location.href = 'https://www.kyowakirin.com/index.html'
+      this.Click_Title(-1)
+    },
     law(){
       this.$router
       .push({
