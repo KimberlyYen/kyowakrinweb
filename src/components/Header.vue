@@ -180,6 +180,26 @@ export default {
     }
   },
   mounted(){
+    var lang = (window.navigator.userLanguage || window.navigator.language).toLowerCase();
+    var url = location.origin
+    var location_ = location.href.toString().split(url)[1]
+    if(lang == 'zh-tw'){
+      lang = '/zh'
+      var newurl = location.origin + lang + location_
+      if(location.href.toString().split('#')[0].split(url)[1] == lang + '/'){
+
+      }else{
+        location.href = newurl
+      }
+    }else{
+      lang = '/en'
+      var newurl = location.origin + lang + location_
+      if(location.href.toString().split('#')[0].split(url)[1] == lang){
+
+      }else{
+        location.href = newurl
+      }
+    }
     window.addEventListener('scroll', () => {
       this.scrollTop = document.documentElement.scrollTop;
       if (this.scrollTop > 150) {
