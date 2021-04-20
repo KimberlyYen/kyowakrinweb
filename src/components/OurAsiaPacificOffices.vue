@@ -22,13 +22,13 @@
         </div>
         <div class="d-flex justify-content-center divtop mb-5" style="width:100vw;left:0;">
             <div style="max-width:60%;min-width:250px;width:100%;background-color:white;">
-                <div class="row p-0 m-0 div_country" style="position:relative">
+                <div class="row p-0 m-0 mb-5 div_country" style="position:relative">
                     <!-- <div @click="CloseCountry()" style="background-color:#ea5504;width:40px;height:40px;border-radius:50%;position:absolute;color:white;font-size:3rem;top:10px;right:10px;z-index:2">╳</div> -->
                     <div class="pic col-12 col-md-5 col-xl-4 p-0 m-0 d-flex justify-content-start" >
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.581590149636!2d121.5220404292319!3d25.056925313887643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96c523d96c9%3A0xe7929a0300ee1e2c!2z5Y-w54Gj5Y2U5ZKM6bqS6bqf6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1618285029986!5m2!1szh-TW!2stw" width="600" height="270" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
 
-                    <div class="row col-12 col-md-7 col-xl-8 m-0 " style="height:270px;padding:32px;overflow:auto">
+                    <div class="row col-12 col-md-7 col-xl-8 m-0 " style="height:270px;padding:10px;">
                         <div class="col-12" style="color:#EA5504;font-weight: 1000;;width:100%;text-align:left;font-size: 1.6rem;">台灣協和麒麟股份有份公司</div>
                         <div class="col-12 col-md-6">
                             <div v-html="countryobj[3].data2"></div>
