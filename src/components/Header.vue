@@ -184,7 +184,11 @@ export default {
     var url = location.origin
     var location_ = location.href.toString().split(url)[1]
     if(location.href.toString().split('/en/').length == 1){
-      location_ = location.href.toString().split('/zh/')[1]
+      if(location.href.toString().split('/zh/').length == 1){
+        location_ = location.href.toString().split(url)[1]
+      }else{
+        location_ = location.href.toString().split('/zh/')[1]
+      }
     }else{
       location_ = location.href.toString().split('/en/')[1]
     }
