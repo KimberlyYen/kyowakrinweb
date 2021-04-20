@@ -28,13 +28,13 @@
             <img style="width:26px;height:17px;" src="../assets/icon_mail_01.png">
           </div>
           <!--(這個是新加坡的版本Menu)-->
-          <!-- <div @click="EarthClickForSingapore()" class="d-flex justify-content-center align-items-center" :class="Earth_bg_form" style="width:52px;border-left: 1px solid #c9c9c9;cursor: pointer;"> 
-            <img :class="Earthsize" :src="Earthsrc">
-          </div> -->
-          <!--(這個是日本的版本Menu)-->
-          <div @click="EarthClick()" class="d-flex justify-content-center align-items-center" :class="Earth_bg_form" style="width:52px;border-left: 1px solid #c9c9c9;cursor: pointer;"> 
+          <div @click="EarthClickForSingapore()" class="d-flex justify-content-center align-items-center" :class="Earth_bg_form" style="width:52px;border-left: 1px solid #c9c9c9;cursor: pointer;"> 
             <img :class="Earthsize" :src="Earthsrc">
           </div>
+          <!--(這個是日本的版本Menu)-->
+          <!-- <div @click="EarthClick()" class="d-flex justify-content-center align-items-center" :class="Earth_bg_form" style="width:52px;border-left: 1px solid #c9c9c9;cursor: pointer;"> 
+            <img :class="Earthsize" :src="Earthsrc">
+          </div> -->
           <div @click="MenuClick()" class="display_hamburger justify-content-center align-items-center " :class="bg_form" style="position:relative;width:52px;border-left: 1px solid #c9c9c9;cursor: pointer;"> 
             <img :class="menusize" :src="Menusrc">
           </div>
