@@ -183,6 +183,11 @@ export default {
     var lang = (window.navigator.userLanguage || window.navigator.language).toLowerCase();
     var url = location.origin
     var location_ = location.href.toString().split(url)[1]
+    if(location.href.toString().split('/en/').length == 1){
+      location_ = location.href.toString().split('/zh/')[1]
+    }else{
+      location_ = location.href.toString().split('/en/')[1]
+    }
     if(lang == 'zh-tw'){
       lang = '/zh'
       var newurl = location.origin + lang + location_
@@ -200,7 +205,7 @@ export default {
         location.href = newurl
       }
     }
-    window.addEventListener('scroll', () => {
+      window.addEventListener('scroll', () => {
       this.scrollTop = document.documentElement.scrollTop;
       if (this.scrollTop > 150) {
         this.isScrollTop = true;
