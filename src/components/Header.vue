@@ -118,6 +118,9 @@ export default {
   name: 'Header',
   components: {
     'Expansion-Obj':Expansion
+  },  
+  watch: {
+    "$route" : 'scrollToTop'
   },
   data () {
     return {

@@ -19,7 +19,7 @@
         <div class="d-flex justify-content-center pt-5 pb-4 pl-5 pr-5 pl-md-0 pr-md-0" style="width:100vw">
             <div v-if="show" class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem" v-html="content[1].content"></div>
         </div>
-        <div @click="SHOW_MORE_click()" style="font-weight: 600;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;padding-bottom: 120px;" class="row d-flex justify-content-center ">SHOW MORE<div class="expand ml-4 mt-1" style="color:#5d6164;"></div></div>
+        <div @click="SHOW_MORE_click()" style="font-weight: 600;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;padding-bottom: 120px;" class="row d-flex justify-content-center ">SHOW MORE<div :class="expand" class="ml-4 mt-1" style="color:#5d6164;"></div></div>
         <div class="bg_child_AboutUs" >
         </div>
         <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
@@ -60,7 +60,13 @@ components: {
         this.$emit('Click_Title_trigger', { index: index });
     },
     SHOW_MORE_click(){
-        this.show=true
+        if(this.show){
+            this.show = false
+            this.expand = 'expand'
+        }else{
+            this.show = true
+            this.expand = 'unexpand'
+        }
     },
     ShowExtraContent(){
         this.extra_content = 'extra_content_open'
@@ -79,7 +85,8 @@ components: {
           ],
           show:false,
           extra_content:'extra_content',
-          website:'website'
+          website:'website',
+          expand:'expand'
       }
   }
 }
@@ -101,6 +108,15 @@ components: {
   height:12.5px;
   width:12.5px;
   transform:rotate(45deg);
+  border-right: 2px solid #5d6164;
+  border-bottom: 2px solid #5d6164;
+}
+.unexpand{
+  height:12.5px;
+  width:12.5px;
+  position: relative;
+  top: 10px;
+  transform:rotate(225deg);
   border-right: 2px solid #5d6164;
   border-bottom: 2px solid #5d6164;
 }
