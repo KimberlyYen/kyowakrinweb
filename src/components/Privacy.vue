@@ -101,14 +101,14 @@ h1,h2,h3,h4 {
 }
 
 .intro_p {
-  color:#a5a5a5;
+  color:#5D6164;
   font-size: 1.8rem;
   margin-left: 0%;
   margin-bottom: 3%;
 }
 
 p {
-  color:#a5a5a5;
+  color:#5D6164;
   font-size: 1.8rem;
   margin-left: 4%;
   margin-bottom: 3%;

@@ -84,6 +84,7 @@
   }
   
   .hdg-lv1-02 {
+    font-weight: bold;
     font-size: 4.8rem;
     line-height: 1.125;
     margin-top: 55px;
@@ -92,6 +93,7 @@
   }
   
   .hdg-lv3-01 {
+    font-weight: bold;
     font-size: 2.5rem;
     margin-top: 3vh;
     color: #ea5504;
@@ -106,14 +108,14 @@
   }
   
   .intro_p {
-    color:#a5a5a5;
+    color:#5D6164;
     font-size: 1.8rem;
     margin-left: 0%;
     margin-bottom: 3%;
   }
   
   p {
-    color:#a5a5a5;
+    color:#5D6164;
     font-size: 1.8rem;
     margin-left: 4%;
     margin-bottom: 3%;

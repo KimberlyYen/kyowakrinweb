@@ -147,6 +147,7 @@ h1,h2,h3,h4 {
 }
 
 .hdg-lv1-02 {
+  font-weight: bold;
   font-size: 4.8rem;
   line-height: 1.125;
   margin-top: 55px;
