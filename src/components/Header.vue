@@ -194,7 +194,7 @@ export default {
     }else{
       lang = '/en'
       var newurl = location.origin + lang + location_
-      if(location.href.toString().split('#')[0].split(url)[1] == lang){
+      if(location.href.toString().split('#')[0].split(url)[1] == lang + '/'){
 
       }else{
         location.href = newurl
