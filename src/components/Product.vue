@@ -1,29 +1,31 @@
 <template>
     <div class="Product">
-      <div class="bg_cp" >
-        <div style="position:relative;top:150px;color:white;max-width:800px;width:100%;height:200px;min-width:350px;text-align:left;"></div>
-      </div>
-      <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
-        <div class="d-flex justify-content-center align-items-center" style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">專注的領域</div>
-      </div>
-      <div class="d-flex justify-content-center" style="padding-bottom: 4vh;width:100vw">
-        <div class="d-flex justify-content-center align-items-center p-0 pl-5 pr-5 pb-5" style=";max-width:1000px;min-width:320px;width:100%;color:#5D6164;font-size:2rem;">公司的產品專注於血液腫瘤科，腎臟科與免疫科的治療領域。</div>
-      </div>
-      <div class="d-flex justify-content-center" style="height:55vh;width:100vw">
-        <div  style="position:relative;max-width:1200px;min-width:350px;width:100%;">
-          <div class="d-flex justify-content-center" style="position:relative;top:140px;width:100%;height:100%">
-            <div @click="Click_Title(1)" class="aboutus"  style="font-size:1.5rem;background-color:#F3F3F3;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
-          </div>
-          <div class="svg_1 bg_svg_1" style="left:0px;top:0"><font style="color:white;position:relative;top:20%;">Nephrology</font></div>
-          <div class="svg_1 bg_svg_2 positioncss_left" style="top:180px" ><font style="color:white;position:relative;top:50%;">Oncology</font></div>
-          <div class="svg_1 bg_svg_3 positioncss_right" style="top:180px" ><font style="color:white;position:relative;top:20%;">Central nervous<br /> system (CNS)</font></div>
-          <div class="svg_1 bg_svg_4" style="right:0px;top:0" ><font style="color:white;position:relative;top:40%;">Immunology <br />& Allergy</font></div>
+      <div>      
+            <div class="bg_cp" >
+                <div style="position:relative;top:150px;color:white;max-width:800px;width:100%;height:200px;min-width:350px;text-align:left;"></div>
+            </div>
+            <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
+                <div class="d-flex justify-content-center align-items-center" style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">專注的領域</div>
+            </div>
+            <div class="d-flex justify-content-center" style="padding-bottom: 4vh;width:100vw">
+                <div class="d-flex justify-content-center align-items-center p-0 pl-5 pr-5 pb-5" style=";max-width:1000px;min-width:320px;width:100%;color:#5D6164;font-size:2rem;">公司的產品專注於血液腫瘤科，腎臟科與免疫科的治療領域。</div>
+            </div>
+            <div class="d-flex justify-content-center" style="height:55vh;width:100vw">
+                <div  style="position:relative;max-width:1200px;min-width:350px;width:100%;">
+                <div class="d-flex justify-content-center" style="position:relative;top:140px;width:100%;height:100%">
+                    <div @click="Click_Title(1)" class="aboutus"  style="font-size:1.5rem;background-color:#F3F3F3;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
+                </div>
+                <div class="svg_1 bg_svg_1" style="left:0px;top:0"><font style="color:white;position:relative;top:20%;">Nephrology</font></div>
+                <div class="svg_1 bg_svg_2 positioncss_left" style="top:180px" ><font style="color:white;position:relative;top:50%;">Oncology</font></div>
+                <div class="svg_1 bg_svg_3 positioncss_right" style="top:180px" ><font style="color:white;position:relative;top:20%;">Central nervous<br /> system (CNS)</font></div>
+                <div class="svg_1 bg_svg_4" style="right:0px;top:0" ><font style="color:white;position:relative;top:40%;">Immunology <br />& Allergy</font></div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="bg_middle_PCmobile">
-        <div v-html="Title" style="position:relative;margin-top: 10vh;color:white;width:100%;height:200px;text-align:center;"></div>
-      </div>
+        <div class="bg_middle_PCmobile">
+            <div v-html="Title" style="position:relative;margin-top: 10vh;color:white;width:100%;height:200px;text-align:center;"></div>
+        </div>
 
         <!-- 展開的產品細節↓ -->
         <button v-bind:class="div0_1" style="text-align: left">
@@ -41,109 +43,111 @@
         </button>
         <!-- 展開的產品細節↑ -->
         
-      <div class="container" style="margin: 0 auto ;padding: 0px;color:#5D6164">
-         <div class="box-hdg2-wrapper" style="margin: auto;justify-items: center;padding-bottom: 5h;">
-             <div class="row">
-                    <div class="box-image col-md-4">
-                        <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+        <div :class="website">
+            <div class="container" style="margin: 0 auto ;padding: 0px;color:#5D6164">
+                <div class="box-hdg2-wrapper" style="margin: auto;justify-items: center;padding-bottom: 5h;">
+                    <div class="row">
+                            <div class="box-image col-md-4">
+                                <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
+                            </div>
+                            <div class="box-text col-sm-12 col-md-7 p-5">
+                                <h3 style="pointer-events: none"> CRYSVITA® </h3>
+                                <p> 適應症：</p>
+                                <p> 性聯遺傳型低磷酸鹽症(X-linked hypophosphatemia，XLH)：適用於1歲以上兒童與青少年，及合併有XLH相關骨骼疾病之成人。</p>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="box-image col-md-4">
+                            <img src="../assets/index_img_slide_gran.jpg" alt="GRAN®">
+                        </div>
+                        <div class="box-text col-sm-12 col-md-7 p-5">
+                            <h3 @click="show_detail(1)"> GRAN®</h3>
+                            <p> (1) 動員造血幹細胞至周邊血中。</p>
+                            <p> (2) 促進造血幹細胞移植時嗜中性白血球數的增加。</p>
+                            <p> (3) 癌症化學療法所引起之嗜中性白血球減少症。</p>
+                            <p> (4) 骨髓發育不良症候群的嗜中性白血球缺乏症。</p>
+                            <p> (5) 先天性、特異性嗜中性白血球缺乏症。 </p>
+                        </div>
                     </div>
-                    <div class="box-text col-sm-12 col-md-7 p-5">
-                        <h3 style="pointer-events: none"> CRYSVITA® </h3>
-                        <p> 適應症：</p>
-                        <p> 性聯遺傳型低磷酸鹽症(X-linked hypophosphatemia，XLH)：適用於1歲以上兒童與青少年，及合併有XLH相關骨骼疾病之成人。</p>
+
+                    <div class="row">
+                        <div class="box-image col-md-4">
+                            <img src="../assets/index_img_slide_lumicef.jpg" alt="LUMICEF®">
+                        </div>
+                        <div class="box-text col-sm-12 col-md-7 p-5">
+                            <h3 @click="show_detail(2)"> LUMICEF®</h3>
+                            <p> 適應症：</p>
+                            <p> (1) 治療適合接受全身性治療的中至重度斑塊性乾癬成人病人。</p>
+                            <p> (2) 治療適合接受全身性治療的膿疱性乾癬之成人病人。</p>
+                            <p> (3) 治療對疾病緩解型抗風濕性藥物(DMARDs)無效或無法耐受的活動性乾癬性關節炎成人病人。</p>
+                        </div>
                     </div>
-                </div>
-             <div class="row">
-                <div class="box-image col-md-4">
-                    <img src="../assets/index_img_slide_gran.jpg" alt="GRAN®">
-                </div>
-                <div class="box-text col-sm-12 col-md-7 p-5">
-                    <h3 @click="show_detail(1)"> GRAN®</h3>
-                    <p> (1) 動員造血幹細胞至周邊血中。</p>
-                    <p> (2) 促進造血幹細胞移植時嗜中性白血球數的增加。</p>
-                    <p> (3) 癌症化學療法所引起之嗜中性白血球減少症。</p>
-                    <p> (4) 骨髓發育不良症候群的嗜中性白血球缺乏症。</p>
-                    <p> (5) 先天性、特異性嗜中性白血球缺乏症。 </p>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="box-image col-md-4">
-                    <img src="../assets/index_img_slide_lumicef.jpg" alt="LUMICEF®">
-                </div>
-                <div class="box-text col-sm-12 col-md-7 p-5">
-                    <h3 @click="show_detail(2)"> LUMICEF®</h3>
-                    <p> 適應症：</p>
-                    <p> (1) 治療適合接受全身性治療的中至重度斑塊性乾癬成人病人。</p>
-                    <p> (2) 治療適合接受全身性治療的膿疱性乾癬之成人病人。</p>
-                    <p> (3) 治療對疾病緩解型抗風濕性藥物(DMARDs)無效或無法耐受的活動性乾癬性關節炎成人病人。</p>
-                </div>
+                    <div class="row">
+                        <div class="box-image col-md-4">
+                            <img src="../assets/index_img_slide_nesp.jpg" alt="NESP®">
+                        </div>
+                        <div class="box-text col-sm-12 col-md-7 p-5">
+                            <h3 @click="show_detail(3)"> NESP®</h3>
+                            <p> 適應症：</p>
+                            <p> 治療與慢性腎臟功能失調有關的貧血症狀或因此而需要輸血的患者，治療與癌症化學治療有關的症狀性貧血。</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box-image col-md-4">
+                            <img src="../assets/index_img_sancuso.jpg" alt="Sancuso®">
+                        </div>
+                        <div class="box-text col-sm-12 col-md-7 p-5">
+                            <h3 @click="show_detail(4)"> Sancuso®</h3>
+                            <p>  適應症：</p>
+                            <p>  預防連續5天使用中度及/或高度致吐性化學療法療程的病人所引起的噁心及嘔吐。 </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box-image col-md-4">
+                            <img src="../assets/index_img_slide_regpara.jpg" alt="REGPARA®">
+                        </div>
+                        <div class="box-text col-sm-12 col-md-7 p-5">
+                            <h3 @click="show_detail(5)"> REGPARA®</h3>
+                            <p> 適應症：</p>
+                            <p> 治療透析患者的次發性副甲狀腺機能亢進。</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box-image col-md-4">
+                            <img src="../assets/index_img_slide_romiplate.jpg" alt="Romiplate®">
+                        </div>
+                        <div class="box-text col-sm-12 col-md-7 p-5">
+                            <h3 @click="show_detail(6)"> Romiplate®</h3>
+                            <p> 適應症：</p>
+                                <p> (1)用於治療在脾臟切除後且對於其他治療(例如:類固醇、免疫球蛋白等)失敗之成年慢性自發性(免疫性)血小板缺乏紫斑症(ITP)患者，或對於不適合進行脾臟切除之成年慢性自發性(免疫性)血小板缺乏紫斑症(ITP)患者之第二線治療。</p>
+                                <p> (2)適用在對免疫抑制療法反應不佳的嚴重再生不良性貧血病人。</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box-image col-md-4">
+                            <img src="../assets/index_img_slide_neulasta.jpg" alt="Neulasta®">
+                        </div>
+                        <div class="box-text col-sm-12 col-md-7 p-5">
+                            <h3 @click="show_detail(7)"> Neulasta®</h3>
+                            <p> 適應症：</p>
+                            <p> 適用於非骨髓性癌症患者在接受易引起臨床上有顯著發生率的嗜中性白血球減少症合併發燒之骨髓抑制性抗癌藥物治療時，以降低嗜中性白血球減少症合併發燒為表現之感染發生率。 </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box-image col-md-4">
+                            <img src="../assets/index_img_slide_Leunase.jpg" alt="Leunase®">
+                        </div>
+                        <div class="box-text col-sm-12 col-md-7 p-5">
+                            <h3 @click="show_detail(8)"> Leunase®</h3>
+                            <p> 適應症：</p>
+                            <p> 適用於非骨髓性癌症患者在接受易引起臨床上有顯著發生率的嗜中性白血球減少症合併發燒之骨髓抑制性抗癌藥物治療時，以降低嗜中性白血球減少症合併發燒為表現之感染發生率。</p>
+                        </div>
+                    </div>
+                </div> 
             </div>
-
-             <div class="row">
-                <div class="box-image col-md-4">
-                    <img src="../assets/index_img_slide_nesp.jpg" alt="NESP®">
-                </div>
-                <div class="box-text col-sm-12 col-md-7 p-5">
-                    <h3 @click="show_detail(3)"> NESP®</h3>
-                    <p> 適應症：</p>
-                    <p> 治療與慢性腎臟功能失調有關的貧血症狀或因此而需要輸血的患者，治療與癌症化學治療有關的症狀性貧血。</p>
-                </div>
-            </div>
-             <div class="row">
-                <div class="box-image col-md-4">
-                    <img src="../assets/index_img_sancuso.jpg" alt="Sancuso®">
-                </div>
-                <div class="box-text col-sm-12 col-md-7 p-5">
-                    <h3 @click="show_detail(4)"> Sancuso®</h3>
-                    <p>  適應症：</p>
-                    <p>  預防連續5天使用中度及/或高度致吐性化學療法療程的病人所引起的噁心及嘔吐。 </p>
-                </div>
-            </div>
-             <div class="row">
-                <div class="box-image col-md-4">
-                    <img src="../assets/index_img_slide_regpara.jpg" alt="REGPARA®">
-                </div>
-                <div class="box-text col-sm-12 col-md-7 p-5">
-                    <h3 @click="show_detail(5)"> REGPARA®</h3>
-                    <p> 適應症：</p>
-                    <p> 治療透析患者的次發性副甲狀腺機能亢進。</p>
-                </div>
-            </div>
-             <div class="row">
-                <div class="box-image col-md-4">
-                    <img src="../assets/index_img_slide_romiplate.jpg" alt="Romiplate®">
-                </div>
-                <div class="box-text col-sm-12 col-md-7 p-5">
-                    <h3 @click="show_detail(6)"> Romiplate®</h3>
-                    <p> 適應症：</p>
-                        <p> (1)用於治療在脾臟切除後且對於其他治療(例如:類固醇、免疫球蛋白等)失敗之成年慢性自發性(免疫性)血小板缺乏紫斑症(ITP)患者，或對於不適合進行脾臟切除之成年慢性自發性(免疫性)血小板缺乏紫斑症(ITP)患者之第二線治療。</p>
-                        <p> (2)適用在對免疫抑制療法反應不佳的嚴重再生不良性貧血病人。</p>
-                </div>
-            </div>
-             <div class="row">
-                <div class="box-image col-md-4">
-                    <img src="../assets/index_img_slide_neulasta.jpg" alt="Neulasta®">
-                </div>
-                <div class="box-text col-sm-12 col-md-7 p-5">
-                    <h3 @click="show_detail(7)"> Neulasta®</h3>
-                    <p> 適應症：</p>
-                    <p> 適用於非骨髓性癌症患者在接受易引起臨床上有顯著發生率的嗜中性白血球減少症合併發燒之骨髓抑制性抗癌藥物治療時，以降低嗜中性白血球減少症合併發燒為表現之感染發生率。 </p>
-                </div>
-            </div>
-             <div class="row">
-                <div class="box-image col-md-4">
-                    <img src="../assets/index_img_slide_Leunase.jpg" alt="Leunase®">
-                </div>
-                <div class="box-text col-sm-12 col-md-7 p-5">
-                    <h3 @click="show_detail(8)"> Leunase®</h3>
-                    <p> 適應症：</p>
-                    <p> 適用於非骨髓性癌症患者在接受易引起臨床上有顯著發生率的嗜中性白血球減少症合併發燒之骨髓抑制性抗癌藥物治療時，以降低嗜中性白血球減少症合併發燒為表現之感染發生率。</p>
-                </div>
-            </div>
-         </div> 
-      </div>
-      <Footer-bg style="background-color:white !important" @Click_Title_trigger="Click_Title2"></Footer-bg>
+        </div>
+        <Footer-bg style="background-color:white !important" @Click_Title_trigger="Click_Title2"></Footer-bg>
     </div>
 </template>
   
@@ -157,11 +161,13 @@
     methods:{
         show_detail (index) {
             this.div0_1='div1'
+            this.website='website_disabled'
             this.dataram=this.dataOBJ[index].data
             console.log(this.dataram)
         },
         close_detail () {
             this.div0_1='div2'
+            this.website='website'
         },
         ToNews(){
             this.$router
@@ -184,8 +190,8 @@
         Title:'<font style="font-size:5rem;font-weight:bold;">我們的產品</font><br/><br/>',
         NewInformation:'最新資訊',
         div0_1: 'div0',
+        website:'website',
         dataram:[],
-
         dataOBJ:[
             {
                 data://0-CRYSVITA
@@ -286,8 +292,9 @@
                         content:'Leunase<br/>中文品名<br/>樂拿舒注射劑 10,000K.U.<br/>英文品名<br/>Leunase Injection (10,000K.U.)<br/>主成份名<br/>L-ASPARAGINASE<br/>許可證字號<br/>衛署藥輸字第 021032 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
                     },
                 ],},],}
-            }
-        }
+        },
+
+    }
   </script>
 
 
@@ -352,6 +359,15 @@
     to     {right: -100vw;width:0vw;}
     }
 
+/* <!-- 背景白色 ↑ --> */
+    .website{
+        opacity: 1;
+        /* pointer-events: initial; */
+    }
+    .website_disabled{
+        opacity: 0.5;
+        /* pointer-events: none; */
+    }
 /* <!-- 展品詳細介紹右側展開動畫 ↑ --> */
 
     font,p {

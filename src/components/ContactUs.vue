@@ -20,7 +20,7 @@
             
                 </dl>
             </div>
-          <button class="button_1">點擊此處連結至諮詢表單</button>
+          <button @click="GotoMail()" class="button_1">點擊此處連結至諮詢表單</button>
           </div>
     <Footer-bg style="background-color:white" @Click_Title_trigger="Click_Title2"></Footer-bg>
     </div>
@@ -39,13 +39,16 @@
         }
       },
       methods:{
+        GotoMail(){
+        location.href = 'https://faq.kirin.co.jp/form/kkc_18_cn.html#_ga=2.267408327.85928623.1616483882-769985277.1576133350'
+        },
         Click_Title2(index){
         this.$emit('Click_Title_trigger', { index: index.index });
         },
         Click_Title(index){
         this.$emit('Click_Title_trigger', { index: index });
         },
-      }
+      },
     }
     </script>
   

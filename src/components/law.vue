@@ -186,7 +186,6 @@
   /*mobile*/
     @media (min-width: 320px) and (max-width:768px) {
       * {
-        text-align: justify;
         text-justify:inter-ideograph;
       }
       .str-outer {

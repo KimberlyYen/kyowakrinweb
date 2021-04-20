@@ -22,7 +22,6 @@
       
           <h3 class="hdg-lv3-01">4. 隱私條款的修改</h3>
           <p>為了更有效地保護個人資料，或更符合相關法律規定，KKTW可能會修改部分隱私政策規定，此等修改都將提示於本網站上。</p>
-
         </dl>
       </div>
     </div>
@@ -60,7 +59,6 @@
 
 *{
   font-family: Arial, sans-serif;
-  text-align: justify;
   text-justify:inter-ideograph;
 }
 .expand{
@@ -126,6 +124,7 @@ p {
   min-height: 250px;
   background-color: #fef3ed;
 }
+
 .arrow {
   font-weight: bold;
   color: #ea5504;
@@ -139,6 +138,7 @@ p {
   transform: translate(-50%, -50%);
   position: absolute;
 }
+
 .title {
   top: 50%;
   right: 50%;
@@ -148,6 +148,7 @@ p {
   text-align: center;
   color: #ea5504;
 }
+
 .str-outer {
   margin-top: 100px;
   padding-bottom: 100px;
@@ -183,13 +184,11 @@ dd {
 /*mobile*/
   @media (min-width: 320px) and (max-width:768px) {
     .str-outer {
-        text-align: justify;
-        text-justify:inter-ideograph;
-        position: relative;
-        min-height: 250px;
-        padding-right: calc(46px/2);
-        padding-left: calc(46px/2);
+      text-justify:inter-ideograph;
+      position: relative;
+      min-height: 250px;
+      padding-right: calc(46px/2);
+      padding-left: calc(46px/2);
     }
   }
-
 </style>

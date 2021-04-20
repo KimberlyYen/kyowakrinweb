@@ -159,12 +159,15 @@ h1,h2,h3,h4 {
   font-weight: bold;
   margin-top: 4vh;
   margin-bottom: 2vh;
+  padding: 1%;
   text-decoration:underline;
+  color: black;
 }
 
 
 .hdg-lv3-01 {
   font-size: 2.4rem;
+  font-weight: bold;
   margin-top: 3vh;
   color: #ea5504;
   margin-left: 1vw;;
