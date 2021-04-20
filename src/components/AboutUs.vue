@@ -19,7 +19,7 @@
         <div class="d-flex justify-content-center pt-5 pb-4 pl-5 pr-5 pl-md-0 pr-md-0" style="width:100vw">
             <div v-if="show" class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem" v-html="content[1].content"></div>
         </div>
-        <div @click="SHOW_MORE_click()" style="font-weight: 600;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;padding-bottom: 120px;" class="row d-flex justify-content-center ">SHOW MORE<div :class="expand" class="ml-4 mt-1" style="color:#5d6164;"></div></div>
+        <div @click="SHOW_MORE_click()" style="width:100vw;font-weight: 600;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;padding-bottom: 120px;" class="row d-flex justify-content-center ">SHOW MORE<div :class="expand" class="ml-4 mt-1" style="color:#5d6164;"></div></div>
         <div class="bg_child_AboutUs" >
         </div>
         <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
