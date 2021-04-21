@@ -418,12 +418,12 @@
 
 @media (min-width: 1025px){
     @keyframes expand {
-        from { height: 256px; width: 256px;}
-        to { height: 400px; width: 400px;}
+        from { height: 256px; width: 256px;font-size: 1.5rem;}
+        to { height: 400px; width: 400px;font-size: 2rem;}
     }
     @keyframes tight {
-        from { height: 400px;width: 400px;}
-        to { height: 256px; width: 256px;}
+        from { height: 400px;width: 400px;font-size: 2rem;}
+        to { height: 256px; width: 256px;font-size: 1.5rem;}
     }
     .svg_1{
         height: 256px;
@@ -448,12 +448,12 @@
 
 @media (min-width: 769px) and (max-width: 1024px){
     @keyframes expand {
-        from { height: 175px; width: 175px;}
-        to { height: 300px; width: 300px;}
+        from { height: 175px; width: 175px;font-size: 1.5rem;}
+        to { height: 300px; width: 300px;font-size: 2rem;}
     }
     @keyframes tight {
-        from { height: 300px;width: 300px; }
-        to { height: 175px; width: 175px;}
+        from { height: 300px;width: 300px;font-size: 2rem; }
+        to { height: 175px; width: 175px;font-size: 1.5rem;}
     }
     .svg_1{
         height: 175px;
