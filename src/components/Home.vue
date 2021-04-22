@@ -15,7 +15,7 @@
           <div @click="Click_Title(1)" class="aboutus" style="font-size:1.5rem;background-color:white;width:260px;height:40px;border-radius:40px;cursor:pointer;color:rgb(234, 85, 4);display: flex;justify-content: center;align-items: center;position:relative;"><font>關於我們</font><font style="position:absolute;right:20px">➝</font></div>
         </div>
       </div>
-      <div class="d-flex justify-content-center pt-5 pb-5 pl-5 pr-5" style="width:100vw;background-color:#F3F3F3;">
+      <!-- <div class="d-flex justify-content-center pt-5 pb-5 pl-5 pr-5" style="width:100vw;background-color:#F3F3F3;">
         <div style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);">
           <div style="font-size:3rem;font-weight:bold;text-align:left;">{{NewInformation}}</div><br />
           <div class="row p-0 m-0">
@@ -32,7 +32,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
         <div class="d-flex justify-content-center align-items-center" style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">專注的領域</div>
       </div>

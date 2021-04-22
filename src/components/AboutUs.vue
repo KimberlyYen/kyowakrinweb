@@ -20,7 +20,21 @@
             <div v-if="show" class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem" v-html="content[1].content"></div>
         </div>
         <div @click="SHOW_MORE_click()" style="width:100vw;font-weight: 600;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;padding-bottom: 120px;" class="row d-flex justify-content-center ">SHOW MORE<div :class="expand" class="ml-4 mt-1" style="color:#5d6164;"></div></div>
+        <div class="displayM" style="max-width:1500px;position:relative;width:100%;height:800px">
+            <img class="Fourcss displayC" style="top:0;left:0" src="../assets/index_img_corevalue_01.png">
+            <img class="displayM" style="height:400px;top:0;left:0" src="../assets/index_img_corevalue_01_M.png">
+            <img @mouseover="Hovercorevalue()" @mouseleave="Hovercorevalue()" class="Fourcss" :src="corevalue_src" style="top:350px;right:0">
+            <img @mouseover="Hovercorevalue03()" @mouseleave="Hovercorevalue03()" class="Fourcss corevalue03" :src="corevalue03_src" style="bottom:100px;left:-50px">
+            <img @mouseover="Hovercorevalue04()" @mouseleave="Hovercorevalue04()" class="Fourcss" :src="corevalue04_src" style="bottom:0px;right:-25px">
+        </div>
         <div class="bg_child_AboutUs" >
+            <div class="displayC" style="max-width:1500px;position:relative;width:100%;">
+                <img class="Fourcss displayC" style="top:0;left:0" src="../assets/index_img_corevalue_01.png">
+                <img class="Fourcss displayM" style="top:0;left:0" src="../assets/index_img_corevalue_01_M.png">
+                <img @mouseover="Hovercorevalue()" @mouseleave="Hovercorevalue()" class="Fourcss" :src="corevalue_src" style="top:100px;right:0">
+                <img @mouseover="Hovercorevalue03()" @mouseleave="Hovercorevalue03()" class="Fourcss corevalue03" :src="corevalue03_src" style="bottom:100px;left:150px">
+                <img @mouseover="Hovercorevalue04()" @mouseleave="Hovercorevalue04()" class="Fourcss" :src="corevalue04_src" style="bottom:0px;right:150px">
+            </div>
         </div>
         <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
             <div class="d-flex justify-content-center align-items-center" style="max-width:1200px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">總經理的話</div>
@@ -70,6 +84,27 @@ components: {
             this.expand = 'unexpand'
         }
     },
+    Hovercorevalue(){
+        if(this.corevalue_src == require('@/assets/index_img_corevalue_05.png')){
+            this.corevalue_src = require('@/assets/index_img_corevalue_02.png')
+        }else{
+            this.corevalue_src = require('@/assets/index_img_corevalue_05.png')
+        }
+    },
+    Hovercorevalue03(){
+        if(this.corevalue03_src == require('@/assets/index_img_corevalue_06.png')){
+            this.corevalue03_src = require('@/assets/index_img_corevalue_03.png')
+        }else{
+            this.corevalue03_src = require('@/assets/index_img_corevalue_06.png')
+        }
+    },
+    Hovercorevalue04(){
+        if(this.corevalue04_src == require('@/assets/index_img_corevalue_07.png')){
+            this.corevalue04_src = require('@/assets/index_img_corevalue_04.png')
+        }else{
+            this.corevalue04_src = require('@/assets/index_img_corevalue_07.png')
+        }
+    },
     ShowExtraContent(){
         this.extra_content = 'extra_content_open'
         this.website='website_disabled'
@@ -88,7 +123,10 @@ components: {
           show:false,
           extra_content:'extra_content',
           website:'website',
-          expand:'expand'
+          expand:'expand',
+          corevalue_src:require('@/assets/index_img_corevalue_02.png'),
+          corevalue03_src:require('@/assets/index_img_corevalue_03.png'),
+          corevalue04_src:require('@/assets/index_img_corevalue_04.png'),
       }
   }
 }
@@ -124,6 +162,37 @@ components: {
 }
 /*computer*/
 @media (min-width: 769px){
+    .corevalue03{
+        left: 0;
+    }
+    .displayC{
+        display: block;
+    }
+    .displayM{
+        display: none;
+    }
+    .Fourcss{
+        position: absolute;
+        height: 300px;
+        animation-name: Fourcssunhover;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+    }
+    .Fourcss:hover{
+        position: absolute;
+        height: 400px;
+        animation-name: Fourcsshover;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+    }
+    @keyframes Fourcsshover {
+        from { height: 300px; }
+        to { height: 400px; }
+    }
+    @keyframes Fourcssunhover {
+        from { height: 400px; }
+        to { height: 300px; }
+    }
     .font_size_content{
         font-size: 2rem;
     }
@@ -142,6 +211,7 @@ components: {
         background-size: cover;
         background-image: url("../assets/42415230.png");
         justify-content: center;
+        position: relative;
     }
     .extra_content_open{
         position:fixed;
@@ -186,6 +256,37 @@ components: {
 }
 /*mobile*/
 @media (min-width: 320px) and (max-width:768px) {
+    .corevalue03{
+        left: -50px;
+    }
+    .displayC{
+        display: none;
+    }
+    .displayM{
+        display: block;
+    }
+    .Fourcss{
+        position: absolute;
+        height: 175px;
+        animation-name: Fourcssunhover;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+    }
+    .Fourcss:hover{
+        position: absolute;
+        height: 225px;
+        animation-name: Fourcsshover;    /*動畫名稱，需與 keyframe 名稱對應*/
+        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
+    }
+    @keyframes Fourcsshover {
+        from { height: 175px; }
+        to { height: 225px; }
+    }
+    @keyframes Fourcssunhover {
+        from { height: 225px; }
+        to { height: 175px; }
+    }
     .font_size_content{
         font-size: 2rem;
     }
