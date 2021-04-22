@@ -420,13 +420,23 @@ export default {
   position:fixed;background-color:#ea5504;cursor:pointer;width:50px;height:50px;border-radius:50%;color:white;font-size:3rem;bottom:20px;right:20px;z-index:2;box-shadow: 1px 1px 1px 1px #8b8b8b;
 }
 /*computer*/
-  @media (min-width: 769px) {
+  @media (min-width: 850px){
     .logo_pc{
       display: flex;
     }
     .logo_mb{
       display: none;
     }
+  }
+  @media (max-width: 849px){
+    .logo_pc{
+      display: none;
+    }
+    .logo_mb{
+      display: flex;
+    }
+  }
+  @media (min-width: 769px) {
     .header_{
         width: 99vw;
         height:52px;
@@ -490,12 +500,6 @@ export default {
   }
 /*mobile*/
   @media (min-width: 320px) and (max-width:768px) {
-    .logo_pc{
-      display: none;
-    }
-    .logo_mb{
-      display: flex;
-    }
     .header_{
         width: 100vw;
         height:52px;
