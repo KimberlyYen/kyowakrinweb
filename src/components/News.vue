@@ -12,7 +12,7 @@
             <div v-if="index < ShowNum">
               <dt>{{items.date}}</dt>
               <dd>
-                <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" style="font-weight:bold" href="/csr/fair_operating_practices/compliance_required_pharmaceuticals/index.html">{{items.content}}</a></p>
+                <p class="mod-link-text"><font class="arrow">⟶  </font><a class="news-a" style="font-weight:bold;color: #5D6164;">{{items.content}}</a></p>
                 <p class="ml-5" style="color:#a5a5a5">{{items.detail}}</p>
                 <p class="ml-5" style="color:#a5a5a5">{{items.detail_}}</p>
               </dd>

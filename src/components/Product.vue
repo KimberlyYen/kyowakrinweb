@@ -414,6 +414,7 @@
     .box_text_detail {
         width: 20%;
         padding-bottom: 5vh;
+        font-size: 1.8rem;
     }
 
 @media (min-width: 1025px){
@@ -430,7 +431,7 @@
         width: 256px;
         position: absolute;
         animation-name: tight;    /*動畫名稱，需與 keyframe 名稱對應*/
-        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-duration: 1s;    /*動畫持續時間，單位為秒*/
         animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
         font-size: 1.5rem;
     }
@@ -439,7 +440,7 @@
         width: 400px;
         position: absolute;
         animation-name: expand;    /*動畫名稱，需與 keyframe 名稱對應*/
-        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-duration: 1s;    /*動畫持續時間，單位為秒*/
         animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
         z-index: 1;
         font-size: 2rem;
@@ -460,7 +461,7 @@
         width: 175px;
         position: absolute;
         animation-name: tight;    /*動畫名稱，需與 keyframe 名稱對應*/
-        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-duration: 1s;    /*動畫持續時間，單位為秒*/
         animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
         font-size: 1.5rem;
     }
@@ -469,7 +470,7 @@
         width: 300px;
         position: absolute;
         animation-name: expand;    /*動畫名稱，需與 keyframe 名稱對應*/
-        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-duration: 1s;    /*動畫持續時間，單位為秒*/
         animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
         z-index: 1;
         font-size: 2rem;
@@ -582,7 +583,7 @@
         position: absolute;
         background-repeat: no-repeat;
         animation-name: tight;    /*動畫名稱，需與 keyframe 名稱對應*/
-        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-duration: 1s;    /*動畫持續時間，單位為秒*/
         animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
         font-size: 1.5rem;
     }
@@ -592,7 +593,7 @@
         position: absolute;
         background-repeat: no-repeat;
         animation-name: expand;    /*動畫名稱，需與 keyframe 名稱對應*/
-        animation-duration: 0.5s;    /*動畫持續時間，單位為秒*/
+        animation-duration: 1s;    /*動畫持續時間，單位為秒*/
         animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/ 
         z-index: 1;
         font-size: 2rem;

@@ -6,17 +6,17 @@
         <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
             <div class="d-flex justify-content-center align-items-center" style="max-width:1200px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">公司目標</div>
         </div>
-        <div class="d-flex justify-content-center pt-5 pb-4 pl-5 pr-5 pl-md-0 pr-md-0" style="width:100vw">
+        <div class="d-flex justify-content-center pt-5 pb-4 pl-3 pr-3 pl-md-0 pr-md-0" style="width:100vw">
             <div class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem">日本麒麟控股集團下所屬協和麒麟公司，是一個以研究為基礎的生命科學事業體，<br/>且專精於生物化學相關領域。我們不斷致力於尖端生物化學的發展，並使用於製藥流程當中，<br/>以期望能研發出更符合患者所需的藥品，改善病患的生活品質。</div>
         </div>
         <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
             <div class="d-flex justify-content-center align-items-center" style="max-width:1200px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">我們的願景</div>
         </div>
-        <div class="d-flex justify-content-center pt-5 pb-4 pl-5 pr-5 pl-md-0 pr-md-0" style="width:100vw">
+        <div class="d-flex justify-content-center pt-5 pb-4 pl-3 pr-3 pl-md-0 pr-md-0" style="width:100vw">
             <div class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem" v-html="content[0].content"></div>
             
         </div>
-        <div class="d-flex justify-content-center pt-5 pb-4 pl-5 pr-5 pl-md-0 pr-md-0" style="width:100vw">
+        <div class="d-flex justify-content-center pt-5 pb-4 pl-3 pr-3 pl-md-0 pr-md-0" style="width:100vw">
             <div v-if="show" class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem" v-html="content[1].content"></div>
         </div>
         <div @click="SHOW_MORE_click()" style="width:100vw;font-weight: 600;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;padding-bottom: 120px;" class="row d-flex justify-content-center ">SHOW MORE<div :class="expand" class="ml-4 mt-1" style="color:#5d6164;"></div></div>

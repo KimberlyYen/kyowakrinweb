@@ -53,7 +53,7 @@
       <div class="d-flex justify-content-center pt-5 pb-5" style="width:100vw;background-color:rgb(243, 243, 243);">
         <div class="d-flex justify-content-center align-items-center" style="max-width:1000px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">快速導覽</div>
       </div>
-      <div class="d-flex justify-content-center pt-4 pb-5" style="width:100vw;background-color:rgb(243, 243, 243);color:#5D6164;font-size:2rem">我們利用生命科學和技術的創新力量幫助患者過上更好的生活</div>
+      <div class="d-flex justify-content-center pt-5 pb-4 pl-5 pr-5 pl-md-0 pr-md-0" style="width:100vw;background-color:rgb(243, 243, 243);color:#5D6164;font-size:2rem">我們利用生命科學和技術的創新力量幫助患者過上更好的生活</div>
       <div class="d-flex justify-content-center pt-5 pb-5" style="width:100vw;background-color:rgb(243, 243, 243);">
         <!-- <video width="320" height="240" src="" >
         </video> -->
