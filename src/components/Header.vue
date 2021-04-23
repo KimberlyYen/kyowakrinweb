@@ -196,7 +196,8 @@ export default {
       location_ = location.href.toString().split('/en/')[1]
     }
     if(lang == 'zh-tw'){
-      lang = '/zh'
+      // lang = '/zh'
+      lang = '/kyowa/zh'
       var newurl = location.origin + lang + location_
       if(location.href.toString().split('#')[0].split(url)[1] == lang + '/'){
 
@@ -204,7 +205,8 @@ export default {
         location.href = newurl
       }
     }else{
-      lang = '/en'
+      // lang = '/en'
+      lang = '/kyowa/en'
       var newurl = location.origin + lang + location_
       if(location.href.toString().split('#')[0].split(url)[1] == lang + '/'){
 
