@@ -31,7 +31,7 @@
         <button v-bind:class="div0_1" style="text-align: left">
         <div class="box_detail_Layout">
             <div v-if="showimgandclose">  
-                <div  v-for="(items,index) in dataram" :key="index" class="row p-0 m-0 w-100" style="color: white;">
+                <div  v-for="(items,index) in dataram" :key="index" class="row p-0 m-0 w-100" style="color: white;font-size:1.8rem">
                     <div class="col-12 col-sm-7 col-md-5 col-xl-3 p-0 m-0">
                         <img v-bind:src="items.src" alt="CRYListObj">
                     </div>
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <div v-if="showimgandclose" @click="close_detail" class="d-flex justify-content-center align-items-center" style="position:relative;top:0;font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;color:white;cursor:pointer;">close</div>
+        <div v-if="showimgandclose" @click="close_detail" class="d-flex justify-content-center align-items-center mt-2" style="position:relative;top:0;font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;color:white;cursor:pointer;">close</div>
         </button>
         <!-- 展開的產品細節↑ -->
         
