@@ -112,6 +112,8 @@ p {
   font-size: 1.8rem;
   margin-left: 4%;
   margin-bottom: 3%;
+  text-align: justify;
+  text-justify: inter-ideograph;
 }
 
 .News {

@@ -39,7 +39,7 @@
                 </div>
             </font>
         </div>
-        <div @click="close_detail" class="d-flex justify-content-center align-items-center mt-5" style="font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;;color:white;cursor:pointer;">close</div>
+        <div @click="close_detail" class="d-flex justify-content-center align-items-center mt-5" style="font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;color:white;cursor:pointer;">close</div>
         </button>
         <!-- 展開的產品細節↑ -->
         
@@ -301,7 +301,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     * {
-        font-family: Arial, "微軟正黑體", sans-serif;
+    font-family: Arial, "微軟正黑體", sans-serif;
     }
     .aboutus:hover{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) !important;
@@ -479,6 +479,15 @@
         max-width: 800px;
         margin: 0 auto;
     }
+    .box_text_detail{
+        width: 50%;
+        padding-right: 30%;
+        margin-left: -150px;
+        margin-top: 22vh;
+    }
+    .box_image_detail{
+        margin-right: 100px;
+    }
 }
 
 /*computer*/
@@ -513,29 +522,38 @@
     .margin_{
         margin:80px auto 0 auto;
     }
+
 }
 
 /*mobile*/
     @media (min-width: 320px) and (max-width:768px) {
     .div1 {
-        padding: 5% 5% 40% 13%;
+        padding: 5% 5% 50% 13%;
     }
 
     .div0,.div1,.div2 {
         border-radius: 0%;
         width: 95vw;
     }
+    @keyframes open {
+    from   {right: -100vw;width:0vw;}
+    to     {right: 0px;width:95vw;}
+    }
+    @keyframes close {
+    from   {right: 0px;width:95vw;}
+    to     {right: -100vw;width:0vw;}
+    }
+
     .box_image_detail {
         width: 0%;
     }
     .box_text_detail {
         width: 100vw;
         margin-top: 60%;
-        padding: 1vh 15vw 3vh 0vw;
+        padding: 1vh 15vw 4vh 0vw;
     }
     .box-image{
         margin: 0 auto;
-        /* background-color: rgb(181, 253, 203); */
     }
     .row {
         margin: 0px;
