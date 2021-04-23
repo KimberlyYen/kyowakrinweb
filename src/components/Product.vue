@@ -29,17 +29,19 @@
 
         <!-- 展開的產品細節↓ -->
         <button v-bind:class="div0_1" style="text-align: left">
-        <div class="box_detail_Layout pt-5" style="height:70vh">  
-            <div  v-for="(items,index) in dataram" :key="index" class="row p-0 m-0 w-100" style="color: white;">
-                <div class="col-12 col-sm-7 col-md-5 col-xl-3 p-0 m-0">
-                    <img v-bind:src="items.src" alt="CRYListObj">
-                </div>
-                <div class="col-12 col-sm-5 col-md-7 col-xl-9 p-0 m-0 mt-2 mt-md-0" >
-                    <div v-html="items.content" style="color: white;"> </div>
+        <div class="box_detail_Layout pt-5" style="height:70vh">
+            <div v-if="showimgandclose">  
+                <div  v-for="(items,index) in dataram" :key="index" class="row p-0 m-0 w-100" style="color: white;">
+                    <div class="col-12 col-sm-7 col-md-5 col-xl-3 p-0 m-0">
+                        <img v-bind:src="items.src" alt="CRYListObj">
+                    </div>
+                    <div class="col-12 col-sm-5 col-md-7 col-xl-9 p-0 m-0 mt-2 mt-md-0" >
+                        <div v-html="items.content" style="color: white;"> </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div @click="close_detail" class="d-flex justify-content-center align-items-center" style="position:relative;top:0;font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;color:white;cursor:pointer;">close</div>
+        <div v-if="showimgandclose" @click="close_detail" class="d-flex justify-content-center align-items-center" style="position:relative;top:0;font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;color:white;cursor:pointer;">close</div>
         </button>
         <!-- 展開的產品細節↑ -->
         
@@ -163,11 +165,13 @@
             this.div0_1='div1'
             this.website='website_disabled'
             this.dataram=this.dataOBJ[index].data
+            this.showimgandclose = true
             console.log(this.dataram)
         },
         close_detail () {
             this.div0_1='div2'
             this.website='website'
+            this.showimgandclose = false
         },
         ToNews(){
             this.$router
@@ -191,6 +195,7 @@
         NewInformation:'最新資訊',
         div0_1: 'div0',
         website:'website',
+        showimgandclose:true,
         dataram:[],
         dataOBJ:[
             {
