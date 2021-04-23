@@ -29,17 +29,17 @@
 
         <!-- 展開的產品細節↓ -->
         <button v-bind:class="div0_1" style="text-align: left">
-        <div class="box_detail_Layout" style="height:100% ; width:80vw"> 
-            <font  v-for="(items,index) in dataram" :key="index" class="d-flex" style="color: white;">    
-                <div class="box_image_detail">
+        <div class="box_detail_Layout pt-5" style="height:70vh">  
+            <div  v-for="(items,index) in dataram" :key="index" class="row p-0 m-0 w-100" style="color: white;">
+                <div class="col-12 col-sm-7 col-md-5 col-xl-3 p-0 m-0">
                     <img v-bind:src="items.src" alt="CRYListObj">
                 </div>
-                <div class="box_text_detail">
+                <div class="col-12 col-sm-5 col-md-7 col-xl-9 p-0 m-0 mt-2 mt-md-0" >
                     <div v-html="items.content" style="color: white;"> </div>
                 </div>
-            </font>
+            </div>
         </div>
-        <div @click="close_detail" class="d-flex justify-content-center align-items-center mt-5" style="font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;color:white;cursor:pointer;">close</div>
+        <div @click="close_detail" class="d-flex justify-content-center align-items-center" style="position:relative;top:0;font-size: 14px;height:40px;width:80px;background-color:#EE7736;border-radius: 30px;color:white;cursor:pointer;">close</div>
         </button>
         <!-- 展開的產品細節↑ -->
         
@@ -309,9 +309,9 @@
     /* <!-- 展品詳細介紹右側展開動畫 ↓ --> */
     .div0 {
     z-index:10000;
-    width:50vw;
+    width:70vw;
     height:100%;
-    border-radius: 50% 0% 0% 50%;
+    border-radius: 45% 0% 0% 45%;
     outline:0;
     border:0;
     background:#ea5504;
@@ -322,9 +322,9 @@
     }
     .div1 {
     z-index: 10000;
-    width:50vw;
+    width:70vw;
     height:100%;
-    border-radius: 50% 0% 0% 50%;
+    border-radius: 45% 0% 0% 45%;
     outline:0;
     border:0;
     background:#ea5504;
@@ -337,9 +337,9 @@
     }
     .div2 {
     z-index:10000;
-    width:50vw;
+    width:70vw;
     height:100%;
-    border-radius: 50% 0% 0% 50%;
+    border-radius: 45% 0% 0% 45%;
     outline:0;
     border:0;
     background:#ea5504;
@@ -352,10 +352,10 @@
 
     @keyframes open {
     from   {right: -100vw;width:0vw;}
-    to     {right: 0px;width:50vw;}
+    to     {right: 0px;width:70vw;}
     }
     @keyframes close {
-    from   {right: 0px;width:50vw;}
+    from   {right: 0px;width:70vw;}
     to     {right: -100vw;width:0vw;}
     }
 
