@@ -4,14 +4,14 @@
         <div class="d-flex justify-content-center" style="width:100vw;padding-bottom: 18vh;">
             <div  style="position:relative;max-width:55%;min-width:375px;width:100%;">
                 <img style="width:100%" src="../assets/index_bg_mainsection_contact_map.png">
-                <div @click="Clickpoint(1)" class="point1"></div>
+                <!-- <div @click="Clickpoint(1)" class="point1"></div>
                 <div @click="Clickpoint(2)" class="point2"></div>
                 <div @click="Clickpoint(3)" class="point3"></div>
                 <div @click="Clickpoint(4)" class="point4"></div>
                 <div @click="Clickpoint(5)" class="point5"></div>
                 <div @click="Clickpoint(6)" class="point6"></div>
                 <div @click="Clickpoint(7)" class="point7"></div>
-                <div @click="Clickpoint(8)" class="point8"></div>
+                <div @click="Clickpoint(8)" class="point8"></div> 地圖點擊出現小圖-->
                 <font class="fontsize" style="position:absolute;top:70%;left:20px;color:#EA5504;font-weight:bold">亞太分佈圖
                     <p style="font-size: 3rem;color:#5d6164;font-weight:bold">Asia Pacific network</p>
                 </font>
