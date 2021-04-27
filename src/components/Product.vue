@@ -53,7 +53,7 @@
                                 <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
                             </div>
                             <div class="box-text col-sm-12 col-md-7 p-5">
-                                <h3 style="pointer-events: none"> CRYSVITA® </h3>
+                                <h3 @click="show_detail(0)"> CRYSVITA® </h3>
                                 <p> 適應症：</p>
                                 <p> 性聯遺傳型低磷酸鹽症(X-linked hypophosphatemia，XLH)：適用於1歲以上兒童與青少年，及合併有XLH相關骨骼疾病之成人。</p>
                             </div>
@@ -64,6 +64,7 @@
                         </div>
                         <div class="box-text col-sm-12 col-md-7 p-5">
                             <h3 @click="show_detail(1)"> GRAN®</h3>
+                            <p> 適應症：</p>
                             <p> (1) 動員造血幹細胞至周邊血中。</p>
                             <p> (2) 促進造血幹細胞移植時嗜中性白血球數的增加。</p>
                             <p> (3) 癌症化學療法所引起之嗜中性白血球減少症。</p>
@@ -202,9 +203,17 @@
                 data://0-CRYSVITA
                 [        
                     {   
-                        src: require('../assets/index_img_slide_crysvita.jpg'),
-                        content:'【劑量一】<br/> 中文品名<br/>耐血比注射劑 20微克 / 0.5 毫升<br/>英文品名<br/>NESP Injection Plastic Syringe 20mcg / 0.5 ml<br/>主成份名<br/>DARBEPOETIN ALFA <br/> 許可證字號 <br/> 衛部菌疫輸字第 000955 號 <br/> 藥品仿單(另開衛福部食藥署視窗) <br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/>',
+                        src: require('../assets/Crysvita_1.jpg'),
+                        content:'CRYSVITA <br/> 【劑量一】<br/>中文品名<br/>磷平 10毫克注射液<br/>英文品名CRYSVITA 10mg Solution for Injection<br/>主成份名<br/>Burosumab<br/>許可證字號<br/>10mg 衛部罕菌疫輸字第000030號<br/><a href="https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000030">藥品仿單(另開衛福部食藥署視窗)</a><br/><a href="https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000030">藥品詳細資料(另開衛福部食藥署視窗)</a>  <br/><br/>'},
+                    {   
+                        src: require('../assets/Crysvita_2.jpg'),
+                        content:'CRYSVITA <br/>【劑量二】<br/>中文品名<br/>磷平 20毫克注射液<br/>英文品名CRYSVITA 20mg Solution for Injection<br/>主成份名<br/>Burosumab<br/>許可證字號<br/>20mg 衛部罕菌疫輸字第000031號<br/><a href="https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000031">藥品仿單(另開衛福部食藥署視窗)</a><br/><a href="https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000031">藥品詳細資料(另開衛福部食藥署視窗) </a> <br/><br/>'
                     },
+                    {   
+                        src: require('../assets/Crysvita_3.jpg'),
+                        content:'CRYSVITA  <br/> 【劑量三】 <br/> 中文品名 <br/> 磷平 30毫克注射液 <br/> 英文品名CRYSVITA 30mg Solution for Injection <br/> 主成份名 <br/> Burosumab <br/> 許可證字號 <br/> 30mg 衛部罕菌疫輸字第000032號 <br/> <a href="https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000032">藥品仿單(另開衛福部食藥署視窗) </a><br/> <a href="https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000032">藥品詳細資料(另開衛福部食藥署視窗)</a> <br/> <br/> '
+                    },
+
                 ],
             },
             {   
@@ -307,6 +316,9 @@
 <style scoped>
     * {
     font-family: Arial, "微軟正黑體", sans-serif;
+    }
+    a {
+        color:#3a4a9d;
     }
     .aboutus:hover{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) !important;
@@ -502,7 +514,7 @@
 @media (min-width: 769px){
     .bg_cp {
         display: flex;
-        height: 600px;
+        height: 400px;
         background-position: center;
         background-size: cover;
         background-image: url("../assets/29595215-2.png");
@@ -655,6 +667,6 @@
     margin: 0 10px;
     }
     a {
-    color: #42b983;    
+    color: #3a4a9d;    
 }
 </style>

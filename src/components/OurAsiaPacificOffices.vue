@@ -24,16 +24,16 @@
             <div class="d-flex justify-content-center align-items-center" style="max-width:1200px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">Taiwan office</div>
         </div>
         <div class="d-flex justify-content-center divtop mb-5" style="width:100vw;left:0;">
-            <div style="max-width:80%;min-width:250px;width:100%;background-color:white;">
+            <div style="max-width:1000px;min-width:250px;width:100%;background-color:white;">
                 <div class="row p-0 m-0 mb-5 div_country" style="position:relative">
                     <!-- <div @click="CloseCountry()" style="background-color:#ea5504;width:40px;height:40px;border-radius:50%;position:absolute;color:white;font-size:3rem;top:10px;right:10px;z-index:2">╳</div> -->
-                    <div class="pic col-12 col-md-5 col-xl-4 p-0 m-0 d-flex justify-content-start" >
+                    <div class="pic col-12 col-md-6 col-xl-6 p-0 m-0 d-flex justify-content-start" >
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.581590149636!2d121.5220404292319!3d25.056925313887643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96c523d96c9%3A0xe7929a0300ee1e2c!2z5Y-w54Gj5Y2U5ZKM6bqS6bqf6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1618285029986!5m2!1szh-TW!2stw" width="600" height="270" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
 
-                    <div class="row col-12 col-md-7 col-xl-8 m-0 " style="height:270px;padding:10px;">
+                    <div class="row col-12 col-md-6 col-xl-6 m-0 " style="height:270px;padding: 5%;">
                         <div class="col-12" style="color:#EA5504;font-weight: 1000;;width:100%;text-align:left;font-size: 2rem;">台灣協和麒麟股份有份公司</div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12">
                             <div v-html="countryobj[3].data2"></div>
                         </div>
                         <div class="col-12 col-md-6">
@@ -125,8 +125,8 @@ components: {
                 fulltitle:'Kyowa Kirin Taiwan Co., Ltd.',
                 address:'9th floor, No. 68, Section 2<br />Zhongshan North Road, Zhongshan District<br /> Taipei City, Taiwan 10448<br /> 富邦中山大樓9F<br /> 中山北路二段68號',
                 visitwebsite:'VISITWEBSITE',
-                data:'<div style="text-align:left;margin-top:15px"><div style="font-size: 1.8rem;color: #5d6164;display: block;margin-bottom: 10px;font-weight: 1000;">Address </div><div style="color:#5d6164;font-size:1.4rem">9F., No.68, Sec. 2, Chung Shan<br /> North Road, Taipei 10448, Taiwan</div></div>',
-                data2:'<div style="text-align:left;margin-top:15px"><div style="font-size: 1.8rem;color: #5d6164;display: block;margin-bottom: 10px;font-weight: 1000;">營業地址 </div><div style="color:#5d6164;font-size:1.4rem">10448台北市中山區中山北路二段<br/>68號9樓<br/><br/>電話<br/>(02)2564-2800<br/>傳真<br/>(02)2560-1667</div></div>',
+                // data:'<div style="text-align:left;margin-top:15px"><div style="font-size: 1.8rem;color: #5d6164;display: block;margin-bottom: 10px;font-weight: 1000;">Address </div><div style="color:#5d6164;font-size:1.4rem">9F., No.68, Sec. 2, Chung Shan<br /> North Road, Taipei 10448, Taiwan</div></div>',
+                data2:'<div style="text-align:left;margin-top:15px"><div style="font-size: 1.8rem;color: #5d6164;display: block;margin-bottom: 10px;font-weight: 1000;">營業地址 </div><div style="color:#5d6164;font-size:1.4rem">10448台北市中山區中山北路二段68號9樓<br/><br/>電話<br/>(02)2564-2800<br/><br/>傳真<br/>(02)2560-1667</div></div>',
                 src:require('@/assets/index_img_regionalnetwork_panel_taiwan_01.jpg')
             },
             {

@@ -21,7 +21,7 @@
         </div>
         <div @click="SHOW_MORE_click()" style="width:100vw;font-weight: 600;color:#5d6164;height:25px;cursor:pointer;font-size:2rem;padding-bottom: 120px;" class="row d-flex justify-content-center ">SHOW MORE<div :class="expand" class="ml-4 mt-1" style="color:#5d6164;"></div></div>
         <div class="displayM" style="max-width:1500px;position:relative;width:100%;height:800px;overflow:hidden">
-            <img class="Fourcss displayC" style="top:0;left:0" src="../assets/index_img_corevalue_01.png">
+            <img class="Fourcss displayC" style="top:0;left:0;" src="../assets/index_img_corevalue_01.png">
             <img class="displayM" style="height:400px;top:0;left:0" src="../assets/index_img_corevalue_01_M.png">
             <img @mouseover="Hovercorevalue()" @mouseleave="Hovercorevalue()" class="Fourcss" :src="corevalue_src" style="top:350px;right:0">
             <img @mouseover="Hovercorevalue03()" @mouseleave="Hovercorevalue03()" class="Fourcss corevalue03" :src="corevalue03_src" style="bottom:100px;left:-50px">
@@ -29,10 +29,10 @@
         </div>
         <div class="bg_child_AboutUs" >
             <div class="displayC" style="max-width:1500px;position:relative;width:100%;">
-                <img class="Fourcss displayC" style="top:0;left:0" src="../assets/index_img_corevalue_01.png">
+                <img class="Fourcss displayC" style="top:0;left:10%" src="../assets/index_img_corevalue_01.png">
                 <img class="Fourcss displayM" style="top:0;left:0" src="../assets/index_img_corevalue_01_M.png">
                 <img @mouseover="Hovercorevalue()" @mouseleave="Hovercorevalue()" class="Fourcss" :src="corevalue_src" style="top:100px;right:0">
-                <img @mouseover="Hovercorevalue03()" @mouseleave="Hovercorevalue03()" class="Fourcss corevalue03" :src="corevalue03_src" style="bottom:100px;left:150px">
+                <img @mouseover="Hovercorevalue03()" @mouseleave="Hovercorevalue03()" class="Fourcss corevalue03" :src="corevalue03_src" style="bottom:100px;left:10%">
                 <img @mouseover="Hovercorevalue04()" @mouseleave="Hovercorevalue04()" class="Fourcss" :src="corevalue04_src" style="bottom:0px;right:150px">
             </div>
         </div>
@@ -198,7 +198,7 @@ components: {
     }
     .bg_cp_AboutUs {
         display: flex;
-        height: 600px;
+        height: 400px;
         background-position: center;
         background-size: cover;
         background-image: url("../assets/AboutUs_bg.png");

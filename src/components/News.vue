@@ -138,7 +138,7 @@ export default {
   z-index:-100;
   position: relative;
   min-height: 250px;
-  background-color: #fef3ed;
+  background-image: url("../assets/notice_bg.png");
 }
 .arrow {
   font-weight: bold;
