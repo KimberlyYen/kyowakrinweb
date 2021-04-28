@@ -53,7 +53,7 @@
                                 <img src="../assets/index_img_slide_crysvita.jpg" alt="CRYSVITA®">
                             </div>
                             <div class="box-text col-sm-12 col-md-7 p-5">
-                                <h3 @click="show_detail(0)"> CRYSVITA® </h3>
+                                <h3 @click="show_detail(0)">磷平 CRYSVITA® </h3>
                                 <p> 適應症：</p>
                                 <p> 性聯遺傳型低磷酸鹽症(X-linked hypophosphatemia，XLH)：適用於1歲以上兒童與青少年，及合併有XLH相關骨骼疾病之成人。</p>
                             </div>
@@ -63,7 +63,7 @@
                             <img src="../assets/index_img_slide_gran.jpg" alt="GRAN®">
                         </div>
                         <div class="box-text col-sm-12 col-md-7 p-5">
-                            <h3 @click="show_detail(1)"> GRAN®</h3>
+                            <h3 @click="show_detail(1)">惠爾血添注射劑 GRAN®</h3>
                             <p> 適應症：</p>
                             <p> (1) 動員造血幹細胞至周邊血中。</p>
                             <p> (2) 促進造血幹細胞移植時嗜中性白血球數的增加。</p>
@@ -78,7 +78,7 @@
                             <img src="../assets/index_img_slide_lumicef.jpg" alt="LUMICEF®">
                         </div>
                         <div class="box-text col-sm-12 col-md-7 p-5">
-                            <h3 @click="show_detail(2)"> LUMICEF®</h3>
+                            <h3 @click="show_detail(2)">立美西膚皮下注射劑210毫克 LUMICEF®</h3>
                             <p> 適應症：</p>
                             <p> (1) 治療適合接受全身性治療的中至重度斑塊性乾癬成人病人。</p>
                             <p> (2) 治療適合接受全身性治療的膿疱性乾癬之成人病人。</p>
@@ -91,7 +91,7 @@
                             <img src="../assets/index_img_slide_nesp.jpg" alt="NESP®">
                         </div>
                         <div class="box-text col-sm-12 col-md-7 p-5">
-                            <h3 @click="show_detail(3)"> NESP®</h3>
+                            <h3 @click="show_detail(3)">耐血比注射劑 NESP®</h3>
                             <p> 適應症：</p>
                             <p> 治療與慢性腎臟功能失調有關的貧血症狀或因此而需要輸血的患者，治療與癌症化學治療有關的症狀性貧血。</p>
                         </div>
@@ -101,7 +101,7 @@
                             <img src="../assets/index_img_sancuso.jpg" alt="Sancuso®">
                         </div>
                         <div class="box-text col-sm-12 col-md-7 p-5">
-                            <h3 @click="show_detail(4)"> Sancuso®</h3>
+                            <h3 @click="show_detail(4)">貼固守 Sancuso®</h3>
                             <p>  適應症：</p>
                             <p>  預防連續5天使用中度及/或高度致吐性化學療法療程的病人所引起的噁心及嘔吐。 </p>
                         </div>
@@ -111,7 +111,7 @@
                             <img src="../assets/index_img_slide_regpara.jpg" alt="REGPARA®">
                         </div>
                         <div class="box-text col-sm-12 col-md-7 p-5">
-                            <h3 @click="show_detail(5)"> REGPARA®</h3>
+                            <h3 @click="show_detail(5)">銳克鈣錠25毫克 REGPARA®</h3>
                             <p> 適應症：</p>
                             <p> 治療透析患者的次發性副甲狀腺機能亢進。</p>
                         </div>
@@ -121,7 +121,7 @@
                             <img src="../assets/index_img_slide_romiplate.jpg" alt="Romiplate®">
                         </div>
                         <div class="box-text col-sm-12 col-md-7 p-5">
-                            <h3 @click="show_detail(6)"> Romiplate®</h3>
+                            <h3 @click="show_detail(6)">恩沛板 Romiplate®</h3>
                             <p> 適應症：</p>
                                 <p> (1)用於治療在脾臟切除後且對於其他治療(例如:類固醇、免疫球蛋白等)失敗之成年慢性自發性(免疫性)血小板缺乏紫斑症(ITP)患者，或對於不適合進行脾臟切除之成年慢性自發性(免疫性)血小板缺乏紫斑症(ITP)患者之第二線治療。</p>
                                 <p> (2)適用在對免疫抑制療法反應不佳的嚴重再生不良性貧血病人。</p>
@@ -132,7 +132,7 @@
                             <img src="../assets/index_img_slide_neulasta.jpg" alt="Neulasta®">
                         </div>
                         <div class="box-text col-sm-12 col-md-7 p-5">
-                            <h3 @click="show_detail(7)"> Neulasta®</h3>
+                            <h3 @click="show_detail(7)">倍血添注射劑 Neulasta®</h3>
                             <p> 適應症：</p>
                             <p> 適用於非骨髓性癌症患者在接受易引起臨床上有顯著發生率的嗜中性白血球減少症合併發燒之骨髓抑制性抗癌藥物治療時，以降低嗜中性白血球減少症合併發燒為表現之感染發生率。 </p>
                         </div>
@@ -142,7 +142,7 @@
                             <img src="../assets/index_img_slide_Leunase.jpg" alt="Leunase®">
                         </div>
                         <div class="box-text col-sm-12 col-md-7 p-5">
-                            <h3 @click="show_detail(8)"> Leunase®</h3>
+                            <h3 @click="show_detail(8)">樂拿舒注射劑 Leunase®</h3>
                             <p> 適應症：</p>
                             <p> 適用於非骨髓性癌症患者在接受易引起臨床上有顯著發生率的嗜中性白血球減少症合併發燒之骨髓抑制性抗癌藥物治療時，以降低嗜中性白血球減少症合併發燒為表現之感染發生率。</p>
                         </div>
@@ -204,10 +204,7 @@
                 [        
                     {   
                         src: require('../assets/Crysvita_1.jpg'),
-                        content:'CRYSVITA <br/> 【劑量一】<br/>中文品名<br/>磷平 10毫克注射液<br/>英文品名CRYSVITA 10mg Solution for Injection<br/>主成份名<br/>Burosumab<br/>許可證字號<br/>10mg 衛部罕菌疫輸字第000030號<br/><a href="https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000030">藥品仿單(另開衛福部食藥署視窗)</a><br/><a href="https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000030">藥品詳細資料(另開衛福部食藥署視窗)</a>  <br/><br/>'},
-                    {   
-                        src: require('../assets/Crysvita_2.jpg'),
-                        content:'CRYSVITA <br/>【劑量二】<br/>中文品名<br/>磷平 20毫克注射液<br/>英文品名CRYSVITA 20mg Solution for Injection<br/>主成份名<br/>Burosumab<br/>許可證字號<br/>20mg 衛部罕菌疫輸字第000031號<br/><a href="https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000031">藥品仿單(另開衛福部食藥署視窗)</a><br/><a href="https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000031">藥品詳細資料(另開衛福部食藥署視窗) </a> <br/><br/>'
+                        content:'CRYSVITA <br/> 【劑量一】<br/>中文品名<br/>磷平 10毫克注射液<br/>英文品名CRYSVITA 10mg Solution for Injection<br/>主成份名<br/>Burosumab<br/>許可證字號<br/>10mg 衛部罕菌疫輸字第000030號<br/><a href="https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000030">藥品仿單(另開衛福部食藥署視窗)</a><br/><a href="https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000030">藥品詳細資料(另開衛福部食藥署視窗)</a>  <br/><br/>'
                     },
                     {   
                         src: require('../assets/Crysvita_3.jpg'),
@@ -285,7 +282,7 @@
                 [        
                     {   
                         src: require('../assets/Romiplate.jpg'),
-                        content:'Lumicef <br/>中文品名<br/>立美西膚皮下注射劑210毫克<br/>英文品名<br/>LUMICEF Subcutaneous Injection 210mg Syringe<br/>主成份名<br/>brodalumab<br/>許可證字號<br/>衛部菌疫輸字第 001076 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)<br/>病人用藥說明書(254KB)<br/>正確使用指引-醫護人員專用(13251KB)',
+                        content:'Romiplate <br/> 中文品名<br/>恩沛板 注射用凍晶粉末<br/>英文品名<br/>Romiplate 250μg injection<br/>主成份名<br/>ROMIPLOSTIM<br/>許可證字號<br/>衛署菌疫輸字第 000927 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
                     },
                 ],
                 

@@ -19,17 +19,17 @@
                 <button @click="Click_Title(2)"  class="hdg-lv3-01 btn">Products</button>
                   <div class="row">
                     <div class="col">
-                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">NESP</button></li>
-                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">REGPARA</button></li>
-                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Filgrastim</button></li>
-                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Leunase</button></li>
-                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Neulasta</button></li>                  
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">磷平 CRYSVITA</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">惠爾血添注射劑 Filgrastim</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">立美西膚皮下注射劑210毫克 Lumicef</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">耐血比注射劑 NESP</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">貼固守 Sancuso</button></li>                  
                     </div>
                     <div class="col">
-                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Romiplate</button></li>
-                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Sancuso</button></li>
-                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Lumicef</button></li>
-                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">Leunase</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">銳克鈣錠25毫克 REGPARA</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">恩沛板 Romiplate</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">倍血添注射劑 Neulasta</button></li>
+                      <li><button @click="Click_Title(2)" class="col_li_a btn" href="/what_we_do/products/abstral/index.html">樂拿舒注射劑 Leunase</button></li>
                     </div>
                   </div>            
               </div>

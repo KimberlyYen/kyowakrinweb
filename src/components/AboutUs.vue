@@ -7,7 +7,7 @@
             <div class="d-flex justify-content-center align-items-center" style="max-width:1200px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">公司目標</div>
         </div>
         <div class="d-flex justify-content-center pt-5 pb-4 pl-3 pr-3 pl-md-0 pr-md-0" style="width:100vw">
-            <div class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem">日本麒麟控股集團下所屬協和麒麟公司，是一個以研究為基礎的生命科學事業體，<br/>且專精於生物化學相關領域。我們不斷致力於尖端生物化學的發展，並使用於製藥流程當中，<br/>以期望能研發出更符合患者所需的藥品，改善病患的生活品質。</div>
+            <div class="d-flex justify-content-center align-items-center" style="color:#5D6164;font-size:2rem">日本麒麟控股集團下所屬協和麒麟公司，是一個以研究為基礎的生命科學事業體，<br/>且專精於生物技術。我們不斷致力於尖端生物技術領域的發展，並使用於製藥流程當中，<br/>以期望能研發出更符合患者所需的藥品，改善病患的生活品質。</div>
         </div>
         <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
             <div class="d-flex justify-content-center align-items-center" style="max-width:1200px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">我們的願景</div>
@@ -43,6 +43,7 @@
             <div @click="ShowExtraContent()" class="row p-0 m-0 d-flex justify-content-center"  style="position:relative;max-width:1200px;min-width:350px;width:100%;cursor:pointer">
                 <div class="pic col-11 col-md-4 p-0">
                     <img class="p-0 m-0 w-100" src="../assets/gm.png">
+                    <p class="p-3 m-0" style="background-color: #EA5504;color: white;font-size: 2rem;font-weight: bold;">總經理：古谷健二</p>
                 </div>
                 <div class="col-11 col-md-8 p-5 pt-md-3 pb-md-3 pt-xl-5 pb-xl-5 m-0 font_size_content" style="background-color:#EA5504;color:white;line-height:30px;text-align:justify">
                     您好:<br/>我是台灣協和麒麟公司總經理 古谷健二，歡迎你們的到訪。 敝公司是日本麒麟控股集團下所屬協和麒麟公司的海外子公司，於1991年成立於台北市，另分別於台中市與高雄市設立辦公室。公司的產品專注於血液腫瘤科與腎臟科的治療領域。2019年度我們即將拓展到皮膚科的領域。 公司的願景是追求生命科學與技術的進步，透過創造新價值對台灣人之健康與安泰帶來貢獻。<br />
@@ -50,6 +51,38 @@
                 </div>
             </div>
         </div>
+        <div class="d-flex justify-content-center pt-5 pb-4" style="width:100vw">
+            <div class="d-flex justify-content-center align-items-center" style="max-width:1200px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">公司發展史</div>
+        </div>
+        <table class="table table-hover" style="max-width:1200px;min-width:350px;width:100%">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
         <Footer-bg class="mt-5" style="background-color:white" @Click_Title_trigger="Click_Title2"></Footer-bg>
     </div>
     <div :class="extra_content" style="padding:10%;text-align:left;font-size:1.5rem;">
