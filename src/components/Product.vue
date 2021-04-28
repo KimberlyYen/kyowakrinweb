@@ -36,7 +36,8 @@
                         <img v-bind:src="items.src" alt="CRYListObj">
                     </div>
                     <div class="col-12 col-sm-5 col-md-7 col-xl-9 p-0 m-0 mt-2 mt-md-0" >
-                        <div v-html="items.content" style="color: white;"> </div>
+                        <!-- <div v-html="items.content" style="color: white;"> </div> -->
+                        <div v-for="(item,index) in items.contentarr" :key="index" style="color: white;">{{item.data}}</div>
                     </div>
                 </div>
             </div>
@@ -204,13 +205,44 @@
                 [        
                     {   
                         src: require('../assets/Crysvita_1.jpg'),
-                        content:'CRYSVITA <br/> 【劑量一】<br/>中文品名<br/>磷平 10毫克注射液<br/>英文品名CRYSVITA 10mg Solution for Injection<br/>主成份名<br/>Burosumab<br/>許可證字號<br/>10mg 衛部罕菌疫輸字第000030號<br/><a href="https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000030">藥品仿單(另開衛福部食藥署視窗)</a><br/><a href="https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000030">藥品詳細資料(另開衛福部食藥署視窗)</a>  <br/><br/>'
+                        contentarr:[
+                            {
+                                data:'CRYSVITA'
+                            },
+                            {
+                                data:'【劑量一】'
+                            },
+                            {
+                                data:'中文品名'
+                            },
+                            {
+                                data:'磷平 10毫克注射液'
+                            },
+                            {
+                                data:'英文品名CRYSVITA 10mg Solution for Injection'
+                            },
+                            {
+                                data:'主成份名'
+                            },
+                            {
+                                data:'Burosumab'
+                            },
+                            {
+                                data:'許可證字號'
+                            },
+                            {
+                                data:'10mg 衛部罕菌疫輸字第000030號'
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000030',
+                                data:'藥品仿單(另開衛福部食藥署視窗)'
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000030',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)'
+                            }
+                        ]
                     },
-                    {   
-                        src: require('../assets/Crysvita_3.jpg'),
-                        content:'CRYSVITA  <br/> 【劑量三】 <br/> 中文品名 <br/> 磷平 30毫克注射液 <br/> 英文品名CRYSVITA 30mg Solution for Injection <br/> 主成份名 <br/> Burosumab <br/> 許可證字號 <br/> 30mg 衛部罕菌疫輸字第000032號 <br/> <a href="https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000032">藥品仿單(另開衛福部食藥署視窗) </a><br/> <a href="https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000032">藥品詳細資料(另開衛福部食藥署視窗)</a> <br/> <br/> '
-                    },
-
                 ],
             },
             {   
