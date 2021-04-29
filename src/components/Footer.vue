@@ -40,18 +40,30 @@
                 </div>
             </div>
       </div>
+      <Dialog-bg class="left_css" style="position:fixed;top:calc(25% + -120px);" :url="Dialoghref" :d_play="Dialogdisplay " @close_trigger="close"></Dialog-bg>
   </div>
 </template>
 <script>
+import Dialog from './Dialog'
 export default {
   name: 'Footer',
   data () {
     return {
+      Dialoghref:'',
+      Dialogdisplay:false
     }
   },
+  components: {
+    'Dialog-bg':Dialog
+  },  
   methods:{
+    close(){
+      this.Dialogdisplay = false
+    },
     ToKyowaKirinGroup(){
-      location.href = 'https://www.kyowakirin.com/index.html'
+      this.Dialogdisplay = true
+      this.Dialoghref = 'https://www.kyowakirin.com/index.html'
+      // location.href = 'https://www.kyowakirin.com/index.html'
       this.Click_Title(-1)
     },
     law(){
@@ -113,6 +125,9 @@ export default {
 }
 /*computer*/
   @media (min-width: 769px) {
+    .left_css{
+      left:calc(50% + -300px)
+    }
     .bg_cp {
         display: block;
         background-position: center;
@@ -129,6 +144,9 @@ export default {
   }
 /*mobile*/
   @media (min-width: 320px) and (max-width:768px) {
+    .left_css{
+      left:calc(50% + -45%)
+    }
     .bg_cp {
         display: none;
         background-position: center;

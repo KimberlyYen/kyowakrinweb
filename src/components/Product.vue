@@ -31,13 +31,19 @@
         <button v-bind:class="div0_1" style="text-align: left">
         <div class="box_detail_Layout">
             <div v-if="showimgandclose">  
-                <div  v-for="(items,index) in dataram" :key="index" class="row p-0 m-0 w-100" style="color: white;font-size:1.8rem">
+                <div  v-for="(items,index1) in dataram" :key="index1" class="row p-0 m-0 w-100" style="color: white;font-size:1.8rem">
                     <div class="col-12 col-sm-7 col-md-5 col-xl-3 p-0 m-0">
                         <img v-bind:src="items.src" alt="CRYListObj">
                     </div>
                     <div class="col-12 col-sm-5 col-md-7 col-xl-9 p-0 m-0 mt-2 mt-md-0" >
                         <!-- <div v-html="items.content" style="color: white;"> </div> -->
-                        <div v-for="(item,index) in items.contentarr" :key="index" style="color: white;">{{item.data}}</div>
+                        <div v-for="(item,index2) in items.contentarr" :key="index2" style="color: white;">
+                            <div class="cursorpointer" v-if="item.href != ''" style="cursor:pointer"  @click="ShowDialog(index1,index2)">{{item.data}}</div>
+                            <div v-else>{{item.data}}</div>
+                            <div >
+                                <Dialog-bg class="left_css" style="position:fixed;top:calc(25% + -120px);" v-if="item.href != ''" :url="item.href" :d_play="item.display " :index1="index1" :index2="index2" @close_trigger="close"></Dialog-bg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,16 +163,25 @@
   
   <script>
   import Footer from './Footer'
+  import Dialog from './Dialog'
   export default {
     components: {
-      'Footer-bg':Footer
+      'Footer-bg':Footer,
+      'Dialog-bg':Dialog
     },
     name: 'Product',
+    mounted(){
+        this.Pusharr()
+    },
     methods:{
+        close(data){
+            this.dataOBJ[this.detailindex].data[data.index1].contentarr[data.index2].display = false
+        },
         show_detail (index) {
             this.div0_1='div1'
             this.website='website_disabled'
             this.dataram=this.dataOBJ[index].data
+            this.detailindex = index
             this.showimgandclose = true
             console.log(this.dataram)
         },
@@ -190,6 +205,12 @@
         Click_Title(index){
             this.$emit('Click_Title_trigger', { index: index });
         },
+        ShowDialog(index1,index2){
+            this.dataOBJ[this.detailindex].data[index1].contentarr[index2].display = true
+            // console.log(this.detailindex)
+            // console.log(index1)
+            // console.log(index2)
+        },
     },
     data () {
       return {
@@ -198,6 +219,7 @@
         div0_1: 'div0',
         website:'website',
         showimgandclose:true,
+        detailindex:0,
         dataram:[],
         dataOBJ:[
             {
@@ -207,39 +229,59 @@
                         src: require('../assets/Crysvita_1.jpg'),
                         contentarr:[
                             {
-                                data:'CRYSVITA'
+                                href:'',
+                                data:'CRYSVITA',
+                                display:false
                             },
                             {
-                                data:'【劑量一】'
+                                href:'',
+                                data:'【劑量一】',
+                                display:false
                             },
                             {
-                                data:'中文品名'
+                                href:'',
+                                data:'中文品名',
+                                display:false
                             },
                             {
-                                data:'磷平 10毫克注射液'
+                                href:'',
+                                data:'磷平 10毫克注射液',
+                                display:false
                             },
                             {
-                                data:'英文品名CRYSVITA 10mg Solution for Injection'
+                                href:'',
+                                data:'英文品名CRYSVITA 10mg Solution for Injection',
+                                display:false
                             },
                             {
-                                data:'主成份名'
+                                href:'',
+                                data:'主成份名',
+                                display:false
                             },
                             {
-                                data:'Burosumab'
+                                href:'',
+                                data:'Burosumab',
+                                display:false
                             },
                             {
-                                data:'許可證字號'
+                                href:'',
+                                data:'許可證字號',
+                                display:false
                             },
                             {
-                                data:'10mg 衛部罕菌疫輸字第000030號'
+                                href:'',
+                                data:'10mg 衛部罕菌疫輸字第000030號',
+                                display:false
                             },
                             {
                                 href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000030',
-                                data:'藥品仿單(另開衛福部食藥署視窗)'
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
                             },
                             {
                                 href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000030',
-                                data:'藥品詳細資料(另開衛福部食藥署視窗)'
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
                             }
                         ]
                     },
@@ -250,15 +292,189 @@
                 [        
                     {   
                         src: require('../assets/GRAN_1.jpg'),
-                        content:'Filgrastim <br/> 【劑量一】<br/> 中文品名<br/> 惠爾血添注射劑 75<br/> 英文品名<br/> Filgrastim Injection 75μg/0.3ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000712 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/> <br/>'
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'Filgrastim',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'【劑量一】',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'惠爾血添注射劑',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'Filgrastim Injection 75μg/0.3ml',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'FILGRASTIM',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛署菌疫輸字第 000712 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=10000712',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=10000711',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            }
+                        ]
                     },
                     {   
                         src: require('../assets/GRAN_2.jpg'),
-                        content:'【劑量二】<br/> 中文品名<br/> 惠爾血添注射劑 150<br/> 英文品名 <br/> Filgrastim Injection 150μg/0.6ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000711 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/> <br/>'
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'【劑量二】',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'惠爾血添注射劑',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'Filgrastim Injection 150μg/0.6ml',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'FILGRASTIM',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛署菌疫輸字第 000711 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=10000711',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=10000711',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            }
+                        ]
                     },
                     {   
                         src: require('../assets/GRAN_3.jpg'),
-                        content:'【劑量三】<br/> 中文品名<br/> 惠爾血添 M300<br/> 英文品名><br/> Filgrastim Injection M300 300μg/0.7ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000670 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)'
+                        content:'【劑量三】<br/> 中文品名<br/> 惠爾血添 M300<br/> 英文品名><br/> Filgrastim Injection M300 300μg/0.7ml<br/> 主成份名<br/> FILGRASTIM<br/> 許可證字號<br/> 衛署菌疫輸字第 000670 號<br/> 藥品仿單(另開衛福部食藥署視窗)<br/> 藥品詳細資料(另開衛福部食藥署視窗)',
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'【劑量三】',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'惠爾血添 M300',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'Filgrastim Injection M300 300μg/0.7ml',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'FILGRASTIM',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛署菌疫輸字第 000670 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=10000670',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=10000670',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            }
+                        ]
                     },
 
                 ],
@@ -270,6 +486,73 @@
                     {   
                         src: require('../assets/Lumicef.jpg'),
                         content:'Lumicef <br/> 中文品名<br/>立美西膚皮下注射劑210毫克<br/>英文品名<br/>LUMICEF Subcutaneous Injection 210mg Syringe<br/>主成份名<br/>brodalumab<br/>許可證字號<br/>衛部菌疫輸字第 001076 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)<br/>病人用藥說明書(254KB)<br/>正確使用指引-醫護人員專用(13251KB)',
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'Lumicef',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'立美西膚皮下注射劑210毫克',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'LUMICEF Subcutaneous Injection 210mg Syringe',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'brodalumab',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛部菌疫輸字第 001076 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=60001076',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=60001076',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://www.kyowakirin.com/tw/products/pdf/mg_lumicef.pdf',
+                                data:'病人用藥說明書(254KB)',
+                                display:false
+                            },
+                            {
+                                href:'https://www.kyowakirin.com/tw/products/pdf/correctusegudieline.pdf',
+                                data:'正確使用指引-醫護人員專用(13251KB)',
+                                display:false
+                            }
+                        ]
                     },
                 ],
                 
@@ -279,15 +562,184 @@
                 [        
                     {   
                         src: require('../assets/NESP_1.jpg'),
-                        content:'【劑量一】<br/> 中文品名<br/>耐血比注射劑 20微克 / 0.5 毫升<br/>英文品名<br/>NESP Injection Plastic Syringe 20mcg / 0.5 ml<br/>主成份名<br/>DARBEPOETIN ALFA <br/> 許可證字號 <br/> 衛部菌疫輸字第 000955 號 <br/> 藥品仿單(另開衛福部食藥署視窗) <br/> 藥品詳細資料(另開衛福部食藥署視窗)<br/>',
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'【劑量一】',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'耐血比注射劑 20微克 / 0.5 毫升',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'NESP Injection Plastic Syringe 20mcg / 0.5 ml',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'DARBEPOETIN ALFA ',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛部菌疫輸字第 000955 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=60000955',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=60000955',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                        ]
                     },
                     {   
                         src: require('../assets/NESP_2.jpg'),
                         content:'【劑量二】<br/> 中文品名 <br/> 耐血比注射劑 40微克 / 0.5 毫升 <br/> 英文品名 <br/> NESP Injection Plastic Syringe 40mcg / 0.5 ml <br/> 主成份名 <br/> DARBEPOETIN ALFA <br/> 許可證字號 <br/> 衛部菌疫輸字第 000953 號 <br/> 藥品仿單(另開衛福部食藥署視窗) <br/> 藥品詳細資料(另開衛福部食藥署視窗)',
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'【劑量二】',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'耐血比注射劑 40微克 / 0.5 毫升 ',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'NESP Injection Plastic Syringe 40mcg / 0.5 ml',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'DARBEPOETIN ALFA ',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛部菌疫輸字第 000953 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=60000953',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=60000953',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                        ]
                     },
                     {   
                         src: require('../assets/NESP_3.jpg'),
-                        content:'【劑量三】<br/>中文品名<br/>惠爾血添 M300<br/>英文品名><br/>Filgrastim Injection M300 300μg/0.7ml<br/>主成份名<br/>FILGRASTIM<br/>許可證字號<br/>衛署菌疫輸字第 000670 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)<br/>',
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'【劑量三】',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'耐血比注射劑 60微克 / 0.5 毫升',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'NESP Injection Plastic Syringe 60mcg / 0.5 ml',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'DARBEPOETIN ALFA',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛部菌疫輸字第 000952 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=60000952',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=60000952',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                        ]
                     },
                 ],
                 
@@ -296,7 +748,63 @@
                 [        
                     {   
                         src: require('../assets/Sancuso.jpg'),
-                        content:'Sancuso<br/>中文品名<br/>貼固守穿皮貼片劑<br/>英文品名<br/>Sancuso transdermal patch 3.1 mg/24hours<br/>主成份名<br/>GRANISETRON<br/>許可證字號<br/>衛署藥輸字第025820號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'Sancuso',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'貼固守穿皮貼片劑',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'Sancuso transdermal patch 3.1 mg/24hours',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'GRANISETRON',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛署藥輸字第025820號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicID=02025820',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=02025820',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                        ]
                     },
                 ],
                 
@@ -305,7 +813,53 @@
                 [        
                     {   
                         src: require('../assets/REGPARA.jpg'),
-                        content:'REGPARA<br/>中文品名<br/>銳克鈣錠25毫克<br/>英文品名<br/>REGPARA TABLETS 25MG<br/>主成份名<br/>CINACALCET HYDROCHLORIDE<br/>許可證字號<br/>衛署藥輸字第 025141 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'REGPARA',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'銳克鈣錠25毫克',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'CINACALCET HYDROCHLORIDE',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛署藥輸字第 025141 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=02025141',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=02025141',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                        ]
                     },
                 ],
                 
@@ -314,7 +868,63 @@
                 [        
                     {   
                         src: require('../assets/Romiplate.jpg'),
-                        content:'Romiplate <br/> 中文品名<br/>恩沛板 注射用凍晶粉末<br/>英文品名<br/>Romiplate 250μg injection<br/>主成份名<br/>ROMIPLOSTIM<br/>許可證字號<br/>衛署菌疫輸字第 000927 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'Romiplate',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'恩沛板 注射用凍晶粉末',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'Romiplate 250μg injection',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'ROMIPLOSTIM',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛署菌疫輸字第 000927 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=10000927',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=10000927',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                        ]
                     },
                 ],
                 
@@ -323,7 +933,63 @@
                 [        
                     {   
                         src: require('../assets/Neulasta_1.jpg'),
-                        content:'Neulasta<br/>中文品名<br/>倍血添注射劑<br/>英文品名<br/>Neulasta<br/>主成份名<br/>Pegfilgrastim<br/>許可證字號<br/>衛署菌疫輸字第 000919 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'Neulasta',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'倍血添注射劑',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'Neulasta',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'Pegfilgrastim',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛署菌疫輸字第 000919 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=10000919',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=10000919',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                        ]
                     },
                 ],
                 
@@ -333,6 +999,63 @@
                     {   
                         src: require('../assets/Leunase.jpg'),
                         content:'Leunase<br/>中文品名<br/>樂拿舒注射劑 10,000K.U.<br/>英文品名<br/>Leunase Injection (10,000K.U.)<br/>主成份名<br/>L-ASPARAGINASE<br/>許可證字號<br/>衛署藥輸字第 021032 號<br/>藥品仿單(另開衛福部食藥署視窗)<br/>藥品詳細資料(另開衛福部食藥署視窗)',
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'Leunase',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'樂拿舒注射劑 10,000K.U.',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'>Leunase Injection (10,000K.U.)',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'L-ASPARAGINASE',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'衛署藥輸字第 021032 號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=02021032',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=10000919',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                        ]
                     },
                 ],},],}
         },
@@ -343,6 +1066,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    .cursorpointer:hover{
+        text-decoration:underline;
+    }
     * {
     font-family: Arial, "微軟正黑體", sans-serif;
     }
@@ -453,6 +1179,7 @@
         overflow:auto;
         height:100% ;
         width:80vw;
+        cursor: initial;
     }
     .box_image_detail {
         width: 20%;
@@ -541,6 +1268,9 @@
 
 /*computer*/
 @media (min-width: 769px){
+    .left_css{
+        left:calc(50% + -300px)
+    }
     .bg_cp {
         display: flex;
         height: 400px;
@@ -573,9 +1303,11 @@
     }
 
 }
-
 /*mobile*/
     @media (min-width: 320px) and (max-width:768px) {
+    .left_css{
+        left:calc(50% + -45%)
+    }
     .div1 {
         padding: 5% 5% 50% 13%;
     }

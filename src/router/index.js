@@ -13,6 +13,8 @@ import Product from '@/components/Product'
 import OurAsiaPacificOffices from '@/components/OurAsiaPacificOffices'
 import AboutUs from '@/components/AboutUs'
 import ananan from '@/components/ananan'
+import Dialog from '@/components/Dialog'
+
 
 
 Vue.use(Router)
@@ -86,5 +88,10 @@ export default new Router({
       name: 'Footer',
       component: Footer
     },
+    {
+      path: '/Dialog',
+      name: 'Dialog',
+      component: Dialog
+    }
   ]
 })

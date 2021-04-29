@@ -109,21 +109,26 @@
       <div :style="{'opacity':OpacityNum_Earth}">
         <router-view style="overflow:auto" :style="{'opacity':OpacityNum}" @Click_Title_trigger="Click_Title_"/>
       </div>
+      <Dialog-bg class="left_css" style="position:fixed;top:calc(25% + -120px);" :url="Dialoghref" :d_play="Dialogdisplay " @close_trigger="close"></Dialog-bg>
   </div>
 </template>
 
 <script>
 import Expansion from './Expansion'
+import Dialog from './Dialog'
 export default {
   name: 'Header',
   components: {
-    'Expansion-Obj':Expansion
+    'Expansion-Obj':Expansion,
+    'Dialog-bg':Dialog
   },  
   watch: {
     "$route" : 'scrollToTop'
   },
   data () {
     return {
+      Dialogdisplay:false,
+      Dialoghref:'',
       headtitle:['headtitle','headtitle','headtitle','headtitle','headtitle'],
       Menusrc:require('@/assets/icon_menu_sp_01.png'),
       Earthsrc:require('@/assets/icon_global_01.png'),
@@ -224,6 +229,9 @@ export default {
     }, true);
   },
   methods:{
+    close(){
+      this.Dialogdisplay = false
+    },
     scrollToTop() {
       let $this = this;
       setTimeout(function animation() {
@@ -237,7 +245,9 @@ export default {
       }, 1);
     },
     EarthClickForSingapore(){
-      location.href = 'https://www.kyowakirin.com/index.html#anc-global-network'
+      this.Dialogdisplay = true
+      this.Dialoghref = 'https://www.kyowakirin.com/index.html#anc-global-network'
+      // location.href = 'https://www.kyowakirin.com/index.html#anc-global-network'
     },
     ToProduct(){
       this.$router
@@ -291,7 +301,8 @@ export default {
        this.ContentObj[obj.index].status = true
     },
     GotoMail(){
-      location.href = 'https://faq.kirin.co.jp/form/kkc_18_cn.html#_ga=2.267408327.85928623.1616483882-769985277.1576133350'
+      this.Dialogdisplay = true
+      this.Dialoghref = 'https://faq.kirin.co.jp/form/kkc_18_cn.html#_ga=2.267408327.85928623.1616483882-769985277.1576133350'
     },
     Change_Title_Css(index){
       if(index == -1){
@@ -439,6 +450,9 @@ export default {
     }
   }
   @media (min-width: 769px) {
+    .left_css{
+      left:calc(50% + -300px)
+    }
     .header_{
         width: 99vw;
         height:52px;
@@ -502,6 +516,9 @@ export default {
   }
 /*mobile*/
   @media (min-width: 320px) and (max-width:768px) {
+    .left_css{
+        left:calc(50% + -45%)
+    }
     .header_{
         width: 100vw;
         height:52px;

@@ -23,24 +23,35 @@
           <button @click="GotoMail()" class="button_1">點擊此處連結至諮詢表單</button>
           </div>
     <Footer-bg style="background-color:white" @Click_Title_trigger="Click_Title2"></Footer-bg>
+    <Dialog-bg class="left_css" style="position:fixed;top:calc(25% + -120px);" :url="Dialoghref" :d_play="Dialogdisplay " @close_trigger="close"></Dialog-bg>
     </div>
 </template>
   
   <script>
     import Footer from './Footer'
+    import Dialog from './Dialog'
     export default {
       components: {
-        'Footer-bg':Footer
+        'Footer-bg':Footer,
+        'Dialog-bg':Dialog
       },
       name: 'ContactUs',
       data () {
         return {
-          msg: 'Welcome to Your Vue.js App'
+          msg: 'Welcome to Your Vue.js App',
+          Dialoghref:'',
+          Dialogdisplay:false
         }
       },
       methods:{
+        close(){
+          this.Dialogdisplay = false
+        },
         GotoMail(){
-        location.href = 'https://faq.kirin.co.jp/form/kkc_18_cn.html#_ga=2.267408327.85928623.1616483882-769985277.1576133350'
+          console.log('123');
+          this.Dialogdisplay = true
+          this.Dialoghref = 'https://faq.kirin.co.jp/form/kkc_18_cn.html#_ga=2.267408327.85928623.1616483882-769985277.1576133350'
+        // location.href = 'https://faq.kirin.co.jp/form/kkc_18_cn.html#_ga=2.267408327.85928623.1616483882-769985277.1576133350'
         },
         Click_Title2(index){
         this.$emit('Click_Title_trigger', { index: index.index });
@@ -208,7 +219,18 @@
     text-align: center;
     padding: 5% 5% 0% 5%;
   }
-  
+  /*computer*/
+  @media (min-width: 769px) {
+    .left_css{
+      left:calc(50% + -300px)
+    }
+  }
+/*mobile*/
+  @media (min-width: 320px) and (max-width:768px) {
+    .left_css{
+      left:calc(50% + -45%)
+    }
+  }
   /*mobile*/
     @media (min-width: 320px) and (max-width:768px) {
       .str-outer {
