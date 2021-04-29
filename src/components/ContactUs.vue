@@ -23,7 +23,7 @@
           <button @click="GotoMail()" class="button_1">點擊此處連結至諮詢表單</button>
           </div>
     <Footer-bg style="background-color:white" @Click_Title_trigger="Click_Title2"></Footer-bg>
-    <Dialog-bg class="left_css" style="position:fixed;top:calc(25% + -120px);" :url="Dialoghref" :d_play="Dialogdisplay " @close_trigger="close"></Dialog-bg>
+    <Dialog-bg class="left_css" style="position:fixed;top:60px;" :url="Dialoghref" :d_play="Dialogdisplay " @close_trigger="close"></Dialog-bg>
     </div>
 </template>
   

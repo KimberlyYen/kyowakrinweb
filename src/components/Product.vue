@@ -41,7 +41,7 @@
                             <div class="cursorpointer" v-if="item.href != ''" style="cursor:pointer"  @click="ShowDialog(index1,index2)">{{item.data}}</div>
                             <div v-else>{{item.data}}</div>
                             <div >
-                                <Dialog-bg class="left_css" style="position:fixed;top:calc(25% + -120px);" v-if="item.href != ''" :url="item.href" :d_play="item.display " :index1="index1" :index2="index2" @close_trigger="close"></Dialog-bg>
+                                <Dialog-bg class="left_css" style="position:fixed;top:60px;" v-if="item.href != ''" :url="item.href" :d_play="item.display " :index1="index1" :index2="index2" @close_trigger="close"></Dialog-bg>
                             </div>
                         </div>
                     </div>

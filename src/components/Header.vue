@@ -109,7 +109,7 @@
       <div :style="{'opacity':OpacityNum_Earth}">
         <router-view style="overflow:auto" :style="{'opacity':OpacityNum}" @Click_Title_trigger="Click_Title_"/>
       </div>
-      <Dialog-bg class="left_css" style="position:fixed;top:calc(25% + -120px);" :url="Dialoghref" :d_play="Dialogdisplay " @close_trigger="close"></Dialog-bg>
+      <Dialog-bg class="left_css" style="position:fixed;top:60px;" :url="Dialoghref" :d_play="Dialogdisplay " @close_trigger="close"></Dialog-bg>
   </div>
 </template>
 
