@@ -35,7 +35,7 @@
                     <div class="col-12 col-sm-7 col-md-5 col-xl-3 p-0 m-0">
                         <img v-bind:src="items.src" alt="CRYListObj">
                     </div>
-                    <div class="col-12 col-sm-5 col-md-7 col-xl-9 p-0 m-0 mt-2 mt-md-0" >
+                    <div class="col-12 col-sm-5 col-md-7 col-xl-9 p-0 m-0 mt-2 mt-md-0 mb-md-5" >
                         <!-- <div v-html="items.content" style="color: white;"> </div> -->
                         <div v-for="(item,index2) in items.contentarr" :key="index2" style="color: white;">
                             <div class="cursorpointer" v-if="item.href != ''" style="cursor:pointer"  @click="ShowDialog(index1,index2)">{{item.data}}</div>
@@ -250,7 +250,12 @@
                             },
                             {
                                 href:'',
-                                data:'英文品名CRYSVITA 10mg Solution for Injection',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'CRYSVITA 10mg Solution for Injection',
                                 display:false
                             },
                             {
@@ -285,6 +290,71 @@
                             }
                         ]
                     },
+                    {   
+                        src: require('../assets/Crysvita_3.jpg'),
+                        contentarr:[
+                            {
+                                href:'',
+                                data:'CRYSVITA',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'【劑量三】',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'中文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'磷平 30毫克注射液',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'英文品名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'CRYSVITA 30mg Solution for Injection',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'Burosumab',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'許可證字號',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'30mg 衛部罕菌疫輸字第000032號',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D3.aspx?LicId=72000032',
+                                data:'藥品仿單(另開衛福部食藥署視窗)',
+                                display:false
+                            },
+                            {
+                                href:'https://info.fda.gov.tw/mlms/H0001D.aspx?Type=Lic&LicId=72000032',
+                                data:'藥品詳細資料(另開衛福部食藥署視窗)',
+                                display:false
+                            }
+                        ]
+                    },
                 ],
             },
             {   
@@ -310,7 +380,7 @@
                             },
                             {
                                 href:'',
-                                data:'惠爾血添注射劑',
+                                data:'惠爾血添注射劑 75',
                                 display:false
                             },
                             {
@@ -370,7 +440,7 @@
                             },
                             {
                                 href:'',
-                                data:'惠爾血添注射劑',
+                                data:'惠爾血添注射劑 150',
                                 display:false
                             },
                             {
@@ -836,6 +906,16 @@
                             },
                             {
                                 href:'',
+                                data:'REGPARA TABLETS 25MG',
+                                display:false
+                            },
+                            {
+                                href:'',
+                                data:'主成份名',
+                                display:false
+                            },
+                            {
+                                href:'',
                                 data:'CINACALCET HYDROCHLORIDE',
                                 display:false
                             },
@@ -1022,7 +1102,7 @@
                             },
                             {
                                 href:'',
-                                data:'>Leunase Injection (10,000K.U.)',
+                                data:'.Leunase Injection (10,000K.U.)',
                                 display:false
                             },
                             {

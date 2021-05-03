@@ -7,95 +7,95 @@
             <div class="d-flex justify-content-center align-items-center" style="max-width:1200px;min-width:320px;width:100%;color:rgb(234, 85, 4);font-size:5rem;font-weight:bold">公司發展歷史</div>
         </div>
         <div class="d-flex justify-content-center pt-5 pb-4 pl-3 pr-3 pl-md-0 pr-md-0" style="width:100vw">
-            <table style="width:80vw;max-width:900px;font-size:2rem">
+            <table style="width:95vw;max-width:900px;font-size:2rem;color:#5d6164;line-height: 1.5;">
                 <tbody>
-                    <tr class="text-left" style="border-bottom:1px solid black;border-top:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">1907年</td>
-                        <td class="pl-3" style="width:80%">麒麟啤酒株式會社在日本設立</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;border-top:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%"> 2020年 </td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">台灣協和麒麟股份有限公司自2020年4月搬遷至新址</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">1982年</td>
-                        <td class="pl-3" style="width:80%">麒麟啤酒株式會社跨足進入醫藥事業領域，開始生化醫藥之硏究開發</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2019年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">台灣協和醱酵麒麟股份有限公司更名爲台灣協和麒麟股份有限公司</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">1984年</td>
-                        <td class="pl-3" style="width:80%">KIRIN-AMGEN公司之設立</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2018年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">ROMIPLATE在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">1987年</td>
-                        <td class="pl-3" style="width:80%">在日本、美國開始FILGRASTIM (G-CSF)之臨床試驗</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2015年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">ROMIPLATE在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">1991年</td>
-                        <td class="pl-3" style="width:80%">FILGRASTIM在曰本、美國[食品暨藥物管理局(Food & Drug Administration, FDA)]、加拿大、 歐洲、澳洲取得製造販賣之許可</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2015年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">LEUNASE 10,000K.U.在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">1991年</td>
-                        <td class="pl-3" style="width:80%">在台成立麒麟藥品股份有限公司</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2014年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">NESP Injection Plastic Syringe在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">1992年</td>
-                        <td class="pl-3" style="width:80%">FILGRASTIM在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2013年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">Sancuso在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2001年</td>
-                        <td class="pl-3" style="width:80%">KIRIN公司在台灣開始ARANESP® (Darbepoetin alfa)之臨床試驗</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2013年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">Nplate在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2004年</td>
-                        <td class="pl-3" style="width:80%">ARANESP®在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2012年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">NEULASTA在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2008年</td>
-                        <td class="pl-3" style="width:80%">日本麒麟集團醫藥部門與日本協和發酵工業株式會社合倂，麒麟藥品股份有限公司正式更名爲台灣協和醱酵麒麟股份有限公司</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2011年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">由台灣協和麒麟股份有限公司取回MITOMYCIN-C 10MG、LEUNASE 5,000K.U.在台灣之販賣權</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2009年</td>
-                        <td class="pl-3" style="width:80%">NESP®在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2010年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">REGPARA在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2010年</td>
-                        <td class="pl-3" style="width:80%">REGPARA在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2009年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">NESP®在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2011年</td>
-                        <td class="pl-3" style="width:80%">由台灣協和麒麟股份有限公司取回MITOMYCIN-C 10MG、LEUNASE 5,000K.U.在台灣之販賣權</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2008年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">日本麒麟集團醫藥部門與日本協和發酵工業株式會社合倂，麒麟藥品股份有限公司正式更名爲台灣協和醱酵麒麟股份有限公司</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2012年</td>
-                        <td class="pl-3" style="width:80%">NEULASTA在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2004年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">ARANESP®在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2013年</td>
-                        <td class="pl-3" style="width:80%">Nplate在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">2001年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">KIRIN公司在台灣開始ARANESP® (Darbepoetin alfa)之臨床試驗</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2013年</td>
-                        <td class="pl-3" style="width:80%">Sancuso在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">1992年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">FILGRASTIM在台灣開始販賣</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2014年</td>
-                        <td class="pl-3" style="width:80%">NESP Injection Plastic Syringe在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">1991年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">在台成立麒麟藥品股份有限公司</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2015年</td>
-                        <td class="pl-3" style="width:80%">LEUNASE 10,000K.U.在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">1991年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">FILGRASTIM在曰本、美國[食品暨藥物管理局(Food & Drug Administration, FDA)]、加拿大、 歐洲、澳洲取得製造販賣之許可</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2015年</td>
-                        <td class="pl-3" style="width:80%">ROMIPLATE在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">1987年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">在日本、美國開始FILGRASTIM (G-CSF)之臨床試驗</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2018年</td>
-                        <td class="pl-3" style="width:80%">ROMIPLATE在台灣開始販賣</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">1984年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">KIRIN-AMGEN公司之設立</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2019年</td>
-                        <td class="pl-3" style="width:80%">台灣協和醱酵麒麟股份有限公司更名爲台灣協和麒麟股份有限公司</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">1982年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">麒麟啤酒株式會社跨足進入醫藥事業領域，開始生化醫藥之硏究開發</td>
                     </tr>
-                    <tr class="text-left" style="border-bottom:1px solid black;">
-                        <td class="pl-3" style="background-color:#F3F2F1;width:20%">2020年</td>
-                        <td class="pl-3" style="width:80%">台灣協和麒麟股份有限公司自2020年4月搬遷至新址</td>
+                    <tr class="text-left" style="border-bottom:1px solid #bfbfbf;">
+                        <td class="pl-3 pt-3 pb-3" style="background-color:#F3F2F1;width:20%">1907年</td>
+                        <td class="pl-3 pt-3 pb-3" style="width:80%">麒麟啤酒株式會社在日本設立</td>
                     </tr>
                 </tbody>
             </table>

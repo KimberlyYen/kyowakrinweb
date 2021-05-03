@@ -1,10 +1,11 @@
 <template>
     <div v-if="d_play" class="dialogbg text-left p-5" style="position:relative;color:white;font-size:2rem">
-        <img @click="close(index1,index2)" src="@/assets/close_2.png" style="position:absolute;top:10px;right:10px;cursor:pointer">
-        您將要連結至其它網站，<br />點擊 ”OK” 後繼續。
+        <img @click="close(index1,index2)" src="@/assets/close_2.png" style="position:absolute;top:10px;right:10px;cursor:pointer;">
+        您將要連結至其它網站，<br />點擊「OK」後繼續。
         <div class="d-flex justify-content-center align-items-end" style="width:100%;height:120px">
-            <div @click="Ahref()" class="d-flex justify-content-center align-items-center" :style="{'cursor':pointer}" style="border-radius:50px;background-color: white;width:200px;height:40px;color:#FF6633;font-weight:bold">
-                OK<img class="ml-3" src="@/assets/icon_link.png">
+            <div @click="Ahref()" class="d-flex justify-content-center align-items-center" :style="{'cursor':pointer}" style="border-radius:50px;background-color: white;width:200px;height:40px;color:#EA5504;font-weight:bold">
+                <div style="margin-left:40%"> OK </div>
+                <img style="margin-left:20%;width: ;" src="@/assets/icon_link.png">
             </div>
         </div>
     </div>
@@ -42,9 +43,10 @@ export default {
 </script>
 <style scoped>
 .dialogbg{
-    background-color: #FF6633;
+    background-color: #EA5504;
     width: 90%;
-    max-width: 600px;
+    max-width: 660px;
     height: 240px;
+    line-height: 2;
 }
 </style>
